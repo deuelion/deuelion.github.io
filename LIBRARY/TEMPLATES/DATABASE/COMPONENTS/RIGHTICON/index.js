@@ -1,0 +1,6 @@
+export const RIGHTICON=(HOLDER,LIGHT,DARK,CALLBACk)=>{
+    ICONS(HOLDER,LIGHT,DARK,(DATA)=>{
+        MARGINRIGHT(DATA,"2%");
+        CALLBACk(DATA);
+    });
+};

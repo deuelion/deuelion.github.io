@@ -1,0 +1,7 @@
+let NOORFASHIONDATABASELINK;
+if (localStorage.getItem("Native")) {
+    NOORFASHIONDATABASELINK = "''";
+} else {
+    NOORFASHIONDATABASELINK = "";
+};
+export { NOORFASHIONDATABASELINK };
