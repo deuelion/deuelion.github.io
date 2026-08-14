@@ -1,4 +1,3 @@
-import { ELITEROBUSTONTOLOGYPROJECT } from "./OTHERS/ELITEROBUSTONTOLOGY/Connection.js";
 import { EROXIANPROJECT } from "./OTHERS/EROXIAN/Connection.js";
 import { NOORPROJECT } from "./OTHERS/NOOR/Connection.js";
 import { SHYLANSIRAJPROJECT } from "./OTHERS/SHYLANSIRAJ/Connection.js";
@@ -11,8 +10,6 @@ export const FEATURES=()=>{
         case "ShyLanSirajFashionHub":SHYLANSIRAJPROJECT();
             break;
         case "Eroxians":EROXIANPROJECT();
-            break;
-        case "EliteRobustOntology":ELITEROBUSTONTOLOGYPROJECT();
             break;
         default:DEFAULTS();
             break;
