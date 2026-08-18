@@ -39,6 +39,8 @@ const PROJECTCONNECTOR=()=>{
         case "Noor_Charity_And_Orphanage_Organisation":PROJECTLOADER("NOOR");
             break; 
         case "ShyLanSirajFashionHub":PROJECTLOADER("NOORFASHION");
+            break;
+        case "Elite Robust Ontology":PROJECTLOADER("ELITEROBUSTONTOLOGY");
             break;  
         default:
             break;
