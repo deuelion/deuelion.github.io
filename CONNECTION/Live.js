@@ -41,7 +41,9 @@ const PROJECTCONNECTOR=()=>{
         case "ShyLanSirajFashionHub":PROJECTLOADER("NOORFASHION");
             break;
         case "Elite Robust Ontology":PROJECTLOADER("ELITEROBUSTONTOLOGY");
-            break;  
+            break; 
+        case "Cinefy":PROJECTLOADER("CINEFY");
+            break; 
         default:
             break;
     };
