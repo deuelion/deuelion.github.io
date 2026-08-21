@@ -43,6 +43,8 @@ const PROJECTCONNECTOR=()=>{
         case "Elite Robust Ontology":PROJECTLOADER("ELITEROBUSTONTOLOGY");
             break; 
         case "Cinefy":PROJECTLOADER("CINEFY");
+            break;
+        case "Movie Lander":PROJECTLOADER("MOVIELANDER");
             break; 
         default:
             break;

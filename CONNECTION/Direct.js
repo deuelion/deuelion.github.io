@@ -52,7 +52,7 @@ const DEVPROJECTLOADER=()=>{
 const PROJECTCONNECTOR=()=>{
     const TITLE = document.title;
     switch (TITLE) {
-        case "EliteBuilder":DEVPROJECTLOADER();
+       case "EliteBuilder":DEVPROJECTLOADER();
             break;
         case "Eroxians":PROJECTLOADER("EROXIAN");
             break;
@@ -61,8 +61,10 @@ const PROJECTCONNECTOR=()=>{
         case "ShyLanSirajFashionHub":PROJECTLOADER("NOORFASHION");
             break;
         case "Elite Robust Ontology":PROJECTLOADER("ELITEROBUSTONTOLOGY");
-            break;  
+            break; 
         case "Cinefy":PROJECTLOADER("CINEFY");
+            break;
+        case "Movie Lander":PROJECTLOADER("MOVIELANDER");
             break; 
         default:
             break;
