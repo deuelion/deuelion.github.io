@@ -1,6 +1,6 @@
 DISPLAY("",`
     
-   <h1> WELCOME TO CINEFY </h1>
+   <h1> WELCOME TO  MOVIE LANDER </h1>
 
     
 `);
