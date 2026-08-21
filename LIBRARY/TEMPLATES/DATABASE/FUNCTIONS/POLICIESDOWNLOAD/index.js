@@ -6,7 +6,7 @@ export const POLICIESDOWNLOAD=(NAME,DATA,CALLBACK)=>{
             CALLBACK(Data);  
         });
     },()=>{
-        const LINK="https://deuelion.github.io/BUILD/LIBRARY/POLICIES/"+NAME;
+        const LINK="https://deuelion.github.io/LIBRARY/POLICIES/"+NAME;
         TEXTFETCH(LINK,DATA,(Data)=>{
             CALLBACK(Data);
         });
