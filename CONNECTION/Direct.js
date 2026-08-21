@@ -65,6 +65,8 @@ const PROJECTCONNECTOR=()=>{
         case "Cinefy":PROJECTLOADER("CINEFY");
             break;
         case "Movie Lander":PROJECTLOADER("MOVIELANDER");
+            break;
+        case "Socialite":PROJECTLOADER("SOCIALLITE");
             break; 
         default:
             break;
