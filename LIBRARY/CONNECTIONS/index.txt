@@ -19,3 +19,5 @@ https://x.com/elite_robust_
 https://servercentre.github.io/
 
 https://eliterobustontologygroup.github.io/Policies?
+
+git config user.email "316406166+deuelion@users.noreply.github.com"
