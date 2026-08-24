@@ -1,9 +1,16 @@
 export const ELITEROBUSTONTOLOGYWEBMOBILEPAGE=()=>{
+    HEADERVIEWSPAGE((HOLDER)=>{
+        LEFTTEXT(HOLDER,"Elite Robust Ontology",()=>{
 
-    DISPLAY("",`
+        });
+        RIGHTICON(HOLDER,WHITEMENUICON,BLACKMENUICON,()=>{
 
-        <h1>Elite Mobile Web Page</h1>
-        
-    `);
+        });
+    },(HOLDER)=>{
 
+        HEADER(HOLDER,"WELCOME TO ELITE ROBUST ONTOLOGY",()=>{
+
+        });
+
+    });
 };
