@@ -1,19 +1,18 @@
 export const ELITEROBUSTONTOLOGYWEBROUTER=()=>{
     const MOBILEVIEW=()=>{
-        SHYRAJCLOTHESAPI();
         const LOADDATA={
-            home: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+            home: () => {ELITEROBUSTONTOLOGYWEBMOBILEPAGE();},
         };
         LINKTRACKER(LOADDATA,()=>{
-            SHYLANSIRAJANDROIDSTARTPAGE();
+            ELITEROBUSTONTOLOGYWEBMOBILEPAGE();
         });
     };
     const DESKTOPVIEW=()=>{
         const LOADDATA={
-            home: () => {SHYLANSIRAJANDROIDSTARTPAGE();},
+            home: () => {ELITEROBUSTONTOLOGYWEBMOBILEPAGE();},
         };
         LINKTRACKER(LOADDATA,()=>{
-            SHYLANSIRAJANDROIDSTARTPAGE();
+            ELITEROBUSTONTOLOGYWEBMOBILEPAGE();
         }); 
     };
     VIEW(()=>{MOBILEVIEW();},()=>{DESKTOPVIEW()});
