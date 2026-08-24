@@ -1,5 +1,8 @@
+import { LEFTICON } from "../../../../../../../CONNECTION";
+
 export const ELITEROBUSTONTOLOGYWEBMOBILEPAGE=()=>{
     HEADERVIEWSPAGE((HOLDER)=>{
+        LEFTICON(HOLDER,)
         LEFTTEXT(HOLDER,"Elite Robust Ontology",()=>{
 
         });
