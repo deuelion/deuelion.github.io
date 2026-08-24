@@ -10,7 +10,12 @@ export const ELITEROBUSTONTOLOGYWEBMOBILEPAGE=()=>{
 
         });
     },(HOLDER)=>{
-        HEADER(HOLDER,"WELCOME TO ELITE ROBUST ONTOLOGY",()=>{
+        BREAK(HOLDER,()=>{});
+        HEADER(HOLDER,"WELCOME",()=>{
+
+        });
+        BREAK(HOLDER,()=>{});
+        LEFTTEXT(HOLDER,"Building Reliable Digital Solutions For A Smarter Tomorrow.",()=>{
 
         });
     });
