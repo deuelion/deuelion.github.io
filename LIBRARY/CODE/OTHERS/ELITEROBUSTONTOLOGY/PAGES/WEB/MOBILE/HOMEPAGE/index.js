@@ -4,7 +4,12 @@ export const ELITEROBUSTONTOLOGYWEBMOBILEPAGE=()=>{
         });
         HEADER(HOLDER,"Elite Robust Ontology",()=>{
         });
-        RIGHTICON(HOLDER,WHITEMENUICON,BLACKMENUICON,()=>{
+        RIGHTICON(HOLDER,WHITEMENUICON,BLACKMENUICON,(DATA)=>{
+            CLICK(DATA,()=>{
+                MENUVIEW("",(DATATA)=>{
+                    ELITEROBUSTONTOLOGYWEBMOBILEMENUPAGE(DATATA);
+                });
+            });
         });
     },(HOLDER)=>{
         BREAK(HOLDER,()=>{});
