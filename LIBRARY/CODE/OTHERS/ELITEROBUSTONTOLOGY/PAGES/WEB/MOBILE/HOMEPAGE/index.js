@@ -68,5 +68,8 @@ export const ELITEROBUSTONTOLOGYWEBMOBILEPAGE=()=>{
             ICONS(DATA,COLOREDFACEBOOKICON,COLOREDFACEBOOKICON,()=>{});
             ICONS(DATA,COLOREDTIKTOKICON,COLOREDTIKTOKICON,()=>{});
         });
+        BREAK(HOLDER,()=>{});BREAK(HOLDER,()=>{});
+        HEADER(HOLDER,"Elite Robust Ontology",()=>{});
+        BREAK(HOLDER,()=>{});BREAK(HOLDER,()=>{});
     });
 };
