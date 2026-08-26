@@ -107,7 +107,7 @@ const DEVPROTECTION=()=>{
 };
 if (!sessionStorage.getItem("DevName")) {
     const LOADDATA={
-        natasha:() => {CURRENT();},
+        erou:() => {CURRENT();},
     };
     LINKTRACKER(LOADDATA,()=>{
         DEVMODE();
