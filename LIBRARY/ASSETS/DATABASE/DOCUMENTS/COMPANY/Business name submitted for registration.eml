@@ -1,0 +1,194 @@
+Delivered-To: eroinnovations9@gmail.com
+Received: by 2002:a05:612c:f03:b0:4bf:c9c4:f0b1 with SMTP id ka3csp1873158vqb;
+        Mon, 24 Mar 2025 02:00:49 -0700 (PDT)
+X-Forwarded-Encrypted: i=2; AJvYcCVMyot8ObToF31xCWFoKb1/gYVmJVjy6FiYA4hX+3RR9yctU6+Ks03zCznl5yNMIzmi7Y9EXh1vYFjBr3TfIkA=@gmail.com
+X-Google-Smtp-Source: AGHT+IGmGglI3FsXZs8+hogewFQsOu7MEoubgRKUILU0XhNttqhC3pEka5r2iVZ6cKm4w8KmhqYp
+X-Received: by 2002:a05:6000:1ac7:b0:38d:d666:5448 with SMTP id ffacd0b85a97d-3997f93874cmr11307961f8f.40.1742806849038;
+        Mon, 24 Mar 2025 02:00:49 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742806849; cv=none;
+        d=google.com; s=arc-20240605;
+        b=UYavNrhzJVLg2Qp4cqG3wQTe+ltlucC9/dkMBa0t0mCjIPbwLD5qMziA1fdpQd7NIn
+         VvkNlMw7+6CbA67XNLqondpQwKtvldbaS8PlMHiaoZd837+BcoOXKm2ewtGdUw5//YYC
+         ZkZe7cqDdRSWcd/n7vFWZ4I/Zlrxs5qoYZNGRCfV/Dqxe5ueA0C36EghEfg2GGczxNwY
+         AbtkSWSroEPkiOdQtp0l+on2FZXiLy/S2vggvcpZBRMFlMYOUJiyozAJeaQZw+zMeaxi
+         iDIFFT1gP3rHX3oMcBMLBcbwd4FSY94vh4WlMOB2dNFmLQWYTDOKWrK2kzruLEeHNHJw
+         zPHQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:subject:message-id:to:from:date:dkim-signature;
+        bh=1Lib8q6fIsABXuSt03Gr9OOYey83rlK4q01NASPY36E=;
+        fh=0LQTaKOK+Hz5u9PTNQeAVY9bAYY4a93kcmJzAD8wW3Q=;
+        b=d6gYOet3TAxE1l7J22Pr/YlE3R0A1jTwfHVQDPCEMF5QXwsWjjxyoqXaZ8+0hqFlg+
+         IMcKMYv64mZv720L2+BcvRcWn/JyKXD9zcmeJxoJ/1m2sm9kMYP8/WwN0NMPAWIvFD13
+         o/5lK13P+luXfsxibAMIjefGoz1EeABZwKWI+ERqfs2zntuLb4EniWKxaPosc4qw+We3
+         FUXpm/suYaKjjsr/6DzXoouCEzkEphvzATZq1wLKSRMbFaO/x4uzVxYSg1JwJvM2kEl3
+         tV4bC4gisF/GX4UAP5jd/ekAz5TfDwC8E7Mnc5HyFk0K97NdKHtky+UT3lwcJ2BIctpg
+         dKzw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@ursb.go.ug header.s=ursb.go.ug header.b=LRCWEdYU;
+       spf=pass (google.com: domain of obrs@ursb.go.ug designates 154.72.199.30 as permitted sender) smtp.mailfrom=obrs@ursb.go.ug;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=ursb.go.ug
+Return-Path: <obrs@ursb.go.ug>
+Received: from mx.ursb.go.ug (mail.ursb.go.ug. [154.72.199.30])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-3997f98868dsi5564197f8f.187.2025.03.24.02.00.48
+        for <eroinnovations9@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 24 Mar 2025 02:00:49 -0700 (PDT)
+Received-SPF: pass (google.com: domain of obrs@ursb.go.ug designates 154.72.199.30 as permitted sender) client-ip=154.72.199.30;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@ursb.go.ug header.s=ursb.go.ug header.b=LRCWEdYU;
+       spf=pass (google.com: domain of obrs@ursb.go.ug designates 154.72.199.30 as permitted sender) smtp.mailfrom=obrs@ursb.go.ug;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=ursb.go.ug
+Received: from mx.ursb.go.ug (mx.ursb.go.ug [127.0.0.1])
+	by mx.ursb.go.ug (Proxmox) with ESMTP id 9EDC4A1D12
+	for <eroinnovations9@gmail.com>; Mon, 24 Mar 2025 12:00:46 +0300 (EAT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ursb.go.ug; h=cc
+	:content-type:content-type:date:from:from:message-id
+	:mime-version:reply-to:subject:subject:to:to; s=ursb.go.ug; bh=1
+	Lib8q6fIsABXuSt03Gr9OOYey83rlK4q01NASPY36E=; b=LRCWEdYUwzQoAOscw
+	SvISunla9k0zSFUIr2YNP5wAF/xZihOuexyhiMk/OVZyCttEGBC0A5coCTVZZ+tb
+	Ex29m/qPUrb361pLRYnihULYFjA8gBDKuR+GekbF3OvW7v0PyZYLI0moTk2YzLWc
+	3XOoQIsCJecMeZTz9PtmRxwb+U=
+X-Virus-Scanned: amavisd-new at mail.ursb.go.ug
+Date: Mon, 24 Mar 2025 09:00:10 +0000 (GMT)
+From: OBRS Online <obrs@ursb.go.ug>
+To: ACHAM JENIFFER <erimrank167@gmail.com>,
+	Official email <eroinnovations9@gmail.com>
+Message-ID: <848154793.1558380.1742806810908@e4220a863b97>
+Subject: Business name submitted for registration
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_1558378_1624520240.1742806810903"
+
+------=_Part_1558378_1624520240.1742806810903
+Content-Type: multipart/related; 
+	boundary="----=_Part_1558379_689780610.1742806810904"
+
+------=_Part_1558379_689780610.1742806810904
+Content-Type: text/html;charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html>
+<html lang=3D"en">
+<head>
+    <meta charset=3D"UTF-8">
+    <meta content=3D"width=3Ddevice-width, user-scalable=3Dno, initial-scal=
+e=3D1.0, maximum-scale=3D1.0, minimum-scale=3D1.0"
+          name=3D"viewport">
+    <meta content=3D"ie=3Dedge" http-equiv=3D"X-UA-Compatible">
+    <title>OBRS</title>
+</head>
+<body>
+<table style=3D"background-color:#f6f8f1; padding:40px; position: fixed; bo=
+ttom:0;left:0;top:0;right:0; height:auto; width: 100%;"
+       border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0">
+    <tr>
+        <td>
+            <table style=3D"background-color:#ffffff; padding:20px;" width=
+=3D"75%" align=3D"center" border=3D"0" cellpadding=3D"0"
+                   cellspacing=3D"0">
+
+
+                <tr>
+
+                    <td class=3D"topHeader" style=3D"text-align: center">
+                        <img src=3D"https://www.staging.ursbonline.go.ug/im=
+g/banner.51ebffa7.png" width=3D"20%" alt=3D"URSB-Logo" title=3D"URSB-Logo"/=
+>
+
+                        <br/>
+                        <br/>
+
+                        <span style=3D"font-size:25px;">UGANDA REGISTRATION=
+ SERVICES BUREAU </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style=3D"text-align:center; font-size: 16px; line-h=
+eight: 22px; color: #153643; font-family: sans-serif;">
+                        <br/>
+
+                        <p>
+                            <span>Your Business Name Registration applicati=
+on has been submitted successfully</span>
+                        </p>
+
+                        <p>
+                            <span>Use the tracking number bellow to track t=
+he progress of this application</span>
+                        </p>
+
+                        <p>
+                            <span></span>
+                        </p>
+
+                        <p>
+                            <span>Business name to be registered: ELITE ROB=
+UST ONTOLOGY</span>
+                        </p>
+
+                        <p>
+                            <span>Business type: sole-proprietor</span>
+                        </p>
+
+                        <p>
+                            <span>Tracking number: G250320-1316</span>
+                        </p>
+
+                        <div style=3D"margin-top: 10px;">
+                           =20
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+
+            <table style=3D"padding:20px;" align=3D"center" width=3D"55%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                <tr style=3D"text-align: center">
+                    <td  style=3D"font-family: sans-serif; font-size: 14px;=
+">
+
+                        <small>
+                            Copyright =C2=A9 1985 - <span>2022</span> <a hr=
+ef=3D"">URSB</a> ,
+                            All rights reserved.
+                        </small>
+
+                    </td>
+                </tr>
+
+
+            </table>
+        </td>
+    </tr>
+</table>
+
+<style>
+    .buttonClass{
+        background-color:#1b74b5;
+        font-size: 25px;
+        color:#ffffff;
+        text-decoration: none;
+        padding: 14px 20px;
+        border-radius:1px 1px 1px 1px
+    }
+    .topHeader{
+        border-bottom:1px solid #eaece6;
+        color: #153643;
+        font-family: sans-serif;
+        text-align:center;
+        padding: 0 0 15px 0;
+        font-weight: bold;
+    }
+</style>
+</body>
+</html>
+
+
+
+------=_Part_1558379_689780610.1742806810904--
+
+------=_Part_1558378_1624520240.1742806810903--
+
