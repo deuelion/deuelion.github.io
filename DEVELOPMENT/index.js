@@ -1,6 +1,6 @@
 const NAME=sessionStorage.getItem("DevName");
 const DEV=localStorage.getItem("ENV");
-const CURRENT=ELITEROBUSTONTOLOGYWEBROUTER;
+const CURRENT=MOVIELANDERANDROIDROUTER;
 const WEBSWITCHER=()=>{
     switch (NAME) {
         case "M1":ELITEROBUSTONTOLOGYWEBROUTER();
@@ -8,6 +8,8 @@ const WEBSWITCHER=()=>{
         case "M2":EROXIANWEBROUTES();
             break;
         case "M3":SHYRAJANDROIDROUTER();
+            break;
+        case "M4":MOVIELANDERANDROID();
             break;
         default:DEVMODE();
             break;
@@ -21,6 +23,8 @@ const ANDROIDSWITCHER=()=>{
             break;
         case "M3":SHYRAJANDROIDROUTER();
             break;
+        case "M4":MOVIELANDERANDROIDROUTER();
+            break;
         default:DEVMODE();
             break;
     };
@@ -32,6 +36,8 @@ const DESKTOPSWITCHER=()=>{
         case "M2":EROXIANWEBROUTES();
             break;
         case "M3":SHYRAJANDROIDROUTER();
+            break;
+        case "M4":MOVIELANDERANDROID();
             break;
         default:DEVMODE();
             break;

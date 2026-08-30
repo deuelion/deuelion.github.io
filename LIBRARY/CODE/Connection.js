@@ -1,8 +1,9 @@
 import { ELITEROBUSTONTOLOGYPROJECT } from "./OTHERS/ELITEROBUSTONTOLOGY/Connection.js";
 import { EROXIANPROJECT } from "./OTHERS/EROXIAN/Connection.js";
+import { MOVIELANDERPROJECT } from "./OTHERS/MOVIELANDER/Connection.js";
 import { NOORPROJECT } from "./OTHERS/NOOR/Connection.js";
 import { SHYLANSIRAJPROJECT } from "./OTHERS/SHYLANSIRAJ/Connection.js";
-let DEFAULTS=ELITEROBUSTONTOLOGYPROJECT;
+let DEFAULTS=MOVIELANDERPROJECT;
 export const FEATURES=()=>{
     const TITLE = document.title;
     switch (TITLE) {
@@ -13,6 +14,8 @@ export const FEATURES=()=>{
         case "Eroxians":EROXIANPROJECT();
             break;
         case "Elite Robust Ontology":ELITEROBUSTONTOLOGYPROJECT();
+            break;
+        case "Movie Lander":MOVIELANDERPROJECT();
             break;
         default:DEFAULTS();
             break;
