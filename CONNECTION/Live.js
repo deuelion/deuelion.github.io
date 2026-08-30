@@ -24,6 +24,7 @@ const PROJECTLOADER=(NAME)=>{
     setTimeout(() => {if (!localStorage.getItem("Updates")) {location.reload();}},3000);
 };
 const DEVPROJECTLOADER=()=>{
+    const LoadingIcon=document.querySelector(".LoadingIcon");LoadingIcon.style.display="none";
     import("../DEVELOPMENT/index.js");
     const DATA=`ROUTED(localStorage.getItem("CLOUDNATIVE"));ROUTED(localStorage.getItem("AUTORUN"));ROUTED(localStorage.getItem("NATIVE"));`;
     localStorage.setItem("NATIVER",DATA);

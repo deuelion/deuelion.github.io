@@ -22,7 +22,11 @@ export const MOVIELANDERANDROIDWEBLOGINPAGE=()=>{
     BUTTON("","Sign In",(DATA)=>{
         BACKGROUND(DATA,"forestgreen");
         CLICK(DATA,()=>{
-            ROUTE("",MOVIELANDERANDROIDWEBPAGE,"MOVIELANDERANDROIDWEBPAGE");
+            TOASTEDMESSAGE(sessionStorage.getItem("UserEmail"),"Enter User Email",()=>{
+                TOASTEDMESSAGE(sessionStorage.getItem("UserPassword"),"Enter User Password",()=>{
+                   AUTH();
+                });
+            });
         });
     });
 };
