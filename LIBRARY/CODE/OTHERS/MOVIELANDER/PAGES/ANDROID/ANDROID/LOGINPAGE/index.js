@@ -24,7 +24,9 @@ export const MOVIELANDERANDROIDWEBLOGINPAGE=()=>{
         CLICK(DATA,()=>{
             TOASTEDMESSAGE(sessionStorage.getItem("UserEmail"),"Enter User Email",()=>{
                 TOASTEDMESSAGE(sessionStorage.getItem("UserPassword"),"Enter User Password",()=>{
-                   AUTH();
+                    TOAST("","500","Please Wait,Verifying User",()=>{
+                        AUTH();
+                    });
                 });
             });
         });
