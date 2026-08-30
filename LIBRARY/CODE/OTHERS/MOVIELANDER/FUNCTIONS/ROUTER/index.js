@@ -1,4 +1,5 @@
 export const MOVIELANDERANDROIDROUTER=()=>{
+    CLOUDSERVERDOWNLOAD("MOVIES");
     const MOBILEVIEW=()=>{
         ANDROIDLOGINPAGE();
     };
