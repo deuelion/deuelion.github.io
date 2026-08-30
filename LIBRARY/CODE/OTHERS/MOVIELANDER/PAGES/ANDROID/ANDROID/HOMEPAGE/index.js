@@ -10,7 +10,6 @@ export const MOVIELANDERANDROIDWEBPAGE=()=>{
                         BORDERRADIUS(IMGS,"10px");
                     });
                 });
-                console.log(Element);
             });
         });
     },(HOLDER)=>{
