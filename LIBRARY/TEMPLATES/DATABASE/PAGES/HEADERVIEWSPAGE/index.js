@@ -7,7 +7,7 @@ export const HEADERVIEWSPAGE=(CALLBACKED,CALLBACK)=>{
         POSITION(HOLDER,"absolute");
         BOTTOM(HOLDER,"0px");
         HEIGHT(HOLDER,"auto");
-        TOP(HOLDER,"50px");
+        TOP(HOLDER,"60px");
         CALLBACK(HOLDER);
     });
 };

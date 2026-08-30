@@ -9,7 +9,7 @@ export const FIXEDHEADERVIEWSPAGE=(CALLBACKED,CALLBACK)=>{
         FIXED(HOLDER);
         BOTTOM(HOLDER,"0px");
         HEIGHT(HOLDER,"auto");
-        TOP(HOLDER,"50px");
+        TOP(HOLDER,"60px");
         CALLBACK(HOLDER);
     });
 };

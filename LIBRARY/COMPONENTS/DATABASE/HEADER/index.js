@@ -5,7 +5,7 @@ export const HEAD=(HOLDER,CALLBACk)=>{
         TOP(DATA,"0");
         LEFT(DATA,"");
         WIDTH(DATA,"100%");
-        HEIGHT(DATA,"50px");
+        HEIGHT(DATA,"60px");
         OVERFLOWY(DATA,"hidden");
         DISPLAYED(DATA,"inline-flex");
         CALLBACk(DATA);

@@ -3,6 +3,7 @@ export const ICONTEXT=(HOLDER,LIGHTICON,DARKICON,WORD,CALLBACK)=>{
         OVERFLOWY(DATA,"hidden");
         WIDTH(DATA,"auto");
         HEIGHT(DATA,"90%");
+        MARGIN(DATA,"");
         ICONS(DATA,LIGHTICON,DARKICON,(DATAICON)=>{
             MARGINTOP(DATAICON,"1%");
         });
