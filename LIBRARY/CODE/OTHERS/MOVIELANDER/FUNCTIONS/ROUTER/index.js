@@ -3,12 +3,7 @@ export const MOVIELANDERANDROIDROUTER=()=>{
         ANDROIDLOGINPAGE();
     };
     const DESKTOPVIEW=()=>{
-        const LOADDATA={
-            home: () => {MOVIELANDERANDROIDWEBPAGE();},
-        };
-        LINKTRACKER(LOADDATA,()=>{
-            MOVIELANDERANDROIDWEBPAGE();
-        }); 
+        ANDROIDLOGINPAGE();
     };
     VIEW(()=>{MOBILEVIEW();},()=>{DESKTOPVIEW()});
 };

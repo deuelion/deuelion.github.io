@@ -1,8 +1,8 @@
 export const MOVIELANDERANDROIDWEBLOGINPAGE=()=>{
     IMAGEVIEW("",MOVIELANDERLOGO,(DATA)=>{
-            WIDTH(DATA,"90%");
-            HEIGHT(DATA,"30%");
-            BORDERRADIUS(DATA,"20px");
+        WIDTH(DATA,"90%");
+        HEIGHT(DATA,"30%");
+        BORDERRADIUS(DATA,"20px");
     });
     HEADER("","Your Home Cinema",(DATA)=>{
         FONTSIZE(DATA,"25px");
@@ -20,5 +20,8 @@ export const MOVIELANDERANDROIDWEBLOGINPAGE=()=>{
     BREAK("",()=>{});
     BUTTON("","Sign In",(DATA)=>{
         BACKGROUND(DATA,"forestgreen");
+        CLICK(DATA,()=>{
+            ROUTE("",MOVIELANDERANDROIDWEBPAGE,"MOVIELANDERANDROIDWEBPAGE");
+        });
     });
 };
