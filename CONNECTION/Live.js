@@ -4,6 +4,7 @@ const BUILDLINK="https://deuelion.github.io/BUILD/";
 window.FEATURES=FEATURES();
 const TITLE = document.title;
 const PROJECTLOADER=(NAME)=>{
+    const LoadingIcon=document.querySelector(".LoadingIcon");LoadingIcon.style.display="none";
     const DEV=localStorage.getItem("ENV");
     switch (DEV) {
         case "ANDROID":import(BUILDLINK+NAME+"/ANDROID/index.js");
