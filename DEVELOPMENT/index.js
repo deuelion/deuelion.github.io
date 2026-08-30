@@ -9,7 +9,7 @@ const WEBSWITCHER=()=>{
             break;
         case "M3":SHYRAJANDROIDROUTER();
             break;
-        case "M4":MOVIELANDERANDROID();
+        case "M4":MOVIELANDERANDROIDROUTER();
             break;
         default:DEVMODE();
             break;
@@ -37,7 +37,7 @@ const DESKTOPSWITCHER=()=>{
             break;
         case "M3":SHYRAJANDROIDROUTER();
             break;
-        case "M4":MOVIELANDERANDROID();
+        case "M4":MOVIELANDERANDROIDROUTER();
             break;
         default:DEVMODE();
             break;
