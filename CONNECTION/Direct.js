@@ -500,4 +500,3 @@ const BODIED = ${BODIED};
 `;
 localStorage.setItem("CLOUDNATIVE",DATA);
 PROJECTCONNECTOR();
-
