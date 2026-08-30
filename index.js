@@ -92,7 +92,7 @@ localStorage.setItem("ExpiredMessage",HOSTEXPIREDMESSAGE);
 if (localStorage.getItem("Expired")) {
   DISPLAY("",HOSTEXPIREDMESSAGE);RUNNER();
 } else {
-  if (STATUS === "Active") {
+  if (STATUS === "Active" ||TITLE === "EliteBuilder") {
     RUNNER();
   }else{
     UPDATES();
