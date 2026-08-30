@@ -1,9 +1,12 @@
 export const MOVIELANDERANDROIDWEBPAGE=()=>{
+    FOOTERVIEWSPAGE((HOLDER)=>{
 
-    DISPLAY("",`
+    },(HOLDER)=>{
+        ICONTEXT(HOLDER,WHITEGRIDICON,BLACKGRIDICON,"Catergory",()=>{
 
-        <h1>HOME</h1>
-        
-    `);
+        });
+        ICONTEXT(HOLDER,WHITEUSERICON,BLACKUSERICON,"Profile",()=>{
 
+        });
+    });
 };
