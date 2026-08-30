@@ -1,4 +1,4 @@
-export const TOAST=(HOLDER,TIME,MESSAGE,CALLBACK)=>{     
+export const TOAST=(HOLDER,MESSAGE,CALLBACK)=>{     
     DIV(HOLDER,(DATA)=>{
         ABSOLUTE(DATA);
         BACKGROUND(DATA,"gray");
@@ -9,12 +9,10 @@ export const TOAST=(HOLDER,TIME,MESSAGE,CALLBACK)=>{
         BORDERRADIUS(DATA,"10px");
         INLINEFLEX(DATA);
         HEADER(DATA,MESSAGE||"Your Message",()=>{});
-        CONDITION(TIME,()=>{
-            HIDER(2000,()=>{
-                DISPLAYED(DATA,"none");
-            });
-        },()=>{
-            CALLBACK(DATA);
+        CALLBACK(DATA);
+        HIDER(2000,()=>{
+            DISPLAYED(DATA,"none"); 
         });
+        
     });
 };

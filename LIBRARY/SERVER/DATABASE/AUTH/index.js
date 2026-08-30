@@ -2,10 +2,12 @@ export const AUTH=()=>{
     CONDITION(sessionStorage.getItem("Access"),()=>{
         GETDATA(MAINCONNECTIONAPI,"CONNECTION",(Data)=>{
             FINDER(Data,"USEREMAIL",sessionStorage.getItem("UserEmail"),(User)=>{
-                TOASTEDMESSAGE(User.USERPASSWORD === sessionStorage.getItem("UserPassword"),"Wrong User Details",()=>{
-                    CHECK(!localStorage.getItem("User"),()=>{
-                        LOCALSTORE("User",User.ID);
-                        RELOAD();
+                TOASTEDMESSAGE(User.USEREMAIL === sessionStorage.getItem("UserEmail"),"Wrong User Email",()=>{
+                    TOASTEDMESSAGE(User.USERPASSWORD === sessionStorage.getItem("UserPassword"),"Wrong User Password",()=>{
+                        CHECK(!localStorage.getItem("User"),()=>{
+                            LOCALSTORE("User",User.ID);
+                            RELOAD();
+                        });
                     });
                 });
             });
