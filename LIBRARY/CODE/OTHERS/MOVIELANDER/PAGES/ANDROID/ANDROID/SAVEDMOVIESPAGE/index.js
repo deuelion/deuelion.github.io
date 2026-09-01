@@ -1,11 +1,11 @@
-export const MOVIELANDERANDROIDWEBCATERGORYPAGE=()=>{
+export const MOVIELANDERANDROIDWEBSAVEDPAGE=()=>{
     HEADERVIEWSPAGE((HOLDER)=>{
         LEFTICON(HOLDER,WHITEBACKICON,BLACKBACKICON,(DATA)=>{
             CLICK(DATA,()=>{
                 ROUTE("",MOVIELANDERANDROIDWEBPAGE,"MOVIELANDERANDROIDWEBPAGE");
             });
         });
-        RIGHTTEXT(HOLDER,"Catergory",()=>{});
+        RIGHTTEXT(HOLDER,"Saved Movies",()=>{});
     },(HOLDER)=>{
         GETINDEX("MOVIES","MOVIES",(Data)=>{
             REDUX(Data,(Element)=>{
