@@ -31,8 +31,7 @@ export const AUTH=()=>{
                                 const DATA=[sessionStorage.getItem("UserName"),"","",sessionStorage.getItem("UserEmail"),sessionStorage.getItem("UserPassword"),localStorage.getItem("TIMEZONE"),"",localStorage.getItem("AppName"),"","Approved",new Date(),"","","","","",""];
                                 CHECK(!localStorage.getItem("User"),()=>{
                                     INSERTDATA(MAINCONNECTIONAPI,"CONNECTION",HEADER,DATA,(Datata)=>{
-                                        LOCALSTORE("User",Datata.uniqueId);
-                                        INSERTDATA(localStorage.getItem("API"),"User",HEADER,DATA,(Datata)=>{
+                                        INSERTDATA(localStorage.getItem("API"),localStorage.getItem("Store"),HEADER,DATA,(Datatata)=>{
                                             LOCALSTORE("User",Datata.uniqueId);
                                             RELOAD();
                                         });
