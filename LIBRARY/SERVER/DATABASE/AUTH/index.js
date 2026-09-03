@@ -31,7 +31,7 @@ export const AUTH=()=>{
                                 const HEADER=["FIRSTNAME", "MIDDLENAME", "LASTNAME", "USEREMAIL", "USERPASSWORD", "LOCATION", "IMAGE", "APPNAME", "STATUS", "ACCESS", "DATECREATED", "DATEUPDATED", "ACCOUNTS", "PHONENUMBER", "PREMIUM", "DEVICE", "COUNTRY"];
                                 const DATA=[sessionStorage.getItem("UserName"),"","",sessionStorage.getItem("UserEmail"),sessionStorage.getItem("UserPassword"),localStorage.getItem("TIMEZONE"),"",localStorage.getItem("AppName"),"","Approved",new Date(),"","","","","",""];
                                 CHECK(!localStorage.getItem("User"),()=>{
-                                    INSERTDATA(MAIN,"User",HEADER,DATA,(Datata)=>{
+                                    INSERTDATA(`"${MAIN}"`,"User",HEADER,DATA,(Datata)=>{
                                         LOCALSTORE("User",Datata.uniqueId);
                                         RELOAD();
                                     });

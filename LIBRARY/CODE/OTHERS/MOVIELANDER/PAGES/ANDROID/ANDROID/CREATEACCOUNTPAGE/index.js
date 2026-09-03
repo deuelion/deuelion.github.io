@@ -24,7 +24,7 @@ export const MOVIELANDERANDROIDWEBCREATEACCOUNTPAGE=()=>{
             TOASTEDMESSAGE(sessionStorage.getItem("UserName"),"Enter User Name",()=>{
                 TOASTEDMESSAGE(sessionStorage.getItem("UserEmail"),"Enter User Email",()=>{
                     TOASTEDMESSAGE(sessionStorage.getItem("UserPassword"),"Enter User Password",()=>{
-                        AUTH();
+                       USERS();AUTH();
                     });
                 });
             });
