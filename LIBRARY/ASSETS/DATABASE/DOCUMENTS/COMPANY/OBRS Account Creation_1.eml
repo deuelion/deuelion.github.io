@@ -1,0 +1,192 @@
+Delivered-To: eroinnovations9@gmail.com
+Received: by 2002:a05:612c:f03:b0:4bf:c9c4:f0b1 with SMTP id ka3csp1879759vqb;
+        Mon, 24 Mar 2025 02:13:17 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IEBV4u5rwkkhdPHi+4tFKa0vz5dEg4/Ygp10fMlLbu0+dWDj5WzsHAekXrP69tTZJbSmyMZ
+X-Received: by 2002:a17:907:7f92:b0:abf:8f56:fe76 with SMTP id a640c23a62f3a-ac3f22b43c4mr1080300966b.25.1742807596978;
+        Mon, 24 Mar 2025 02:13:16 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1742807596; cv=none;
+        d=google.com; s=arc-20240605;
+        b=d8vmBZCVNVZeTjh8HSXjs6eBZc2W9PpbPzqeMrzrJkkF1nPCajoOHYi3qjALIlT1XU
+         yOlKORkgmZsmmh1Ohmaqa2vKX3nwr6oh/nORvBy9pi33G1x/wtvo31hvp8Cf+Vd2U3Ir
+         SeLGYN1+rVm4Wgi/bEdX9PnEluW3Mh8esyZpIMUGczEWebFZ7laKoj1qzdheZN7eByuz
+         P0hqwrj88UVX5qx0pK7ST5wV/fi1RSp1+5iOxILBohu8e+xuUSoWsytGRvq2wgNL6OVl
+         w0538sWKzTK+4J0sIhnxrhknBLvg4o5o/aG2XfFveW0MFyQdyIwpcNnT3Zwcjztz6uXJ
+         vdCw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:subject:message-id:to:from:date:dkim-signature;
+        bh=PUHxId9v0x+aC91eycY/OGrJcLbURIg+HW3i3Ristnw=;
+        fh=zNLAj6FAQML938dMmuuSK/QDqyEWq2Hme8Z0HcIjOnU=;
+        b=QIdjBA58JUp2LwAiKqfUDVxghdz3sBvGq52wCV+Oi3wVSnSaeUmQdPfaQrmMKSLqF7
+         UpD560w7/C2lFX7psAf8FbL8PQylxu9mQgQWbNF+NFa1dgglzeYn8Q/PmmvtjPb3GJkU
+         R+s0WikJ3H16tt+9EBNgyl9wo8FwKMaW69Asg+gjd/d5WX3pLBaufDibsGnHdWQrARes
+         e2BxrrduIHhMjHEuFRufaSBiTdg3u20ZBUURO8UbaqGlZd+SVTT4iIp4X+J2l55Q8qYm
+         pxBhmkvueyZG1wJiAL2BAEyrTSSKMVGPzLbXT6F4tQq0qtKwk+7WVtvpVIM8NY29MhIE
+         qAfw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@ursb.go.ug header.s=ursb.go.ug header.b=xwypbPQR;
+       spf=pass (google.com: domain of obrs@ursb.go.ug designates 154.72.199.30 as permitted sender) smtp.mailfrom=obrs@ursb.go.ug;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=ursb.go.ug
+Return-Path: <obrs@ursb.go.ug>
+Received: from mx.ursb.go.ug (mail.ursb.go.ug. [154.72.199.30])
+        by mx.google.com with ESMTPS id a640c23a62f3a-ac3ef9d3366si520698466b.144.2025.03.24.02.13.16
+        for <eroinnovations9@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Mon, 24 Mar 2025 02:13:16 -0700 (PDT)
+Received-SPF: pass (google.com: domain of obrs@ursb.go.ug designates 154.72.199.30 as permitted sender) client-ip=154.72.199.30;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@ursb.go.ug header.s=ursb.go.ug header.b=xwypbPQR;
+       spf=pass (google.com: domain of obrs@ursb.go.ug designates 154.72.199.30 as permitted sender) smtp.mailfrom=obrs@ursb.go.ug;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=ursb.go.ug
+Received: from mx.ursb.go.ug (mx.ursb.go.ug [127.0.0.1])
+	by mx.ursb.go.ug (Proxmox) with ESMTP id 232FAA0626
+	for <eroinnovations9@gmail.com>; Mon, 24 Mar 2025 12:13:15 +0300 (EAT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=ursb.go.ug; h=cc
+	:content-type:content-type:date:from:from:message-id
+	:mime-version:reply-to:subject:subject:to:to; s=ursb.go.ug; bh=P
+	UHxId9v0x+aC91eycY/OGrJcLbURIg+HW3i3Ristnw=; b=xwypbPQR8VK1MkBuf
+	G3bMbtwG3O7oRncVa84QEO+TyuM3AVbBZE1+nmQtT33YWlTJFHOSGs6x8qv3f5FF
+	BNLXRjArBxL0o2mq687920n+BhsJBqpvYc3rM3N/WyMt1EvUeB7oeVBc27NzOpty
+	wu5/MJwPl5bB20KcGiLCy6x1rQ=
+X-Virus-Scanned: amavisd-new at mail.ursb.go.ug
+Date: Mon, 24 Mar 2025 09:12:40 +0000 (GMT)
+From: OBRS Online <obrs@ursb.go.ug>
+To:  <eroinnovations9@gmail.com>
+Message-ID: <1720223565.1559121.1742807560432@e4220a863b97>
+Subject: OBRS Account Creation
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_1559119_229116367.1742807560429"
+
+------=_Part_1559119_229116367.1742807560429
+Content-Type: multipart/related; 
+	boundary="----=_Part_1559120_1876800406.1742807560429"
+
+------=_Part_1559120_1876800406.1742807560429
+Content-Type: text/html;charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+<!doctype html>
+<html lang=3D"en">
+<head>
+    <meta charset=3D"UTF-8">
+    <meta content=3D"width=3Ddevice-width, user-scalable=3Dno, initial-scal=
+e=3D1.0, maximum-scale=3D1.0, minimum-scale=3D1.0"
+          name=3D"viewport">
+    <meta content=3D"ie=3Dedge" http-equiv=3D"X-UA-Compatible">
+    <title>OBRS</title>
+</head>
+<body>
+<table style=3D"background-color:#f6f8f1; padding:40px; position: fixed; bo=
+ttom:0;left:0;top:0;right:0; height:auto; width: 100%;"
+       border=3D"0" align=3D"center" cellpadding=3D"0" cellspacing=3D"0">
+    <tr>
+        <td>
+            <table style=3D"background-color:#ffffff; padding:20px;" width=
+=3D"75%" align=3D"center" border=3D"0" cellpadding=3D"0"
+                   cellspacing=3D"0">
+
+
+                <tr>
+
+                    <td class=3D"topHeader" style=3D"text-align: center">
+                        <img src=3D"https://www.staging.ursbonline.go.ug/im=
+g/banner.51ebffa7.png" width=3D"20%" alt=3D"URSB-Logo" title=3D"URSB-Logo"/=
+>
+
+                        <br/>
+                        <br/>
+
+                        <span style=3D"font-size:25px;">UGANDA REGISTRATION=
+ SERVICES BUREAU </span>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td style=3D"text-align:center; font-size: 16px; line-h=
+eight: 22px; color: #153643; font-family: sans-serif;">
+                        <br/>
+
+                        <p>
+                            <span>Hello, </span>
+                        </p>
+
+                        <p>
+                            <span>Your business ELITE ROBUST ONTOLOGY with =
+business registration number 80030850063089 has been created.</span>
+                        </p>
+
+                        <p>
+                            <span>Click link below to activate your account=
+</span>
+                        </p>
+
+                        <p>
+                            <span>Please revisit this Activation link in ca=
+se of failure to receive a One-Time-Password OR need to resend the One-Time=
+-Password</span>
+                        </p>
+
+                        <div style=3D"margin-top: 10px;">
+                            <div>
+                                <a href=3D"https://obrs.ursb.go.ug/verify/e=
+mail/?token=3DNTI0NDgxMzEtOTE5NC00MTllLWFlMTUtMjVjNjJiNDE5YjZmLDQ2MWEwODE0L=
+TdlMDAtNDk5Ni1hYWU1LWRkZDYzMWIwMjY4Ng=3D=3D" title=3D'Click Activation Link=
+' class=3D"buttonClass">
+                                    <span>Click Activation Link</span>
+                                </a>
+                            </div>
+                        </div>
+
+                    </td>
+                </tr>
+            </table>
+
+            <table style=3D"padding:20px;" align=3D"center" width=3D"55%" b=
+order=3D"0" cellpadding=3D"0" cellspacing=3D"0">
+                <tr style=3D"text-align: center">
+                    <td  style=3D"font-family: sans-serif; font-size: 14px;=
+">
+
+                        <small>
+                            Copyright =C2=A9 1985 - <span>2022</span> <a hr=
+ef=3D"">URSB</a> ,
+                            All rights reserved.
+                        </small>
+
+                    </td>
+                </tr>
+
+
+            </table>
+        </td>
+    </tr>
+</table>
+
+<style>
+    .buttonClass{
+        background-color:#1b74b5;
+        font-size: 25px;
+        color:#ffffff;
+        text-decoration: none;
+        padding: 14px 20px;
+        border-radius:1px 1px 1px 1px
+    }
+    .topHeader{
+        border-bottom:1px solid #eaece6;
+        color: #153643;
+        font-family: sans-serif;
+        text-align:center;
+        padding: 0 0 15px 0;
+        font-weight: bold;
+    }
+</style>
+</body>
+</html>
+
+
+
+------=_Part_1559120_1876800406.1742807560429--
+
+------=_Part_1559119_229116367.1742807560429--
+

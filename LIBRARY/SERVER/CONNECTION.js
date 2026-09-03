@@ -1,0 +1,12 @@
+import { AUTH } from "./DATABASE/AUTH/index.js";
+import { CREATEDATABASE } from "./DATABASE/CREATEDATABASE/index.js";
+import { CREATETABLE } from "./DATABASE/CREATETABLE/index.js";
+import { GETDATA } from "./DATABASE/GETDATA/index.js";
+import { INSERTDATA } from "./DATABASE/INSERTDATA/index.js";
+import { PAYTOTA } from "./DATABASE/PAYTOTA/index.js";
+import { PESAPAL } from "./DATABASE/PESAPAL/index.js";
+import { SENDEMAIL } from "./DATABASE/SENDEMAIL/index.js";
+import { STOREUSER } from "./DATABASE/STORE/index.js";
+import { UPDATEDATA } from "./DATABASE/UPDATEDATA/index.js";
+import { UPLOADFILE } from "./DATABASE/UPLOADFILE/index.js";
+export{CREATEDATABASE,CREATETABLE,GETDATA,INSERTDATA,PAYTOTA,PESAPAL,UPDATEDATA,UPLOADFILE,SENDEMAIL,AUTH,STOREUSER};

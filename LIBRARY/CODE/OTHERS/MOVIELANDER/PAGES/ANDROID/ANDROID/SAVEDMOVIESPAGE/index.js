@@ -1,0 +1,21 @@
+export const MOVIELANDERANDROIDWEBSAVEDPAGE=()=>{
+    HEADERVIEWSPAGE((HOLDER)=>{
+        LEFTICON(HOLDER,WHITEBACKICON,BLACKBACKICON,(DATA)=>{
+            CLICK(DATA,()=>{
+                ROUTE("",MOVIELANDERANDROIDWEBPAGE,"MOVIELANDERANDROIDWEBPAGE");
+            });
+        });
+        RIGHTTEXT(HOLDER,"Saved Movies",()=>{});
+    },(HOLDER)=>{
+        GETINDEX("MOVIES","MOVIES",(Data)=>{
+            REDUX(Data,(Element)=>{
+                VIEWBOTTOMHOLDER(HOLDER,Element.POSTER,Element.GENRE,(DATA)=>{
+                    INLINETABLE(DATA);
+                    WIDTH(DATA,"45%");
+                    HEIGHT(DATA,"250px");
+                    BORDERRADIUS(DATA,"10px");
+                });
+            });
+        });
+    });
+};
