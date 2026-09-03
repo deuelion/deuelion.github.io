@@ -2,6 +2,10 @@ export const USERS=(NAME)=>{
     CONDITION(NAME,()=>{
         SESSIONSTORE("Access","True");
     },()=>{
-        SESSIONSTORE("Access","False");
+        CONDITION(NAME === "Delete" ,()=>{
+            SESSIONDELETE("Access");
+        },()=>{
+            SESSIONSTORE("Access","False");
+        }); 
     });
 };
