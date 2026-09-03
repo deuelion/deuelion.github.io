@@ -1,5 +1,5 @@
 export const MOVIELANDERANDROIDWEBLOGINPAGE=()=>{
-    BREAK("",()=>{});BREAK("",()=>{});
+    CLEAR("");BREAK("",()=>{});
     IMAGEVIEW("",MOVIELANDERLOGO,(DATA)=>{
         WIDTH(DATA,"90%");
         HEIGHT(DATA,"30%");
@@ -9,14 +9,17 @@ export const MOVIELANDERANDROIDWEBLOGINPAGE=()=>{
         FONTSIZE(DATA,"25px");
     });
     BREAK("",()=>{});BREAK("",()=>{});
-    INPUT("","email","Enter Your Email","UserEmail",()=>{
+    INPUT("","email","johndoe@gmail.com","UserEmail",()=>{
     });
     BREAK("",()=>{});BREAK("",()=>{});
-    INPUT("","email","Enter Your Password","UserPassword",()=>{
+    INPUT("","email","********","UserPassword",()=>{
     });
     BREAK("",()=>{});BREAK("",()=>{});
-    RIGHTTEXT("","Forgot Password?",(DATA)=>{
+    RIGHTTEXT("","Forgot Password ?",(DATA)=>{
         MARGINRIGHT(DATA,"8%");
+        CLICK(DATA,()=>{
+            ROUTE(" ",MOVIELANDERANDROIDWEBFORGOTPASSWORDPAGE,"MOVIELANDERANDROIDWEBLOGINPAGE");
+        });
     });
     BREAK("",()=>{});
     BUTTON("","Sign In",(DATA)=>{
@@ -24,11 +27,16 @@ export const MOVIELANDERANDROIDWEBLOGINPAGE=()=>{
         CLICK(DATA,()=>{
             TOASTEDMESSAGE(sessionStorage.getItem("UserEmail"),"Enter User Email",()=>{
                 TOASTEDMESSAGE(sessionStorage.getItem("UserPassword"),"Enter User Password",()=>{
-                    TOAST("","Please Wait,Verifying User",()=>{
-                        USERS();AUTH();
-                    });
+                    USERS("True");AUTH();
                 });
             });
         });
     });
+    BREAK("",()=>{});BREAK("",()=>{});
+    HEADER("","New Here,Lets Join The Community !",(DATA)=>{
+        CLICK(DATA,()=>{
+            ROUTE(" ",MOVIELANDERANDROIDWEBCREATEACCOUNTPAGE,"MOVIELANDERANDROIDWEBLOGINPAGE");
+        });
+    });
+    BREAK("",()=>{});BREAK("",()=>{});
 };

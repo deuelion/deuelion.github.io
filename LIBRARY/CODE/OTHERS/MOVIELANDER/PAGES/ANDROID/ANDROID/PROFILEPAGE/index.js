@@ -16,6 +16,21 @@ export const MOVIELANDERANDROIDWEBPROFILEPAGE=()=>{
                 BORDERRADIUS(DATA,"10px");
             });
             INLINEVIEW(HOLDER,(DATA)=>{
+                BUTTON(DATA,"Update",(DATATA)=>{
+                    WIDTH(DATATA,"40%");
+                    HEIGHT(DATATA,"45px");
+                    BACKGROUND(DATATA,"forestgreen");
+                });
+                BUTTON(DATA,"Log Out",(DATATA)=>{
+                    WIDTH(DATATA,"40%");
+                    HEIGHT(DATATA,"45px");
+                    BACKGROUND(DATATA,"brown");
+                    CLICK(DATATA,()=>{
+                        LOCALDELETE("User");RELOAD();
+                    });
+                });
+            });
+            INLINEVIEW(HOLDER,(DATA)=>{
                 LEFTICON(DATA,WHITEUSERICON,BLACKUSERICON,(DATATA)=>{
                     MARGINLEFT(DATATA,"10%");
                 });
