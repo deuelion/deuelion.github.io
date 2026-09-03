@@ -1,11 +1,11 @@
 export const USERS=(NAME)=>{
-    CONDITION(NAME,()=>{
+    CONDITION(NAME === "True" ,()=>{
         SESSIONSTORE("Access","True");
     },()=>{
-        CONDITION(NAME === "Delete" ,()=>{
-            SESSIONDELETE("Access");
+        CONDITION(NAME === "False" ,()=>{
+          SESSIONSTORE("Access","False");  
         },()=>{
-            SESSIONSTORE("Access","False");
+            SESSIONDELETE("Access");
         }); 
     });
 };
