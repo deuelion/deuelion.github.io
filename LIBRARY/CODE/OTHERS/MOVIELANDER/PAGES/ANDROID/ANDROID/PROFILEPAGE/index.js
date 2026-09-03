@@ -20,6 +20,11 @@ export const MOVIELANDERANDROIDWEBPROFILEPAGE=()=>{
                     WIDTH(DATATA,"40%");
                     HEIGHT(DATATA,"45px");
                     BACKGROUND(DATATA,"forestgreen");
+                    CLICK(DATATA,()=>{
+                        BOTTOMVIEW("Profile Updates",()=>{
+
+                        });
+                    });
                 });
                 BUTTON(DATA,"Log Out",(DATATA)=>{
                     WIDTH(DATATA,"40%");
@@ -50,8 +55,10 @@ export const MOVIELANDERANDROIDWEBPROFILEPAGE=()=>{
                 LEFTICON(DATA,WHITELOCATIONICON,BLACKLOCATIONICON,(DATATA)=>{
                     MARGINLEFT(DATATA,"10%");
                 });
-                RIGHTTEXT(DATA,"Uganda",(DATATA)=>{
-                    MARGINRIGHT(DATATA,"10%");
+                LOCALGET("TIMEZONE",(Datate)=>{
+                    RIGHTTEXT(DATA,Datate,(DATATA)=>{
+                        MARGINRIGHT(DATATA,"10%");
+                    });
                 });
             });
             HEADER(HOLDER,"PREFERENCES",(DATA)=>{

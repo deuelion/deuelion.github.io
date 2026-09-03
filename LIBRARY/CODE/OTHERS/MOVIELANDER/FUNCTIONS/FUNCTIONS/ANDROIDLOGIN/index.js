@@ -7,6 +7,6 @@ export const ANDROIDLOGINPAGE=()=>{
             MOVIELANDERANDROIDWEBPAGE();
         });
     },()=>{
-        MOVIELANDERANDROIDWEBLOGINPAGE();
+       MOVIELANDERANDROIDWEBLOGINPAGE();
     });
 };

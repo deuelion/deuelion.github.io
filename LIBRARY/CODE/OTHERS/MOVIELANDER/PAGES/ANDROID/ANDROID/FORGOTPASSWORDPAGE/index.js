@@ -3,12 +3,12 @@ export const MOVIELANDERANDROIDWEBFORGOTPASSWORDPAGE=()=>{
     IMAGEVIEW("",MOVIELANDERLOGO,(DATA)=>{
         WIDTH(DATA,"90%");
         HEIGHT(DATA,"30%");
-        BORDERRADIUS(DATA,"20px");
+        BORDERRADIUS(DATA,"5px");
     });
     HEADER("","Your Home Cinema",(DATA)=>{
         FONTSIZE(DATA,"25px");
     });
-    BREAK("",()=>{});BREAK("",()=>{});
+    BREAK("",()=>{});
     INPUT("","email","johndoe@gmail.com","UserEmail",()=>{
     });
     BREAK("",()=>{});BREAK("",()=>{});
