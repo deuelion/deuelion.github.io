@@ -32,7 +32,10 @@ export const AUTH=()=>{
                                 CHECK(!localStorage.getItem("User"),()=>{
                                     INSERTDATA(MAINCONNECTIONAPI,"CONNECTION",HEADER,DATA,(Datata)=>{
                                         LOCALSTORE("User",Datata.uniqueId);
-                                        RELOAD();
+                                        INSERTDATA(localStorage.getItem("API"),"User",HEADER,DATA,(Datata)=>{
+                                            LOCALSTORE("User",Datata.uniqueId);
+                                            RELOAD();
+                                        });
                                     });
                                 });
                             });
