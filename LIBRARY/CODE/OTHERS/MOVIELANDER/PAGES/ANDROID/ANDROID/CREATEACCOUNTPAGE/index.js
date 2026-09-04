@@ -1,5 +1,5 @@
 export const MOVIELANDERANDROIDWEBCREATEACCOUNTPAGE=()=>{
-    MOVIELANDERWELCOMEEMAIL();USERS();CLEAR("");BREAK("",()=>{});
+    USERS();CLEAR("");BREAK("",()=>{});
     IMAGEVIEW("",MOVIELANDERLOGO,(DATA)=>{
         WIDTH(DATA,"90%");
         HEIGHT(DATA,"30%");
@@ -25,7 +25,7 @@ export const MOVIELANDERANDROIDWEBCREATEACCOUNTPAGE=()=>{
                 TOASTEDMESSAGE(sessionStorage.getItem("UserEmail"),"Enter User Email",()=>{
                     TOASTEDMESSAGE(sessionStorage.getItem("UserPassword"),"Enter User Password",()=>{
                         SESSIONGET("WELCOMEMESSAGE",(Message)=>{
-                            CREATEAUTH(MOVIELANDERAPI,"User","WELCOME TO MOVIE LANDER",Message);
+                            MOVIELANDERWELCOMEEMAIL();CREATEAUTH(MOVIELANDERAPI,"User","WELCOME TO MOVIE LANDER",Message);
                         });
                     });
                 });
