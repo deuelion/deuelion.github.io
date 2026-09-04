@@ -29,7 +29,7 @@ export const MOVIELANDERANDROIDWEBLOGINPAGE=()=>{
                 TOASTEDMESSAGE(sessionStorage.getItem("UserPassword"),"Enter User Password",()=>{
                     MOVIELANDERWELCOMEBACKEMAIL();
                     SESSIONGET("WELCOMEMESSAGE",(Message)=>{
-                        AUTH(MOVIELANDERAPI,"User","Movie Lander Login Alert",Message);
+                        AUTH(MOVIELANDERAPI,"User","MOVIE LANDER ALERT",Message);
                     });
                 });
             });
