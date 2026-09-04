@@ -3,7 +3,7 @@ export const LOADINGICON=(HOLDER,CALLBACK)=>{
         WIDTH(DATA,"50px");
         HEIGHT(DATA,"50px");
         BACKGROUND(DATA,"transparent");
-        MARGINTOP(DATA,"40vh");
+        MARGIN(DATA,"");
         DATA.classList.add("spinner");
         const CSS=`
             .spinner {

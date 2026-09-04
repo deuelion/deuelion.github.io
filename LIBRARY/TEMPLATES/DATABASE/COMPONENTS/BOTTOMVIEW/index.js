@@ -4,7 +4,7 @@ export const BOTTOMVIEW=(WORD,CALLBACK)=>{
         ABSOLUTE(DATA);
         OVERFLOW(DATA,"hidden");
         WIDTH(DATA,"100%");
-        HEIGHT(DATA,"");
+        HEIGHT(DATA,"1100%");
         COMPONENTMODE(DATA);
         HEAD(DATA,(DATATA)=>{
             RIGHT(DATA,"0");
