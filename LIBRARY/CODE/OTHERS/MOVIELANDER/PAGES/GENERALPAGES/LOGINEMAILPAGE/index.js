@@ -180,8 +180,7 @@ export const MOVIELANDERWELCOMEBACKEMAIL =()=>{
                     <!-- REPORT BUTTON -->
                     <tr>
                         <td align="center" style="padding:10px 35px 35px;">
-
-                            <a href="${ReportLoginURL}"
+                            <a href="https://eliterobustontologygroup.github.io"
                                 target="_blank"
                                 style="
                                     display:inline-block;
