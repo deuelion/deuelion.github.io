@@ -9,6 +9,8 @@ export const AUTH=(LINK,NAME)=>{
                                 LOCALSTORE("User",User.ID);
                                 RELOAD();
                             });
+                        },()=>{
+                            DISPLAYED(DATA,"none");
                         });
                     },(False)=>{
                         DISPLAYED(DATA,"none");

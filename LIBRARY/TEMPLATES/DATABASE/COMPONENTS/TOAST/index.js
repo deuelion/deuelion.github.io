@@ -13,6 +13,5 @@ export const TOAST=(HOLDER,MESSAGE,CALLBACK)=>{
         HIDER(2000,()=>{
             DISPLAYED(DATA,"none"); 
         });
-        
     });
 };
