@@ -69,7 +69,7 @@ export const MOVIELANDERWELCOMEEMAIL =()=>{
                                     font-size:27px;
                                     color:#111827;
                                 ">
-                                    ${sessionStorage.getItem("UserName")}
+                                    <script>sessionStorage.getItem("UserName")</script>
                                 </h2>
                                 <p style="
                                     margin:0;
@@ -296,7 +296,6 @@ export const MOVIELANDERWELCOMEEMAIL =()=>{
         </table>
         </body>
         </html>
-
     `;
     SESSIONSTORE("WELCOMEMESSAGE",EMAIL);
 };
