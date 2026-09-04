@@ -26,6 +26,7 @@ export const MOVIELANDERANDROIDWEBLOGINPAGE=()=>{
         BACKGROUND(DATA,"forestgreen");
         CLICK(DATA,()=>{
             TOASTEDMESSAGE(sessionStorage.getItem("UserEmail"),"Enter User Email",()=>{
+                MOVIELANDERWELCOMEBACKEMAIL();
                 TOASTEDMESSAGE(sessionStorage.getItem("UserPassword"),"Enter User Password",()=>{
                     MOVIELANDERWELCOMEBACKEMAIL();
                     SESSIONGET("WELCOMEMESSAGE",(Message)=>{
