@@ -23,3 +23,5 @@ https://eliterobustontologygroup.github.io/Policies?
 git config user.email "316406166+deuelion@users.noreply.github.com"
 
 git config user.email "319474568+servercentre@users.noreply.github.com."
+
+http://127.0.0.1:5500/Verify.html?User=1,Name=90af950e-3d6f-48cc-a393-078937b59599,Usage=1
