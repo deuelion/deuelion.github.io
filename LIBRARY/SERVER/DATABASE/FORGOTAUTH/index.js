@@ -4,11 +4,17 @@ export const FORGOTAUTH=(LINK,NAME)=>{
             LOADINGICON(DATA,(DATATA)=>{
                 GETDATA(LINK,NAME,(Data)=>{
                     FINDER(Data,"USEREMAIL",sessionStorage.getItem("UserEmail"),(User)=>{
-                        DISPLAYED(DATA,"none");
-                        TOAST("","Reset Link Sent To Your Email !",()=>{});
+                        TOAST("","Reset Link Sent To Your Email !",()=>{
+
+                        },()=>{
+                            DISPLAYED(DATA,"none");
+                        });
                     },(False)=>{
-                        DISPLAYED(DATA,"none");
-                        TOAST("","No User Account Found",()=>{});
+                        TOAST("","No User Account Found",()=>{
+
+                        },()=>{
+                            DISPLAYED(DATA,"none");
+                        });
                     });
                 });
             });
