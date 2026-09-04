@@ -1,79 +1,302 @@
 export const MOVIELANDERWELCOMEEMAIL =()=>{
-
     const EMAIL=`
-
         <!DOCTYPE html>
-
-        <html>
-
+        <html lang="en">
         <head>
-
             <meta charset="UTF-8">
-
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
         </head>
-
         <body style="
             margin:0;
             padding:0;
-            background:#050505;
-            font-family:Arial,sans-serif;
+            background:#f2f4f8;
+            font-family:Arial, Helvetica, sans-serif;
+            color:#222;
         ">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0"
+            style="background:#f2f4f8; padding:35px 15px;">
+            <tr>
+                <td align="center">
+                    <table width="600" cellpadding="0" cellspacing="0" border="0"
+                        style="
+                            max-width:600px;
+                            width:100%;
+                            background:#ffffff;
+                            border-radius:18px;
+                            overflow:hidden;
+                            box-shadow:0 5px 25px rgba(0,0,0,0.08);
+                        ">
+                        <tr>
+                            <td align="center"
+                                style="
+                                    background:linear-gradient(135deg,#111827,#312e81);
+                                    padding:45px 25px;
+                                    color:#ffffff;
+                                ">
+                                <div style="
+                                    font-size:38px;
+                                    margin-bottom:12px;
+                                ">
+                                    🎬
+                                </div>
+                                <h1 style="
+                                    margin:0;
+                                    font-size:30px;
+                                    letter-spacing:1px;
+                                ">
+                                    MOVIE LANDER
+                                </h1>
+                                <p style="
+                                    margin:12px 0 0;
+                                    font-size:15px;
+                                    color:#dbeafe;
+                                ">
+                                    Your movie journey starts here.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding:40px 35px 20px;">
+                                <p style="
+                                    margin:0 0 10px;
+                                    font-size:16px;
+                                    color:#6b7280;
+                                ">
+                                    Welcome,
+                                </p>
+                                <h2 style="
+                                    margin:0 0 18px;
+                                    font-size:27px;
+                                    color:#111827;
+                                ">
+                                    ${sessionStorage.getItem("UserName")}
+                                </h2>
+                                <p style="
+                                    margin:0;
+                                    font-size:16px;
+                                    line-height:1.7;
+                                    color:#4b5563;
+                                ">
+                                    Welcome to <strong>Movie Lander</strong>! 
+                                    We're excited to have you with us.
+                                    Your account has been successfully created,
+                                    and you're ready to begin exploring your new
+                                    movie experience.
+                                </p>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding:10px 25px 25px;">
+                                <table width="100%" cellpadding="0" cellspacing="0">
+                                    <tr>
+                                        <td width="33%" align="center"
+                                            style="
+                                                padding:20px 8px;
+                                                background:#f8fafc;
+                                                border-radius:12px;
+                                            ">
+                                            <div style="font-size:28px;">
+                                                🎥
+                                            </div>
+                                            <strong style="
+                                                display:block;
+                                                margin-top:8px;
+                                                font-size:14px;
+                                                color:#111827;
+                                            ">
+                                                Discover
+                                            </strong>
+                                            <span style="
+                                                display:block;
+                                                margin-top:5px;
+                                                font-size:12px;
+                                                color:#6b7280;
+                                            ">
+                                                Explore movies
+                                            </span>
+                                        </td>
+                                        <td width="10"></td>
+                                        <td width="33%" align="center"
+                                            style="
+                                                padding:20px 8px;
+                                                background:#f8fafc;
+                                                border-radius:12px;
+                                            ">
+                                            <div style="font-size:28px;">
+                                                ⭐
+                                            </div>
+                                            <strong style="
+                                                display:block;
+                                                margin-top:8px;
+                                                font-size:14px;
+                                                color:#111827;
+                                            ">
+                                                Enjoy
+                                            </strong>
+                                            <span style="
+                                                display:block;
+                                                margin-top:5px;
+                                                font-size:12px;
+                                                color:#6b7280;
+                                            ">
+                                                Find your favorites
+                                            </span>
+                                        </td>
+                                        <td width="10"></td>
+                                        <td width="33%" align="center"
+                                            style="
+                                                padding:20px 8px;
+                                                background:#f8fafc;
+                                                border-radius:12px;
+                                            ">
+                                            <div style="font-size:28px;">
+                                                🚀
+                                            </div>
+                                            <strong style="
+                                                display:block;
+                                                margin-top:8px;
+                                                font-size:14px;
+                                                color:#111827;
+                                            ">
+                                                Get Started
+                                            </strong>
+                                            <span style="
+                                                display:block;
+                                                margin-top:5px;
+                                                font-size:12px;
+                                                color:#6b7280;
+                                            ">
+                                                Start your journey
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding:5px 35px 25px;">
 
-            <div style="
-                max-width:650px;
-                margin:auto;
-                padding:40px;
-                background:#111;
-                color:white;
-                border-radius:20px;
-            ">
+                                <div style="
+                                    background:#eef2ff;
+                                    border-left:4px solid #4f46e5;
+                                    padding:18px;
+                                    border-radius:8px;
+                                ">
 
-                <h1 style="
-                    color:#7c5cff;
-                    font-size:40px;
-                ">
-                    Hello
-                </h1>
+                                    <p style="
+                                        margin:0;
+                                        font-size:14px;
+                                        line-height:1.6;
+                                        color:#3730a3;
+                                    ">
+                                        Before using Movie Lander, please take a
+                                        moment to review our app policies and
+                                        understand the rules and guidelines that
+                                        help keep Movie Lander safe and enjoyable.
+                                    </p>
 
-                <p style="
-                    color:#ccc;
-                    font-size:18px;
-                ">
-                    Welcome to Elite Robust Ontology.
-                </p>
+                                </div>
 
-                <div style="
-                    padding:20px;
-                    background:#222;
-                    border-radius:12px;
-                ">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center" style="padding:10px 35px 35px;">
+                                <a href="https://eliterobustontologygroup.github.io/Policies.html?MHIN2kL9xP4zT8rM6cW1"
+                                target="_blank"
+                                style="
+                                    display:inline-block;
+                                    padding:16px 32px;
+                                    background:#4f46e5;
+                                    color:#ffffff;
+                                    text-decoration:none;
+                                    font-size:15px;
+                                    font-weight:bold;
+                                    border-radius:10px;
+                                ">
+                                    📄 &nbsp; View App Policy
+                                </a>
+                                <p style="
+                                    margin:15px 0 0;
+                                    font-size:12px;
+                                    color:#9ca3af;
+                                ">
+                                    Please review the policy before using the app.
+                                </p>
 
-                    Your account is now active.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="padding:0 35px;">
+                                <div style="
+                                    height:1px;
+                                    background:#e5e7eb;
+                                "></div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center"
+                                style="padding:30px 35px;">
 
-                </div>
+                                <h3 style="
+                                    margin:0 0 10px;
+                                    color:#111827;
+                                    font-size:19px;
+                                ">
+                                    Thank you for joining Movie Lander! 🍿
+                                </h3>
 
-                <br>
+                                <p style="
+                                    margin:0;
+                                    font-size:14px;
+                                    line-height:1.6;
+                                    color:#6b7280;
+                                ">
+                                    We hope you enjoy discovering and exploring
+                                    everything Movie Lander has to offer.
+                                </p>
 
-                <a href="https://example.com"
-                style="
-                    display:inline-block;
-                    padding:14px 25px;
-                    background:#7c5cff;
-                    color:white;
-                    text-decoration:none;
-                    border-radius:10px;
-                ">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td align="center"
+                                style="
+                                    background:#111827;
+                                    padding:25px 20px;
+                                    color:#9ca3af;
+                                ">
 
-                    Continue
+                                <div style="
+                                    color:#ffffff;
+                                    font-size:15px;
+                                    font-weight:bold;
+                                    margin-bottom:8px;
+                                ">
+                                    MOVIE LANDER
+                                </div>
 
-                </a>
-
-            </div>
-
+                                <p style="
+                                    margin:0;
+                                    font-size:11px;
+                                    line-height:1.6;
+                                ">
+                                    This is an automated email.
+                                    Please do not reply directly to this message.
+                                </p>
+                                <p style="
+                                    margin:10px 0 0;
+                                    font-size:11px;
+                                ">
+                                    © 2026 Movie Lander. All rights reserved.
+                                </p>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
         </body>
-
         </html>
-    
+
     `;
     SESSIONSTORE("WELCOMEMESSAGE",EMAIL);
 };
