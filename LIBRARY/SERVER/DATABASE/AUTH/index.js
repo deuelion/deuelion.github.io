@@ -14,7 +14,7 @@ export const AUTH=(LINK,NAME)=>{
                         });
                     },(False)=>{
                         TOAST("","No User Account Found",()=>{
-
+                            DISPLAYED(DATA,"none");
                         },()=>{
                             DISPLAYED(DATA,"none");
                         });

@@ -5,7 +5,7 @@ export const CREATEAUTH=(LINK,NAME,TITLE,MESSAGE)=>{
                 GETDATA(LINK,NAME,(Data)=>{
                     FINDER(Data,"USEREMAIL",sessionStorage.getItem("UserEmail"),(User)=>{
                         TOAST("","User With Account Found,Log In",()=>{
-                            
+                            DISPLAYED(DATA,"none");
                         },()=>{
                             DISPLAYED(DATA,"none");
                         });
