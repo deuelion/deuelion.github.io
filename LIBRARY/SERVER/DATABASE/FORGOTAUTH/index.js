@@ -3,12 +3,9 @@ export const FORGOTAUTH=(LINK,NAME)=>{
         TOAST("","Please Wait,Verification In Progress!",()=>{            
             GETDATA(LINK,NAME,(Data)=>{
                 FINDER(Data,"USEREMAIL",sessionStorage.getItem("UserEmail"),(User)=>{
-                    TOASTEDMESSAGE(User.USEREMAIL === sessionStorage.getItem("UserEmail"),"Wrong User Email",()=>{
-                        CHECK(!localStorage.getItem("User"),()=>{
-                            LOCALSTORE("User",User.ID);
-                            RELOAD();
-                        });
-                    });
+                    TOAST("","Reset Link Sent To Your Email !",()=>{});
+                },(False)=>{
+                    TOAST("","No User Account Found",()=>{});
                 });
             });
         });
