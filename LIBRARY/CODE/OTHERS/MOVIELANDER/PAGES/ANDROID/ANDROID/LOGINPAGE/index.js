@@ -1,5 +1,5 @@
 export const MOVIELANDERANDROIDWEBLOGINPAGE=()=>{
-    CLEAR("");BREAK("",()=>{});
+    USERS();CLEAR("");BREAK("",()=>{});
     IMAGEVIEW("",MOVIELANDERLOGO,(DATA)=>{
         WIDTH(DATA,"90%");
         HEIGHT(DATA,"30%");
@@ -27,7 +27,7 @@ export const MOVIELANDERANDROIDWEBLOGINPAGE=()=>{
         CLICK(DATA,()=>{
             TOASTEDMESSAGE(sessionStorage.getItem("UserEmail"),"Enter User Email",()=>{
                 TOASTEDMESSAGE(sessionStorage.getItem("UserPassword"),"Enter User Password",()=>{
-                    USERS("True");AUTH();
+                    AUTH(MOVIELANDERAPI,"User");
                 });
             });
         });

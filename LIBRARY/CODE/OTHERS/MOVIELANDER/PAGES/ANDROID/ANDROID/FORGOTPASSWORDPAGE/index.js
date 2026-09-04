@@ -1,5 +1,5 @@
 export const MOVIELANDERANDROIDWEBFORGOTPASSWORDPAGE=()=>{
-    CLEAR("");BREAK("",()=>{});
+    USERS();CLEAR("");BREAK("",()=>{});
     IMAGEVIEW("",MOVIELANDERLOGO,(DATA)=>{
         WIDTH(DATA,"90%");
         HEIGHT(DATA,"30%");
@@ -16,7 +16,7 @@ export const MOVIELANDERANDROIDWEBFORGOTPASSWORDPAGE=()=>{
         BACKGROUND(DATA,"forestgreen");
         CLICK(DATA,()=>{
             TOASTEDMESSAGE(sessionStorage.getItem("UserEmail"),"Enter User Email",()=>{
-                USERS("");AUTH();
+                FORGOTAUTHAUTH(MOVIELANDERAPI,"User");
             });
         });
     });
