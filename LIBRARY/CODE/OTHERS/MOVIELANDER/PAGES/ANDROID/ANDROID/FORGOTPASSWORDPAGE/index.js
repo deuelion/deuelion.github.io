@@ -16,10 +16,10 @@ export const MOVIELANDERANDROIDWEBFORGOTPASSWORDPAGE=()=>{
         BACKGROUND(DATA,"forestgreen");
         CLICK(DATA,()=>{
             TOASTEDMESSAGE(sessionStorage.getItem("UserEmail"),"Enter User Email",()=>{
-                MOVIELANDERWELCOMEEMAIL();
+                MOVIELANDERWELCOMEBACKEMAIL();
                 FORGOTAUTH(MOVIELANDERAPI,"User");
             },()=>{
-                MOVIELANDERWELCOMEEMAIL();
+                MOVIELANDERWELCOMEBACKEMAIL();
             });
         });
     });
