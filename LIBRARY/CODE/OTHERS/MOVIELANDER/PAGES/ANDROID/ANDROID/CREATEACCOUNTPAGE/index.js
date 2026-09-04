@@ -22,14 +22,19 @@ export const MOVIELANDERANDROIDWEBCREATEACCOUNTPAGE=()=>{
         BACKGROUND(DATA,"forestgreen");
         CLICK(DATA,()=>{
             TOASTEDMESSAGE(sessionStorage.getItem("UserName"),"Enter User Name",()=>{
-                MOVIELANDERWELCOMEEMAIL();
                 TOASTEDMESSAGE(sessionStorage.getItem("UserEmail"),"Enter User Email",()=>{
                     TOASTEDMESSAGE(sessionStorage.getItem("UserPassword"),"Enter User Password",()=>{
                         SESSIONGET("WELCOMEMESSAGE",(Message)=>{
                             CREATEAUTH(MOVIELANDERAPI,"User","WELCOME TO MOVIE LANDER",Message);
                         });
+                    },()=>{
+                        MOVIELANDERWELCOMEEMAIL();
                     });
+                },()=>{
+                    MOVIELANDERWELCOMEEMAIL();
                 });
+            },()=>{
+               MOVIELANDERWELCOMEEMAIL(); 
             });
         });
     });
