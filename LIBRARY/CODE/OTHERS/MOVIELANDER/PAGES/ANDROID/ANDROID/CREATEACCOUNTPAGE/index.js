@@ -9,13 +9,13 @@ export const MOVIELANDERANDROIDWEBCREATEACCOUNTPAGE=()=>{
         FONTSIZE(DATA,"25px");
     });
     BREAK("",()=>{});
-    INPUT("","email","John Doe","UserName",()=>{
+    INPUT("","text","John Doe","UserName",()=>{
     });
     BREAK("",()=>{});BREAK("",()=>{});
     INPUT("","email","johndoe@gmail.com","UserEmail",()=>{
     });
     BREAK("",()=>{});BREAK("",()=>{});
-    INPUT("","email","********","UserPassword",()=>{
+    INPUT("","password","********","UserPassword",()=>{
     });
     BREAK("",()=>{});BREAK("",()=>{});
     BUTTON("","Sign Up",(DATA)=>{

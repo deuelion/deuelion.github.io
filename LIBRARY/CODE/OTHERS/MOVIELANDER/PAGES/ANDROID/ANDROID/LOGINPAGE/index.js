@@ -12,7 +12,7 @@ export const MOVIELANDERANDROIDWEBLOGINPAGE=()=>{
     INPUT("","email","johndoe@gmail.com","UserEmail",()=>{
     });
     BREAK("",()=>{});BREAK("",()=>{});
-    INPUT("","email","********","UserPassword",()=>{
+    INPUT("","password","********","UserPassword",()=>{
     });
     BREAK("",()=>{});BREAK("",()=>{});
     RIGHTTEXT("","Forgot Password ?",(DATA)=>{
