@@ -27,11 +27,14 @@ export const MOVIELANDERANDROIDWEBLOGINPAGE=()=>{
         CLICK(DATA,()=>{
             TOASTEDMESSAGE(sessionStorage.getItem("UserEmail"),"Enter User Email",()=>{
                 TOASTEDMESSAGE(sessionStorage.getItem("UserPassword"),"Enter User Password",()=>{
-                    MOVIELANDERWELCOMEBACKEMAIL();
                     SESSIONGET("WELCOMEMESSAGE",(Message)=>{
                         AUTH(MOVIELANDERAPI,"User","MOVIE LANDER ALERT",Message);
                     });
+                },()=>{
+                    MOVIELANDERWELCOMEBACKEMAIL();
                 });
+            },()=>{
+                MOVIELANDERWELCOMEBACKEMAIL();
             });
         });
     });
