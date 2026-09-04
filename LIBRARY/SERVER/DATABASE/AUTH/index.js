@@ -13,8 +13,11 @@ export const AUTH=(LINK,NAME)=>{
                             DISPLAYED(DATA,"none");
                         });
                     },(False)=>{
-                        DISPLAYED(DATA,"none");
-                        TOAST("","No User Account Found",()=>{});
+                        TOAST("","No User Account Found",()=>{
+
+                        },()=>{
+                            DISPLAYED(DATA,"none");
+                        });
                     });
                 });
             });
