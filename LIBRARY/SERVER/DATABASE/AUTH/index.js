@@ -1,4 +1,4 @@
-export const AUTH=(LINK,NAME)=>{
+export const AUTH=(LINK,NAME,TITLE,MESSAGE)=>{
     OFFLINE(()=>{
         BOTTOMVIEWSPAGE((DATA)=>{
             LOADINGICON(DATA,(DATATA)=>{
@@ -7,7 +7,10 @@ export const AUTH=(LINK,NAME)=>{
                         TOASTEDMESSAGE(User.USERPASSWORD === sessionStorage.getItem("UserPassword"),"Wrong User Password",()=>{
                             CHECK(!localStorage.getItem("User"),()=>{
                                 LOCALSTORE("User",User.ID);
-                                RELOAD();
+                                SESSIONSTORE("UserName",User.USERNAME);
+                                SENDEMAIL(ELITEMAILAPI,sessionStorage.getItem("UserEmail"),TITLE,MESSAGE,(Datatata)=>{
+                                    RELOAD();
+                                });
                             });
                         },()=>{
                             DISPLAYED(DATA,"none");
