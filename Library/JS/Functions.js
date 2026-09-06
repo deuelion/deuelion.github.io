@@ -12,3 +12,4 @@ const INJECTCSS = (STYLES) => {
   style.textContent = STYLES;
   document.head.appendChild(style);
 };
+
