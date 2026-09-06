@@ -4,8 +4,8 @@ export const AUTH=(LINK,NAME,TITLE)=>{
             LOADINGICON(DATA,(DATATA)=>{
                 GETDATA(LINK,NAME,(Data)=>{
                     FINDER(Data,"USEREMAIL",sessionStorage.getItem("UserEmail"),(User)=>{
-                        SESSIONSTORE("UserName",User.FIRSTNAME);
-                        TOASTEDMESSAGE(User.USERPASSWORD === sessionStorage.getItem("UserPassword"),"Wrong User Password",()=>{
+                        TOASTEDMESSAGE(sessionStorage.getItem("UserPassword") === User.USERPASSWORD,"Wrong User Password",()=>{
+                            SESSIONSTORE("UserName",User.FIRSTNAME);
                             MOVIELANDERWELCOMEBACKEMAIL();
                             SESSIONGET("WELCOMEMESSAGE",(MESSAGES)=>{
                                 SENDEMAIL(ELITEMAILAPI,sessionStorage.getItem("UserEmail"),TITLE,MESSAGES,(Datatata)=>{
