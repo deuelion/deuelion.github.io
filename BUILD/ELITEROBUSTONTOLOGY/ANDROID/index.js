@@ -1,6 +1,0 @@
-DISPLAY("",`
-    
-   <h1> WELCOME TO ELITEROBUSTONTOLOGY ANDROID </h1>
-
-    
-`);
