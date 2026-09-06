@@ -4,7 +4,7 @@ export const FORGOTAUTH=(LINK,NAME,TITLE)=>{
             LOADINGICON(DATA,(DATATA)=>{
                 GETDATA(LINK,NAME,(Data)=>{
                     FINDER(Data,"USEREMAIL",sessionStorage.getItem("UserEmail"),(User)=>{
-                        MOVIELANDERWELCOMEBACKEMAIL();
+                        MOVIELANDERWELCOMEFORGOTEMAIL();
                         CHECK(!localStorage.getItem("User"),()=>{
                             SESSIONGET("WELCOMEMESSAGE",(MESSAGE)=>{
                                 SENDEMAIL(ELITEMAILAPI,sessionStorage.getItem("UserEmail"),TITLE,MESSAGE,(Datatata)=>{

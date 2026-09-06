@@ -18,7 +18,7 @@ export const MOVIELANDERANDROIDWEBFORGOTPASSWORDPAGE=()=>{
             TOASTEDMESSAGE(sessionStorage.getItem("UserEmail"),"Enter User Email",()=>{
                 FORGOTAUTH(MOVIELANDERAPI,"User","MOVIE LANDER ACCOUNT ALERT");
             },()=>{
-                MOVIELANDERWELCOMEBACKEMAIL();
+                MOVIELANDERWELCOMEFORGOTEMAIL();
             });
         });
     });
