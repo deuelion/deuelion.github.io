@@ -1,44 +1,79 @@
 export const GETINDEX = (DATABASE, STORE, CALLBACK) => {
+
     let completed = false;
+
     const finish = (data) => {
+
         if (completed) return;
+
         completed = true;
+
         CALLBACK(data);
+
     };
+
     try {
+
         const request = indexedDB.open(DATABASE);
+
         request.onerror = () => {
-            finish([]);
+
+            finish(null);
+
         };
+
         request.onsuccess = () => {
+
             const db = request.result;
+
             if (!db.objectStoreNames.contains(STORE)) {
+
                 db.close();
-                finish([]);
+
+                finish(null);
+
                 return;
-            };
+
+            }
+
             const transaction = db.transaction(STORE, "readonly");
+
             const objectStore = transaction.objectStore(STORE);
+
             const getRequest = objectStore.getAll();
+
             getRequest.onsuccess = () => {
-                const records = getRequest.result || [];
+
+                const records = getRequest.result;
+
                 db.close();
-                if (records.length > 0 && Array.isArray(records[0].Data)) {
-                    finish(records[0].Data);
-                } else {
-                    finish([]);
-                };
+
+                finish(records);
+
             };
+
             getRequest.onerror = () => {
+
                 db.close();
-                finish([]);
+
+                finish(null);
+
             };
+
             transaction.onerror = () => {
+
                 db.close();
-                finish([]);
+
+                finish(null);
+
             };
+
         };
+
     } catch (error) {
-        finish([]);
-    };
+
+        finish(null);
+
+    }
+
 };
