@@ -10,18 +10,68 @@ export const MOVIELANDERANDROIDWEBPROFILEPAGE=()=>{
         });
     },(HOLDER)=>{
         GETUSERDATAAPP((Data)=>{
-            console.log(Data)
-            INLINEVIEW(HOLDER,(DATA)=>{
-                    BACKGROUND(DATA,"red")
-                IMAGEVIEW(DATA,MOVIELANDERLOGO,(IMG)=>{
-                    WIDTH(IMG,"100px");
-                    HEIGHT(IMG,"100px");
-                    BORDERRADIUS(IMG,"50px");
-                    MARGIN(IMG,"");
-                    MARGINLEFT(IMG,"1%");
-                });
-                HEADER(DATA,"Name",()=>{
+            VIEWS(HOLDER,(DATA)=>{
+                WIDTH(DATA,"95%");
+                HEIGHT(DATA,"200px");
+                VIEWS(DATA,(DATATA)=>{
+                    HEIGHT(DATATA,"150px");
+                    INLINEVIEW(DATATA,(HOLDERS)=>{
+                        IMAGEVIEW(HOLDERS,MOVIELANDERLOGO,(IMG)=>{
+                            BORDERRADIUS(IMG,"10px");
+                            WIDTH(IMG,"100px");
+                            HEIGHT(IMG,"90px");
+                            MARGIN(IMG,"");
+                            MARGINTOP(IMG,"2%");
+                            MARGINLEFT(IMG,"2%");
+                        });
+                        INLINEVIEW(HOLDERS,(HOLDERES)=>{
+                            ABSOLUTE(HOLDERES);
+                            TOP(HOLDERES,"50px");
+                            LEFT(HOLDERES,"145px");
+                            WIDTH(HOLDERES,"100px");
+                            HEIGHT(HOLDERES,"50px");
+                            BUTTON(HOLDERES,"Edit",(BTN)=>{
+                                BACKGROUND(BTN,"forestgreen");
+                                WIDTH(BTN,"100px");
+                            });
+                        })
+                        INLINEVIEW(HOLDERS,(HOLDERES)=>{
+                            ABSOLUTE(HOLDERES);
+                            TOP(HOLDERES,"50px");
+                            RIGHT(HOLDERES,"20px");
+                            WIDTH(HOLDERES,"80px");
+                            HEIGHT(HOLDERES,"50px");
+                            BUTTON(HOLDERES,"Verified",(BTN)=>{
+                                BACKGROUND(BTN,"forestgreen");
+                                WIDTH(BTN,"100px");
+                            });
+                        })
+                        HEADER(HOLDERS,Data.FIRSTNAME,(DATATE)=>{
+                            MARGINTOP(DATATE,"5%");
+                            FONTSIZE(DATATA,"25px");
+                        });
 
+                    });
+
+                });
+                VIEWS(DATA,(DATATA)=>{
+                    HEIGHT(DATATA,"50px");
+                    INLINEFLEX(DATATA);
+                    BUTTON(DATATA,"Watched",(BTN)=>{
+                        MARGIN(BTN,"");
+                        BACKGROUND(BTN,"forestgreen");
+                        WIDTH(BTN,"100px");
+                    });
+                    BUTTON(DATATA,"Hours",(BTN)=>{
+                        MARGIN(BTN,"");
+                        BACKGROUND(BTN,"forestgreen");
+                        WIDTH(BTN,"100px");
+                    });
+                    BUTTON(DATATA,"Premium",(BTN)=>{
+                        MARGIN(BTN,"");
+                        BACKGROUND(BTN,"forestgreen");
+                        WIDTH(BTN,"100px");
+                    });
                 });
             });
         });
