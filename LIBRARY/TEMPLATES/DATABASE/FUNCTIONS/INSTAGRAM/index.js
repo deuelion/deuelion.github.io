@@ -1,3 +1,3 @@
 export const INSTAGRAM=(USERNAME)=>{
-    location.href=LINK;
+    location.href="https://www.instagram.com/"+USERNAME;
 };

@@ -1,3 +1,3 @@
 export const TWITTER=(USERNAME)=>{
-    location.href=LINK;
+    location.href="https://x.com/"+USERNAME;
 };

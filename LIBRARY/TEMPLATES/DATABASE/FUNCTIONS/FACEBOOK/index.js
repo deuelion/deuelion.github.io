@@ -1,3 +1,3 @@
 export const FACEBOOK=(USERNAME)=>{
-    location.href=LINK;
+    location.href="https://www.facebook.com"+USERNAME;
 };

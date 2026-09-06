@@ -1,3 +1,3 @@
 export const WHATSAPP=(NUMBER)=>{
-    location.href=LINK;
+    location.href="https://wa.me/"+NUMBER;
 };

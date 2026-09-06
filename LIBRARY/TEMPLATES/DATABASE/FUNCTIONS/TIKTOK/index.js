@@ -1,3 +1,3 @@
 export const TIKTOK=(USERNAME)=>{
-    location.href=LINK;
+    location.href="https://www.tiktok.com/@"+USERNAME;
 };

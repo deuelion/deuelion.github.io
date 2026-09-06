@@ -1,3 +1,3 @@
 export const YOUTUBE=(USERNAME)=>{
-    location.href=LINK;
+    location.href="https://www.youtube.com/@"+USERNAME;
 };
