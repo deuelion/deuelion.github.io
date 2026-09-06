@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://eliterobustontology.github.io/sitemap.xml
