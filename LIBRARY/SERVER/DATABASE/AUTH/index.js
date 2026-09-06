@@ -10,7 +10,7 @@ export const AUTH=(LINK,NAME,TITLE)=>{
                             CHECK(!localStorage.getItem("User"),()=>{
                                 LOCALSTORE("User",User.ID);
                                 SESSIONGET("WELCOMEMESSAGE",(MESSAGE)=>{
-                                    SENDEMAIL(ELITEMAILAPI,User.USEREMAIL,TITLE,MESSAGE,(Datatata)=>{
+                                    SENDEMAIL(ELITEMAILAPI,sessionStorage.getItem("UserEmail"),TITLE,MESSAGE,(Datatata)=>{
                                         RELOAD();
                                     });
                                 });
