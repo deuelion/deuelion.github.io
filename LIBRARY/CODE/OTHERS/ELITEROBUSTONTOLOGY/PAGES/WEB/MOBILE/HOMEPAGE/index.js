@@ -1,0 +1,80 @@
+export const ELITEROBUSTONTOLOGYWEBMOBILEPAGE=()=>{
+    HEADERVIEWSPAGE((HOLDER)=>{
+        LEFTICON(HOLDER,ELITEROBUSTONTOLOGYLOGO,ELITEROBUSTONTOLOGYLOGO,()=>{
+        });
+        HEADER(HOLDER,"Elite Robust Ontology",()=>{
+        });
+        RIGHTICON(HOLDER,WHITEMENUICON,BLACKMENUICON,(DATA)=>{
+            CLICK(DATA,()=>{
+                MENUVIEW("",(DATATA)=>{
+                    ELITEROBUSTONTOLOGYWEBMOBILEMENUPAGE(DATATA);
+                });
+            });
+        });
+    },(HOLDER)=>{
+        BREAK(HOLDER,()=>{});
+        HEADER(HOLDER,"WELCOME",(DATA)=>{
+            FONTSIZE(DATA,"30px");
+            COLOR(DATA,"Orange");
+        });
+        BREAK(HOLDER,()=>{});
+        const Msg="Building Reliable Digital Solutions For A Smarter Tomorrow.";
+        LEFTTEXT(HOLDER,Msg,(DATA)=>{
+            FONTSIZE(DATA,"28px");
+        });
+        INLINEVIEW(HOLDER,(DATA)=>{
+            MARGINTOP(DATA,"10%");
+            BUTTON(DATA,"Our Services",(DATATA)=>{
+                BACKGROUND(DATATA,BLUE);
+                WIDTH(DATATA,"40%");
+                BORDERRADIUS(DATATA,"10px");
+            });
+            BUTTON(DATA,"Contact US",(DATATA)=>{
+                BACKGROUND(DATATA,"forestgreen");
+                WIDTH(DATATA,"40%");
+                BORDERRADIUS(DATATA,"10px");
+            });
+        });
+        VIEWS(HOLDER,(DATA)=>{
+            WIDTH(DATA,"90%");
+            HEIGHT(DATA,"200px");
+            BORDERRADIUS(DATA,"20px");
+            BACKGROUND(DATA,"forestgreen");
+            INLINEFLEX(DATA);
+            IMAGEVIEW(DATA,WHITEPRIVACYPOLICYICON,(DATATA)=>{
+                MARGIN(DATATA,"");
+                WIDTH(DATATA,"100px");
+                MARGINLEFT(DATATA,"1%");
+                HEIGHT(DATATA,"100px");
+                BORDERRADIUS(DATATA,"20px");
+                BACKGROUND(DATATA,"transparent");
+            });
+        });
+        BREAK(HOLDER,()=>{});BREAK(HOLDER,()=>{});
+        VIEWS(HOLDER,(DATA)=>{
+            WIDTH(DATA,"90%");
+            HEIGHT(DATA,"200px");
+            BORDERRADIUS(DATA,"20px");
+            BACKGROUND(DATA,"forestgreen");
+            INLINEFLEX(DATA);
+            IMAGEVIEW(DATA,WHITEPRIVACYPOLICYICON,(DATATA)=>{
+                MARGIN(DATATA,"");
+                WIDTH(DATATA,"100px");
+                MARGINLEFT(DATATA,"1%");
+                HEIGHT(DATATA,"100px");
+                BORDERRADIUS(DATATA,"20px");
+                BACKGROUND(DATATA,"transparent");
+            });
+        });
+        BREAK(HOLDER,()=>{});BREAK(HOLDER,()=>{});
+        INLINEVIEW(HOLDER,(DATA)=>{
+            ICONS(DATA,COLOREDINSTAGRAM,COLOREDINSTAGRAM,()=>{});
+            ICONS(DATA,WHITEXICON,BLACKXICON,()=>{});
+            ICONS(DATA,COLOREDFACEBOOKICON,COLOREDFACEBOOKICON,()=>{});
+            ICONS(DATA,COLOREDTIKTOKICON,COLOREDTIKTOKICON,()=>{});
+        });
+        BREAK(HOLDER,()=>{});BREAK(HOLDER,()=>{});
+        HEADER(HOLDER,"Elite Robust Ontology",()=>{});
+        BREAK(HOLDER,()=>{});BREAK(HOLDER,()=>{});
+    });
+};

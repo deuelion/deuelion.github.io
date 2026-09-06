@@ -1,0 +1,12 @@
+export const SHYLANSIRAJANDROIDLIKEDITEMPAGE=()=>{
+    HEADERVIEWSPAGE((HOLDER)=>{
+        LEFTICON(HOLDER,WHITEBACKICON,BLACKBACKICON,(DATA)=>{
+            CLICK(DATA,()=>{
+                ROUTE("",SHYLANSIRAJANDROIDHOMEPAGE,"SHYLANSIRAJANDROIDHOMEPAGE");
+            });
+        });
+        RIGHTTEXT(HOLDER,"Saved Items",(DATA)=>{});
+    },(HOLDER)=>{
+
+    });
+};
