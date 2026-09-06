@@ -6,8 +6,9 @@ export const AUTH=(LINK,NAME,TITLE)=>{
                     FINDER(Data,"USEREMAIL",sessionStorage.getItem("UserEmail"),(User)=>{
                         SESSIONSTORE("UserName",User.FIRSTNAME);
                         TOASTEDMESSAGE(User.USERPASSWORD === sessionStorage.getItem("UserPassword"),"Wrong User Password",()=>{
+                            MOVIELANDERWELCOMEBACKEMAIL();
                             CHECK(!localStorage.getItem("User"),()=>{
-                                MOVIELANDERWELCOMEBACKEMAIL();LOCALSTORE("User",User.ID);
+                                LOCALSTORE("User",User.ID);
                                 SESSIONGET("WELCOMEMESSAGE",(MESSAGE)=>{
                                     SENDEMAIL(ELITEMAILAPI,User.USEREMAIL,TITLE,MESSAGE,(Datatata)=>{
                                         RELOAD();

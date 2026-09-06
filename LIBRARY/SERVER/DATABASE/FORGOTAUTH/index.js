@@ -8,8 +8,8 @@ export const FORGOTAUTH=(LINK,NAME,TITLE)=>{
                         CHECK(!localStorage.getItem("User"),()=>{
                             MOVIELANDERWELCOMEFORGOTEMAIL();
                             SESSIONGET("WELCOMEMESSAGE",(MESSAGE)=>{
-                                SENDEMAIL(ELITEMAILAPI,sessionStorage.getItem("UserEmail"),TITLE,MESSAGE,(Datatata)=>{
-                                    TOAST("","Check Your Email For Further Proccess",()=>{
+                                SENDEMAIL(ELITEMAILAPI,User.USEREMAIL,TITLE,MESSAGE,(Datatata)=>{
+                                    TOAST("","Check Your Email For Access Instructions",()=>{
                                         DISPLAYED(DATA,"none");
                                     });
                                 });
