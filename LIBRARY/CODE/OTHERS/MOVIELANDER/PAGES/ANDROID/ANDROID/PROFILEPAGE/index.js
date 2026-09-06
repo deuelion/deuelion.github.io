@@ -18,8 +18,8 @@ export const MOVIELANDERANDROIDWEBPROFILEPAGE=()=>{
                     INLINEVIEW(DATATA,(HOLDERS)=>{
                         IMAGEVIEW(HOLDERS,MOVIELANDERLOGO,(IMG)=>{
                             BORDERRADIUS(IMG,"10px");
-                            WIDTH(IMG,"100px");
-                            HEIGHT(IMG,"90px");
+                            WIDTH(IMG,"130px");
+                            HEIGHT(IMG,"93px");
                             MARGIN(IMG,"");
                             MARGINTOP(IMG,"2%");
                             MARGINLEFT(IMG,"2%");
