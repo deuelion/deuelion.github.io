@@ -9,6 +9,8 @@ const NATIVEDATA=`ROUTED(localStorage.getItem("API"));
 ROUTED(localStorage.getItem("STYLES"));
 ROUTED(localStorage.getItem("COMPONENTS"));
 ROUTED(localStorage.getItem("FUNCTIONS"));
+ROUTED(localStorage.getItem("PROJECTSGENERAL"));
+ROUTED(localStorage.getItem("PROJECTS"));
 `;
 fetch(GETDATAAPI,{
     mode:"cors",
@@ -27,8 +29,55 @@ fetch(GETDATAAPI,{
         localStorage.setItem("COMPONENTS",COMPONENTS);
         const APIS=user.APIS;
         localStorage.setItem("APIS",APIS);
-        localStorage.setItem("Native",Date.now());
-        localStorage.setItem("NATIVER",NATIVEDATA)
+        const DATA2={
+            "spreadsheetUrl":"https://docs.google.com/spreadsheets/d/16LFihiUWEqvV5Np064F1MVQiNf9f4d12FPbiRUT73-4/edit?usp=sharing",
+            "sheetName":"PROJECTS",
+        };
+        fetch(GETDATAAPI,{
+            mode:"cors",
+            method:"POST",
+            body: JSON.stringify(DATA2)
+        })
+        .then(res =>res.json())
+        .then(Datata =>{
+            const users = Datata.find((item) => item.NAME === document.title);
+            if (users && users.ACCESS) {
+                if (localStorage.getItem("ENV") === "ANDROID") {
+                    const PROJECTS=users.ANDROID+users.ANDROIDONE+users.ANDROIDTWO+users.ANDROIDTHREE+users.ANDROIDFOUR+users.ANDROIDFIVE;
+                    localStorage.setItem("PROJECTS",PROJECTS);
+                    localStorage.setItem("NATIVER",NATIVEDATA);
+                    if (!localStorage.getItem("Native")) {
+                        localStorage.setItem("Native",Date.now());
+                        location.reload();
+                    };
+                } else {
+                    if (localStorage.getItem("ENV") === "DESKTOP") {
+                        const PROJECTS=users.DESKTOP+users.DESKTOPONE+users.DESKTOPTWO+users.DESKTOPTHREE+users.DESKTOPFOUR+users.DESKTOPFIVE;
+                        localStorage.setItem("PROJECTS",PROJECTS);
+                        localStorage.setItem("NATIVER",NATIVEDATA);
+                        if (!localStorage.getItem("Native")) {
+                            localStorage.setItem("Native",Date.now());
+                            location.reload();
+                        };
+                    } else {
+                        const PROJECTS=users.PAGES+users.PAGESONE+users.PAGESTWO+users.PAGESTHREE+users.PAGESFOUR+users.PAGESFIVE;
+                        localStorage.setItem("PROJECTS",PROJECTS);
+                        localStorage.setItem("NATIVER",NATIVEDATA);
+                        if (!localStorage.getItem("Native")) {
+                            localStorage.setItem("Native",Date.now());
+                            location.reload();
+                        };
+                    };
+                };
+                const PROJECTSGENERAL=users.GENERAL+users.GENERALONE+users.GENERALTWO;
+                localStorage.setItem("PROJECTSGENERAL",PROJECTSGENERAL);
+            } else {
+                BODY.innerHTML=`
+                    <h1>PROJECT WAS DISCONTINUED</h1>
+                `;
+            };
+        })
+        .catch(Error =>{console.log(Error)})
     } else {
         BODY.innerHTML=`
             <h1>CONNECTION ERROR TO SERVER</h1>
