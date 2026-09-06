@@ -1,4 +1,4 @@
-export const MOVIELANDERWELCOMEBACKEMAIL =()=>{
+export const MOVIELANDERWELCOMEFORGOTEMAIL =()=>{
     const EMAIL=`
         <!DOCTYPE html>
         <html lang="en">
@@ -292,5 +292,3 @@ export const MOVIELANDERWELCOMEBACKEMAIL =()=>{
     `;
     SESSIONSTORE("WELCOMEMESSAGE",EMAIL);
 };
-
-// Not Con

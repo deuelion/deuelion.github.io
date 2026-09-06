@@ -26,12 +26,8 @@ export const MOVIELANDERANDROIDWEBLOGINPAGE=()=>{
         BACKGROUND(DATA,"forestgreen");
         CLICK(DATA,()=>{
             TOASTEDMESSAGE(sessionStorage.getItem("UserEmail"),"Enter User Email",()=>{
-                MOVIELANDERWELCOMEBACKEMAIL();
                 TOASTEDMESSAGE(sessionStorage.getItem("UserPassword"),"Enter User Password",()=>{
-                    MOVIELANDERWELCOMEBACKEMAIL();
-                    SESSIONGET("WELCOMEMESSAGE",(Message)=>{
-                        AUTH(MOVIELANDERAPI,"User","MOVIE LANDER ALERT",Message);
-                    });
+                    AUTH(MOVIELANDERAPI,"User","MOVIE LANDER ALERT");
                 },()=>{
                     MOVIELANDERWELCOMEBACKEMAIL();
                 });
