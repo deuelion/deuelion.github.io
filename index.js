@@ -89,6 +89,42 @@ const ONLINE=()=>{
 };
 const OFFLINE=()=>{
 
+    const script = document.createElement("script");
+    script.type = "module";
+    script.defer=true;
+    script.src = "./Library/JS/Functions.js";
+    document.head.appendChild(script);
+
+    const script2 = document.createElement("script");
+    script2.type = "module";
+    script2.defer=true;
+    script2.src = "./Library/JS/FunctionsOne.js";
+    document.head.appendChild(script2);
+
+    const script3 = document.createElement("script");
+    script3.type = "module";
+    script3.defer=true;
+    script3.src = "./Library/JS/FunctionsTwo.js";
+    document.head.appendChild(script3);
+
+    const script4 = document.createElement("script");
+    script4.type = "module";
+    script4.defer=true;
+    script4.src = "./Library/JS/FunctionsThree.js";
+    document.head.appendChild(script4);
+
+    const script5 = document.createElement("script");
+    script5.type = "module";
+    script5.defer=true;
+    script5.src = "./Library/JS/FunctionsFour.js";
+    document.head.appendChild(script5);
+
+    const script6 = document.createElement("script");
+    script6.type = "module";
+    script6.defer=true;
+    script6.src = "./Project.js";
+    document.head.appendChild(script6);
+
 };
 if (localStorage.getItem("ENV") === "DEV" ) {
     OFFLINE();

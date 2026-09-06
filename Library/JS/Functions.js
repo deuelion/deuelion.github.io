@@ -6,3 +6,9 @@ const DISPLAY=(ELEMENT,DATA)=>{
         BODY.innerHTML=DATA;
     };
 };
+const INJECTCSS = (STYLES) => {
+  const style = document.createElement("style");
+  style.type = "text/css";
+  style.textContent = STYLES;
+  document.head.appendChild(style);
+};

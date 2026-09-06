@@ -1,5 +1,5 @@
 DISPLAY("",`
 
-    <h1>MOVIE LANDER</h1>
+    <h1>MOVIE </h1>
     
 `);
