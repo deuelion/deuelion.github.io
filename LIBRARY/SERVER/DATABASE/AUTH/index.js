@@ -4,12 +4,12 @@ export const AUTH=(LINK,NAME,TITLE)=>{
             LOADINGICON(DATA,(DATATA)=>{
                 GETDATA(LINK,NAME,(Data)=>{
                     FINDER(Data,"USEREMAIL",sessionStorage.getItem("UserEmail"),(User)=>{
-                        MOVIELANDERWELCOMEBACKEMAIL();SESSIONSTORE("UserName",User.FIRSTNAME);
+                        SESSIONSTORE("UserName",User.FIRSTNAME);
                         TOASTEDMESSAGE(User.USERPASSWORD === sessionStorage.getItem("UserPassword"),"Wrong User Password",()=>{
                             CHECK(!localStorage.getItem("User"),()=>{
-                                LOCALSTORE("User",User.ID);
+                                MOVIELANDERWELCOMEBACKEMAIL();LOCALSTORE("User",User.ID);
                                 SESSIONGET("WELCOMEMESSAGE",(MESSAGE)=>{
-                                    SENDEMAIL(ELITEMAILAPI,sessionStorage.getItem("UserEmail"),TITLE,MESSAGE,(Datatata)=>{
+                                    SENDEMAIL(ELITEMAILAPI,User.USEREMAIL,TITLE,MESSAGE,(Datatata)=>{
                                         RELOAD();
                                     });
                                 });
