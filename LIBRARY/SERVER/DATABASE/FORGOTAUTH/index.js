@@ -1,3 +1,5 @@
+import { TOAST } from "../../../CONNECTION";
+
 export const FORGOTAUTH=(LINK,NAME,TITLE)=>{
     OFFLINE(()=>{
         BOTTOMVIEWSPAGE((DATA)=>{
@@ -5,13 +7,11 @@ export const FORGOTAUTH=(LINK,NAME,TITLE)=>{
                 GETDATA(LINK,NAME,(Data)=>{
                     FINDER(Data,"USEREMAIL",sessionStorage.getItem("UserEmail"),(User)=>{
                         SESSIONSTORE("UserName",User.FIRSTNAME);
-                        CHECK(!localStorage.getItem("User"),()=>{
-                            MOVIELANDERWELCOMEFORGOTEMAIL();
-                            SESSIONGET("WELCOMEMESSAGE",(MESSAGE)=>{
-                                SENDEMAIL(ELITEMAILAPI,User.USEREMAIL,TITLE,MESSAGE,(Datatata)=>{
-                                    TOAST("","Check Your Email For Access Instructions",()=>{
-                                        DISPLAYED(DATA,"none");
-                                    });
+                        MOVIELANDERWELCOMEFORGOTEMAIL();
+                        SESSIONGET("WELCOMEMESSAGE",(MESSAGE)=>{
+                            SENDEMAIL(ELITEMAILAPI,User.USEREMAIL,TITLE,MESSAGE,(Datatata)=>{
+                                TOAST("","Check Your Email For Instructions",()=>{
+                                   DISPLAYED(DATA,"none"); 
                                 });
                             });
                         });
