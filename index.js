@@ -10,8 +10,13 @@ const ONLINE=()=>{
     ROUTED(localStorage.getItem("STYLES"));
     ROUTED(localStorage.getItem("COMPONENTS"));
     ROUTED(localStorage.getItem("FUNCTIONS"));
+    
+    
+    INJECTCSS(localStorage.getItem("STYLES"));
+
     ROUTED(localStorage.getItem("PROJECTSGENERAL"));
     ROUTED(localStorage.getItem("PROJECTS"));
+
     `;
     fetch(GETDATAAPI,{
         mode:"cors",
