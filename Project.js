@@ -1,9 +1,8 @@
 const HOMEPAGE=()=>{
 
-
     DISPLAY("",`
     
-        <h1>MOVIE </h1>
+        <h1 class="Test">MOVIE </h1>
         
     `);
 
@@ -16,6 +15,14 @@ const HOMEPAGE=()=>{
     
     `
     INJECTCSS(HOMEPAGESTYLES);
+
+    const Test=document.querySelector(".Test");
+
+    Test.addEventListener("click",()=>{
+
+        alert("Working");
+
+    });
   
 };
 HOMEPAGE();
