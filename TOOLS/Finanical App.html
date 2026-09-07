@@ -22,7 +22,6 @@
     --shadow-big:0 20px 60px rgba(0,0,0,.20);
     --radius:20px;
 }
-
 [data-theme="dark"]{
     --bg:#111315;
     --surface:#1b1d1f;
@@ -38,15 +37,12 @@
     --shadow:0 4px 18px rgba(0,0,0,.30);
     --shadow-big:0 20px 60px rgba(0,0,0,.50);
 }
-
 *{
     box-sizing:border-box;
 }
-
 html{
     scroll-behavior:smooth;
 }
-
 body{
     margin:0;
     background:var(--bg);
@@ -54,24 +50,18 @@ body{
     font-family:Arial,Helvetica,sans-serif;
     line-height:1.5;
 }
-
 button,
 input,
 select,
 textarea{
     font:inherit;
 }
-
 button{
     cursor:pointer;
 }
-
 .hidden{
     display:none!important;
 }
-
-/* LOGIN */
-
 .login-screen{
     min-height:100vh;
     display:grid;
@@ -79,7 +69,6 @@ button{
     padding:20px;
     background:var(--bg);
 }
-
 .login-card{
     width:min(430px,100%);
     padding:32px;
@@ -88,7 +77,6 @@ button{
     border-radius:28px;
     box-shadow:var(--shadow-big);
 }
-
 .logo{
     width:46px;
     height:46px;
@@ -101,22 +89,16 @@ button{
     font-size:20px;
     margin-bottom:18px;
 }
-
 .login-card h1{
     margin:0;
     font-size:30px;
 }
-
 .login-card p{
     color:var(--muted);
 }
-
-/* APP */
-
 .app{
     min-height:100vh;
 }
-
 .sidebar{
     position:fixed;
     top:0;
@@ -128,7 +110,6 @@ button{
     border-right:1px solid var(--border);
     z-index:50;
 }
-
 .brand{
     display:flex;
     align-items:center;
@@ -137,19 +118,16 @@ button{
     font-weight:700;
     padding:8px 10px 25px;
 }
-
 .brand .logo{
     width:38px;
     height:38px;
     margin:0;
     border-radius:12px;
 }
-
 .nav{
     display:grid;
     gap:5px;
 }
-
 .nav button{
     width:100%;
     border:0;
@@ -160,25 +138,21 @@ button{
     text-align:left;
     transition:.2s;
 }
-
 .nav button:hover{
     background:var(--surface2);
     color:var(--text);
 }
-
 .nav button.active{
     background:var(--surface2);
     color:var(--text);
     font-weight:700;
 }
-
 .main{
     margin-left:250px;
     padding:28px;
     width:calc(100% - 250px);
     max-width:1700px;
 }
-
 .topbar{
     display:flex;
     align-items:center;
@@ -186,25 +160,19 @@ button{
     gap:15px;
     margin-bottom:25px;
 }
-
 .page-title h1{
     margin:0;
     font-size:30px;
 }
-
 .page-title p{
     margin:5px 0 0;
     color:var(--muted);
 }
-
 .actions{
     display:flex;
     gap:8px;
     flex-wrap:wrap;
 }
-
-/* BUTTONS */
-
 .btn{
     border:1px solid var(--border);
     background:var(--surface);
@@ -213,123 +181,96 @@ button{
     border-radius:12px;
     transition:.2s;
 }
-
 .btn:hover{
     transform:translateY(-1px);
 }
-
 .btn.primary{
     background:var(--primary);
     border-color:var(--primary);
     color:white;
 }
-
 .btn.danger{
     color:var(--red);
 }
-
 .btn.small{
     padding:7px 10px;
     font-size:13px;
 }
-
-/* SECTIONS */
-
 .section{
     display:none;
 }
-
 .section.active{
     display:block;
 }
-
-/* CARDS */
-
 .cards{
     display:grid;
     grid-template-columns:repeat(4,1fr);
     gap:14px;
     margin-bottom:18px;
 }
-
 .card{
     background:var(--surface);
     border:1px solid var(--border);
     border-radius:var(--radius);
     box-shadow:var(--shadow);
 }
-
 .stat{
     padding:20px;
 }
-
 .stat-label{
     color:var(--muted);
     font-size:13px;
 }
-
 .stat-value{
     font-size:27px;
     font-weight:700;
     margin-top:7px;
 }
-
 .stat-sub{
     color:var(--muted);
     font-size:12px;
     margin-top:5px;
 }
-
 .panel{
     padding:20px;
 }
-
 .panel h2{
     margin:0 0 15px;
     font-size:19px;
 }
-
 .grid-2{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:16px;
 }
-
 .list{
     display:grid;
     gap:10px;
 }
-
 .item{
     padding:14px;
     background:var(--surface);
     border:1px solid var(--border);
     border-radius:15px;
 }
-
 .item-row{
     display:flex;
     justify-content:space-between;
     align-items:center;
     gap:12px;
 }
-
 .muted{
     color:var(--muted);
 }
-
 .positive{
     color:var(--green);
 }
-
 .negative{
     color:var(--red);
 }
-
 .warning{
     color:var(--yellow);
 }
-
 .badge{
     display:inline-flex;
     align-items:center;
@@ -338,7 +279,6 @@ button{
     background:var(--surface2);
     font-size:12px;
 }
-
 .progress{
     width:100%;
     height:9px;
@@ -347,42 +287,33 @@ button{
     border-radius:999px;
     overflow:hidden;
 }
-
 .progress i{
     display:block;
     height:100%;
     background:var(--primary);
     border-radius:999px;
 }
-
 .empty{
     padding:35px;
     text-align:center;
     color:var(--muted);
 }
-
-/* FORMS */
-
 .form-grid{
     display:grid;
     grid-template-columns:1fr 1fr;
     gap:14px;
 }
-
 .field{
     display:grid;
     gap:6px;
 }
-
 .field.full{
     grid-column:1/-1;
 }
-
 .field label{
     color:var(--muted);
     font-size:13px;
 }
-
 .field input,
 .field select,
 .field textarea{
@@ -394,27 +325,21 @@ button{
     color:var(--text);
     outline:none;
 }
-
 .field textarea{
     min-height:100px;
     resize:vertical;
 }
-
 .field input:focus,
 .field select:focus,
 .field textarea:focus{
     border-color:var(--primary);
 }
-
-/* TOOLBAR */
-
 .toolbar{
     display:flex;
     gap:8px;
     flex-wrap:wrap;
     margin-bottom:15px;
 }
-
 .toolbar input,
 .toolbar select{
     padding:10px 12px;
@@ -423,46 +348,33 @@ button{
     background:var(--surface);
     color:var(--text);
 }
-
-/* TABLE */
-
 .table-wrap{
     overflow:auto;
 }
-
 table{
     width:100%;
     border-collapse:collapse;
 }
-
 th,
 td{
     padding:12px 8px;
     border-bottom:1px solid var(--border);
     text-align:left;
 }
-
 th{
     color:var(--muted);
     font-size:12px;
 }
-
-/* CLICKABLE */
-
 .goal-card,
 .debt-card{
     cursor:pointer;
     transition:.2s;
 }
-
 .goal-card:hover,
 .debt-card:hover{
     border-color:var(--primary);
     transform:translateY(-1px);
 }
-
-/* MODAL */
-
 .modal-overlay{
     position:fixed;
     inset:0;
@@ -473,11 +385,9 @@ th{
     padding:18px;
     z-index:100;
 }
-
 .modal-overlay.show{
     display:flex;
 }
-
 .modal{
     width:min(780px,100%);
     max-height:90vh;
@@ -487,7 +397,6 @@ th{
     border-radius:25px;
     box-shadow:var(--shadow-big);
 }
-
 .modal-header{
     position:sticky;
     top:0;
@@ -499,11 +408,9 @@ th{
     background:var(--surface);
     border-bottom:1px solid var(--border);
 }
-
 .modal-header strong{
     font-size:19px;
 }
-
 .close-btn{
     width:36px;
     height:36px;
@@ -512,13 +419,9 @@ th{
     background:var(--surface2);
     color:var(--text);
 }
-
 .modal-body{
     padding:20px;
 }
-
-/* TOAST */
-
 .toast-container{
     position:fixed;
     right:20px;
@@ -527,7 +430,6 @@ th{
     display:grid;
     gap:8px;
 }
-
 .toast{
     padding:12px 15px;
     border-radius:12px;
@@ -536,7 +438,6 @@ th{
     box-shadow:var(--shadow);
     animation:toastIn .2s ease;
 }
-
 @keyframes toastIn{
     from{
         opacity:0;
@@ -547,36 +448,24 @@ th{
         transform:none;
     }
 }
-
-/* TASKS */
-
 .check-list{
     display:grid;
     gap:9px;
 }
-
 .check-item{
     display:flex;
     gap:9px;
     align-items:center;
 }
-
-/* MOBILE */
-
 @media(max-width:1050px){
-
     .cards{
         grid-template-columns:repeat(2,1fr);
     }
-
     .grid-2{
         grid-template-columns:1fr;
     }
-
 }
-
 @media(max-width:720px){
-
     .sidebar{
         top:0;
         bottom:auto;
@@ -586,83 +475,59 @@ th{
         border-right:0;
         border-bottom:1px solid var(--border);
     }
-
     .brand{
         display:none;
     }
-
     .nav{
         display:flex;
         overflow-x:auto;
     }
-
     .nav button{
         white-space:nowrap;
         width:auto;
     }
-
     .main{
         margin-left:0;
         width:100%;
         padding:15px;
         padding-top:70px;
     }
-
     .topbar{
         flex-direction:column;
         align-items:flex-start;
     }
-
     .cards{
         grid-template-columns:1fr 1fr;
     }
-
     .form-grid{
         grid-template-columns:1fr;
     }
-
     .field.full{
         grid-column:auto;
     }
-
     .stat{
         padding:15px;
     }
-
     .stat-value{
         font-size:21px;
     }
-
 }
-
 @media(max-width:450px){
-
     .cards{
         grid-template-columns:1fr;
     }
-
 }
 </style>
 </head>
-
 <body>
-
-<!-- ================= LOGIN ================= -->
-
 <div id="loginScreen" class="login-screen">
-
     <div class="login-card">
-
         <div class="logo">F</div>
-
         <h1>Finance Planner</h1>
-
         <p>
             Manage earnings, expenses, goals, debts and your financial roadmap.
         </p>
-
         <form id="loginForm">
-
             <div class="field">
                 <label>Username</label>
                 <input
@@ -671,9 +536,7 @@ th{
                     required
                 >
             </div>
-
             <br>
-
             <div class="field">
                 <label>Password</label>
                 <input
@@ -683,645 +546,404 @@ th{
                     required
                 >
             </div>
-
             <br>
-
             <button class="btn primary" style="width:100%;">
                 Sign in
             </button>
-
             <p id="loginError" class="negative"></p>
-
         </form>
-
     </div>
-
 </div>
-
-
-<!-- ================= APP ================= -->
-
 <div id="app" class="app hidden">
-
     <aside class="sidebar">
-
         <div class="brand">
             <div class="logo">F</div>
             Finance Planner
         </div>
-
         <nav class="nav">
-
             <button
                 class="active"
                 data-page="dashboard">
                 Dashboard
             </button>
-
             <button data-page="earnings">
                 Earnings
             </button>
-
             <button data-page="expenses">
                 Expenses
             </button>
-
             <button data-page="goals">
                 Goals
             </button>
-
             <button data-page="debts">
                 Debts
             </button>
-
             <button data-page="transactions">
                 Transactions
             </button>
-
             <button data-page="reports">
                 Reports
             </button>
-
             <button data-page="settings">
                 Settings
             </button>
-
         </nav>
-
     </aside>
-
-
     <main class="main">
-
         <header class="topbar">
-
             <div class="page-title">
-
                 <h1 id="pageTitle">
                     Dashboard
                 </h1>
-
                 <p id="todayText"></p>
-
             </div>
-
             <div class="actions">
-
                 <button
                     class="btn"
                     id="themeButton">
                     ☾ Theme
                 </button>
-
                 <button
                     class="btn"
                     id="logoutButton">
                     Log out
                 </button>
-
             </div>
-
         </header>
-
-
-        <!-- ================= DASHBOARD ================= -->
-
         <section
             id="dashboard"
             class="section active">
-
             <div class="cards">
-
                 <div class="card stat">
-
                     <div class="stat-label">
                         Total earnings
                     </div>
-
                     <div
                         class="stat-value"
                         id="totalEarnings">
                         $0.00
                     </div>
-
                     <div class="stat-sub">
                         All recorded income
                     </div>
-
                 </div>
-
-
                 <div class="card stat">
-
                     <div class="stat-label">
                         Total expenses
                     </div>
-
                     <div
                         class="stat-value"
                         id="totalExpenses">
                         $0.00
                     </div>
-
                     <div class="stat-sub">
                         All recorded spending
                     </div>
-
                 </div>
-
-
                 <div class="card stat">
-
                     <div class="stat-label">
                         Net savings
                     </div>
-
                     <div
                         class="stat-value positive"
                         id="netSavings">
                         $0.00
                     </div>
-
                     <div class="stat-sub">
                         Earnings minus expenses
                     </div>
-
                 </div>
-
-
                 <div class="card stat">
-
                     <div class="stat-label">
                         Debt balance
                     </div>
-
                     <div
                         class="stat-value negative"
                         id="totalDebt">
                         $0.00
                     </div>
-
                     <div class="stat-sub">
                         Outstanding debt
                     </div>
-
                 </div>
-
             </div>
-
-
             <div class="grid-2">
-
                 <div class="card panel">
-
                     <h2>
                         This month
                     </h2>
-
                     <div id="monthlySummary"></div>
-
                 </div>
-
-
                 <div class="card panel">
-
                     <h2>
                         Upcoming
                     </h2>
-
                     <div id="upcoming"></div>
-
                 </div>
-
             </div>
-
         </section>
-
-
-        <!-- ================= EARNINGS ================= -->
-
         <section
             id="earnings"
             class="section">
-
             <div class="card panel">
-
                 <div class="item-row">
-
                     <h2>
                         Earnings
                     </h2>
-
                     <button
                         class="btn primary"
                         onclick="openEarningModal()">
                         + Add earning
                     </button>
-
                 </div>
-
                 <div class="toolbar">
-
                     <input
                         id="earningSearch"
                         placeholder="Search earnings">
-
                     <input
                         id="earningMonth"
                         type="month">
-
                 </div>
-
                 <div id="earningsList"></div>
-
             </div>
-
         </section>
-
-
-        <!-- ================= EXPENSES ================= -->
-
         <section
             id="expenses"
             class="section">
-
             <div class="card panel">
-
                 <div class="item-row">
-
                     <h2>
                         Expenses
                     </h2>
-
                     <button
                         class="btn primary"
                         onclick="openExpenseModal()">
                         + Add expense
                     </button>
-
                 </div>
-
                 <div class="toolbar">
-
                     <input
                         id="expenseSearch"
                         placeholder="Search expenses">
-
                     <input
                         id="expenseMonth"
                         type="month">
-
                 </div>
-
                 <div id="expensesList"></div>
-
             </div>
-
         </section>
-
-
-        <!-- ================= GOALS ================= -->
-
         <section
             id="goals"
             class="section">
-
             <div class="card panel">
-
                 <div class="item-row">
-
                     <h2>
                         Financial Goals
                     </h2>
-
                     <button
                         class="btn primary"
                         onclick="openGoalModal()">
                         + Add goal
                     </button>
-
                 </div>
-
                 <div
                     id="goalsList"
                     class="list">
                 </div>
-
             </div>
-
         </section>
-
-
-        <!-- ================= DEBTS ================= -->
-
         <section
             id="debts"
             class="section">
-
             <div class="card panel">
-
                 <div class="item-row">
-
                     <h2>
                         Debt Manager
                     </h2>
-
                     <button
                         class="btn primary"
                         onclick="openDebtModal()">
                         + Add debt
                     </button>
-
                 </div>
-
                 <div
                     id="debtsList"
                     class="list">
                 </div>
-
             </div>
-
         </section>
-
-
-        <!-- ================= TRANSACTIONS ================= -->
-
         <section
             id="transactions"
             class="section">
-
             <div class="card panel">
-
                 <div class="item-row">
-
                     <h2>
                         Transactions
                     </h2>
-
                     <button
                         class="btn"
                         onclick="exportBackup()">
                         Export backup
                     </button>
-
                 </div>
-
                 <div class="toolbar">
-
                     <select id="transactionType">
-
                         <option value="">
                             All types
                         </option>
-
                         <option value="earning">
                             Earnings
                         </option>
-
                         <option value="expense">
                             Expenses
                         </option>
-
                         <option value="goal">
                             Goal contributions
                         </option>
-
                         <option value="debt">
                             Debt payments
                         </option>
-
                     </select>
-
                     <input
                         id="transactionSearch"
                         placeholder="Search transactions">
-
                 </div>
-
                 <div class="table-wrap">
-
                     <table>
-
                         <thead>
-
                             <tr>
                                 <th>Date</th>
                                 <th>Type</th>
                                 <th>Description</th>
                                 <th>Amount</th>
                             </tr>
-
                         </thead>
-
                         <tbody id="transactionTable"></tbody>
-
                     </table>
-
                 </div>
-
             </div>
-
         </section>
-
-
-        <!-- ================= REPORTS ================= -->
-
         <section
             id="reports"
             class="section">
-
             <div class="cards">
-
                 <div class="card stat">
-
                     <div class="stat-label">
                         Savings rate
                     </div>
-
                     <div
                         class="stat-value"
                         id="savingsRate">
                         0%
                     </div>
-
                 </div>
-
-
                 <div class="card stat">
-
                     <div class="stat-label">
                         Goal contributions
                     </div>
-
                     <div
                         class="stat-value"
                         id="goalFunding">
                         $0.00
                     </div>
-
                 </div>
-
-
                 <div class="card stat">
-
                     <div class="stat-label">
                         Debt paid
                     </div>
-
                     <div
                         class="stat-value"
                         id="debtPaid">
                         $0.00
                     </div>
-
                 </div>
-
-
                 <div class="card stat">
-
                     <div class="stat-label">
                         Net position
                     </div>
-
                     <div
                         class="stat-value"
                         id="netPosition">
                         $0.00
                     </div>
-
                 </div>
-
             </div>
-
-
             <div class="card panel">
-
                 <h2>
                     Financial health
                 </h2>
-
                 <div id="financialHealth"></div>
-
             </div>
-
         </section>
-
-
-        <!-- ================= SETTINGS ================= -->
-
         <section
             id="settings"
             class="section">
-
             <div class="card panel">
-
                 <h2>
                     Settings & Data
                 </h2>
-
                 <p class="muted">
                     Your finance information is stored locally in this browser.
                 </p>
-
                 <div class="actions">
-
                     <button
                         class="btn"
                         onclick="exportBackup()">
                         Export backup
                     </button>
-
                     <button
                         class="btn"
                         onclick="document.getElementById('importFile').click()">
                         Import backup
                     </button>
-
                     <button
                         class="btn danger"
                         onclick="openClearDataModal()">
                         Clear finance data
                     </button>
-
                     <input
                         id="importFile"
                         type="file"
                         accept=".json"
                         hidden>
-
                 </div>
-
             </div>
-
         </section>
-
     </main>
-
 </div>
-
-
-<!-- ================= MODAL ================= -->
-
 <div
     id="modalOverlay"
     class="modal-overlay">
-
     <div class="modal">
-
         <div class="modal-header">
-
             <strong id="modalTitle">
                 Window
             </strong>
-
             <button
                 class="close-btn"
                 onclick="closeModal()">
                 ×
             </button>
-
         </div>
-
         <div
             id="modalBody"
             class="modal-body">
         </div>
-
     </div>
-
 </div>
-
-
-<!-- ================= TOAST ================= -->
-
 <div
     id="toastContainer"
     class="toast-container">
 </div>
-
-
 <script>
-
-/* ============================================================
-   CONFIGURATION
-============================================================ */
-
 const LOGIN = {
     username:"harmony",
     password:"natasha"
 };
-
 const STORAGE_KEY = "finance_planner_data_v5";
 const AUTH_KEY = "finance_planner_auth_v5";
 const THEME_KEY = "finance_planner_theme_v5";
-
-
-/* ============================================================
-   DATABASE
-============================================================ */
-
 function createEmptyDatabase(){
-
     return {
         earnings:[],
         expenses:[],
@@ -1329,54 +951,30 @@ function createEmptyDatabase(){
         debts:[],
         transactions:[]
     };
-
 }
-
-
 function loadDatabase(){
-
     try{
-
         const saved =
             JSON.parse(
                 localStorage.getItem(STORAGE_KEY)
             );
-
         return {
             ...createEmptyDatabase(),
             ...(saved || {})
         };
-
     }catch(error){
-
         return createEmptyDatabase();
-
     }
-
 }
-
-
 let database = loadDatabase();
-
-
 function saveDatabase(){
-
     localStorage.setItem(
         STORAGE_KEY,
         JSON.stringify(database)
     );
-
     renderEverything();
-
 }
-
-
-/* ============================================================
-   HELPERS
-============================================================ */
-
 function id(prefix){
-
     return (
         prefix +
         "_" +
@@ -1386,12 +984,8 @@ function id(prefix){
             .toString(36)
             .substring(2,8)
     );
-
 }
-
-
 function money(value){
-
     return new Intl.NumberFormat(
         "en-US",
         {
@@ -1399,23 +993,14 @@ function money(value){
             currency:"USD"
         }
     ).format(Number(value) || 0);
-
 }
-
-
 function today(){
-
     return new Date()
         .toISOString()
         .slice(0,10);
-
 }
-
-
 function formatDate(value){
-
     if(!value) return "";
-
     return new Date(
         value + "T00:00:00"
     ).toLocaleDateString(
@@ -1426,23 +1011,16 @@ function formatDate(value){
             day:"numeric"
         }
     );
-
 }
-
-
 function daysUntil(date){
-
     const now = new Date();
-
     now.setHours(
         0,0,0,0
     );
-
     const target =
         new Date(
             date + "T00:00:00"
         );
-
     return Math.ceil(
         (
             target.getTime() -
@@ -1450,17 +1028,12 @@ function daysUntil(date){
         ) /
         86400000
     );
-
 }
-
-
 function escapeHTML(value){
-
     return String(value ?? "")
         .replace(
             /[&<>"']/g,
             character => {
-
                 const map = {
                     "&":"&amp;",
                     "<":"&lt;",
@@ -1468,209 +1041,127 @@ function escapeHTML(value){
                     '"':"&quot;",
                     "'":"&#039;"
                 };
-
                 return map[character];
-
             }
         );
-
 }
-
-
-/* ============================================================
-   TOASTS
-============================================================ */
-
 function toast(message){
-
     const container =
         document.getElementById(
             "toastContainer"
         );
-
     const element =
         document.createElement("div");
-
     element.className = "toast";
-
     element.textContent = message;
-
     container.appendChild(element);
-
     setTimeout(
         () => element.remove(),
         2800
     );
-
 }
-
-
-/* ============================================================
-   MODALS
-============================================================ */
-
 function openModal(title,html){
-
     document.getElementById(
         "modalTitle"
     ).textContent = title;
-
     document.getElementById(
         "modalBody"
     ).innerHTML = html;
-
     document.getElementById(
         "modalOverlay"
     ).classList.add("show");
-
 }
-
-
 function closeModal(){
-
     document.getElementById(
         "modalOverlay"
     ).classList.remove("show");
-
 }
-
-
 document
 .getElementById("modalOverlay")
 .addEventListener(
     "click",
     event => {
-
         if(
             event.target.id ===
             "modalOverlay"
         ){
-
             closeModal();
-
         }
-
     }
 );
-
-
 document.addEventListener(
     "keydown",
     event => {
-
         if(event.key === "Escape"){
-
             closeModal();
-
         }
-
     }
 );
-
-
-/* ============================================================
-   LOGIN
-============================================================ */
-
 document
 .getElementById("loginForm")
 .addEventListener(
     "submit",
     event => {
-
         event.preventDefault();
-
         const username =
             document.getElementById(
                 "username"
             ).value.trim();
-
         const password =
             document.getElementById(
                 "password"
             ).value;
-
         if(
             username === LOGIN.username &&
             password === LOGIN.password
         ){
-
             sessionStorage.setItem(
                 AUTH_KEY,
                 "1"
             );
-
             startApplication();
-
         }else{
-
             document.getElementById(
                 "loginError"
             ).textContent =
                 "Incorrect username or password.";
-
         }
-
     }
 );
-
-
 document
 .getElementById("logoutButton")
 .addEventListener(
     "click",
     () => {
-
         sessionStorage.removeItem(
             AUTH_KEY
         );
-
         location.reload();
-
     }
 );
-
-
 function startApplication(){
-
     document
         .getElementById("loginScreen")
         .classList.add("hidden");
-
     document
         .getElementById("app")
         .classList.remove("hidden");
-
     applyTheme();
-
     renderEverything();
-
 }
-
-
 if(
     sessionStorage.getItem(
         AUTH_KEY
     ) === "1"
 ){
-
     startApplication();
-
 }
-
-
-/* ============================================================
-   NAVIGATION
-============================================================ */
-
 document
 .querySelectorAll(".nav button")
 .forEach(button => {
-
     button.addEventListener(
         "click",
         () => {
-
             document
             .querySelectorAll(
                 ".nav button"
@@ -1681,11 +1172,9 @@ document
                     "active"
                 )
             );
-
             button.classList.add(
                 "active"
             );
-
             document
             .querySelectorAll(
                 ".section"
@@ -1696,7 +1185,6 @@ document
                     "active"
                 )
             );
-
             document
             .getElementById(
                 button.dataset.page
@@ -1704,66 +1192,45 @@ document
             .classList.add(
                 "active"
             );
-
             document.getElementById(
                 "pageTitle"
             ).textContent =
                 button.textContent.trim();
-
         }
     );
-
 });
-
-
-/* ============================================================
-   THEME
-============================================================ */
-
 function applyTheme(){
-
     const theme =
         localStorage.getItem(
             THEME_KEY
         ) || "light";
-
     document.documentElement
         .setAttribute(
             "data-theme",
             theme
         );
-
 }
-
-
 document
 .getElementById("themeButton")
 .addEventListener(
     "click",
     () => {
-
         const current =
             document.documentElement
                 .getAttribute(
                     "data-theme"
                 );
-
         const next =
             current === "dark"
                 ? "light"
                 : "dark";
-
         localStorage.setItem(
             THEME_KEY,
             next
         );
-
         applyTheme();
-
     }
 );
-
-
 document.getElementById(
     "todayText"
 ).textContent =
@@ -1776,12 +1243,6 @@ document.getElementById(
             day:"numeric"
         }
     );
-
-
-/* ============================================================
-   TRANSACTION SYSTEM
-============================================================ */
-
 function addTransaction(
     type,
     description,
@@ -1789,31 +1250,19 @@ function addTransaction(
     date,
     reference
 ){
-
     database.transactions.push({
-
         id:id("transaction"),
-
         type,
-
         description,
-
         amount:Number(amount),
-
         date,
-
         reference
-
     });
-
 }
-
-
 function removeTransactionsByReference(
     reference,
     type
 ){
-
     database.transactions =
         database.transactions.filter(
             transaction =>
@@ -1824,21 +1273,12 @@ function removeTransactionsByReference(
                     type
                 )
         );
-
 }
-
-
-/* ============================================================
-   EARNINGS
-============================================================ */
-
 function openEarningModal(existingId=null){
-
     const existing =
         database.earnings.find(
             item => item.id === existingId
         );
-
     const data =
         existing ||
         {
@@ -1848,7 +1288,6 @@ function openEarningModal(existingId=null){
             category:"Salary",
             notes:""
         };
-
     openModal(
         existingId
             ? "Edit earning"
@@ -1857,7 +1296,6 @@ function openEarningModal(existingId=null){
         `
         <form id="earningForm"
               class="form-grid">
-
             <div class="field">
                 <label>Date</label>
                 <input
@@ -1866,7 +1304,6 @@ function openEarningModal(existingId=null){
                     value="${data.date}"
                     required>
             </div>
-
             <div class="field">
                 <label>Amount</label>
                 <input
@@ -1877,7 +1314,6 @@ function openEarningModal(existingId=null){
                     value="${data.amount}"
                     required>
             </div>
-
             <div class="field">
                 <label>Source</label>
                 <input
@@ -1886,12 +1322,9 @@ function openEarningModal(existingId=null){
                     placeholder="Salary, client, business..."
                     required>
             </div>
-
             <div class="field">
                 <label>Category</label>
-
                 <select name="category">
-
                     ${[
                         "Salary",
                         "Business",
@@ -1910,96 +1343,65 @@ function openEarningModal(existingId=null){
                         </option>`
                     )
                     .join("")}
-
                 </select>
-
             </div>
-
             <div class="field full">
-
                 <label>Notes</label>
-
                 <textarea
                     name="notes">${escapeHTML(data.notes)}</textarea>
-
             </div>
-
             <div class="field full">
-
                 <button
                     class="btn primary">
                     ${existingId
                         ? "Save changes"
                         : "Add earning"}
                 </button>
-
             </div>
-
         </form>
         `
     );
-
-
     document
     .getElementById("earningForm")
     .addEventListener(
         "submit",
         event => {
-
             event.preventDefault();
-
             const form =
                 new FormData(
                     event.target
                 );
-
             const values =
                 Object.fromEntries(form);
-
             if(existingId){
-
                 const item =
                     database.earnings.find(
                         x => x.id === existingId
                     );
-
                 removeTransactionsByReference(
                     existingId,
                     "earning"
                 );
-
                 Object.assign(
                     item,
                     values
                 );
-
                 item.amount =
                     Number(item.amount);
-
             }else{
-
                 const item = {
-
                     id:id("earning"),
-
                     date:values.date,
-
                     source:values.source,
-
                     amount:Number(
                         values.amount
                     ),
-
                     category:values.category,
-
                     notes:values.notes
-
                 };
-
                 database.earnings.push(
                     item
                 );
-
                 addTransaction(
                     "earning",
                     item.source,
@@ -2007,60 +1409,37 @@ function openEarningModal(existingId=null){
                     item.date,
                     item.id
                 );
-
             }
-
             saveDatabase();
-
             closeModal();
-
             toast(
                 "Earning saved successfully."
             );
-
         }
     );
-
 }
-
-
 function deleteEarning(idValue){
-
     openChoiceModal(
         "Delete earning",
         "This earning will be removed from your records.",
-
         () => {
-
             database.earnings =
                 database.earnings.filter(
                     item =>
                     item.id !== idValue
                 );
-
             removeTransactionsByReference(
                 idValue,
                 "earning"
             );
-
             saveDatabase();
-
             closeModal();
-
             toast(
                 "Earning deleted."
             );
-
         }
     );
-
 }
-
-
-/* ============================================================
-   EXPENSES
-============================================================ */
-
 function openExpenseModal(existingId=null){
 
     const existing =
