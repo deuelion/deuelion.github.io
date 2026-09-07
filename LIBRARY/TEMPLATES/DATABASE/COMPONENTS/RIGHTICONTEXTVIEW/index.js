@@ -1,8 +1,0 @@
-export const RIGHTICONTEXTVIEW=(HOLDER,LIGHT,DARK,WORD,CALLBACK)=>{
-    INLINEVIEW(HOLDER,(DATA)=>{
-        LEFTTEXT(DATA,WORD||"Your Text",()=>{});
-        RIGHTICON(DATA,LIGHT,DARK,()=>{});
-        HEIGHT(DATA,"50px");
-        CALLBACK(DATA);
-    });
-};
