@@ -28,27 +28,28 @@ export const MOVIELANDERANDROIDWEBPROFILEPAGE=()=>{
                             ABSOLUTE(HOLDERES);
                             TOP(HOLDERES,"50px");
                             LEFT(HOLDERES,"145px");
-                            WIDTH(HOLDERES,"100px");
+                            WIDTH(HOLDERES,"80px");
                             HEIGHT(HOLDERES,"50px");
                             BUTTON(HOLDERES,"Edit",(BTN)=>{
                                 BACKGROUND(BTN,"forestgreen");
-                                WIDTH(BTN,"100px");
+                                WIDTH(BTN,"80px");
                             });
                         })
                         INLINEVIEW(HOLDERS,(HOLDERES)=>{
                             ABSOLUTE(HOLDERES);
                             TOP(HOLDERES,"50px");
-                            RIGHT(HOLDERES,"20px");
+                            RIGHT(HOLDERES,"50px");
                             WIDTH(HOLDERES,"80px");
                             HEIGHT(HOLDERES,"50px");
-                            BUTTON(HOLDERES,"Verified",(BTN)=>{
-                                BACKGROUND(BTN,"forestgreen");
+                            BUTTON(HOLDERES,"Followers:"+"0",(BTN)=>{
+                                BACKGROUND(BTN,"transparent");
                                 WIDTH(BTN,"100px");
                             });
                         })
                         HEADER(HOLDERS,Data.FIRSTNAME,(DATATE)=>{
                             MARGINTOP(DATATE,"5%");
                             FONTSIZE(DATATA,"25px");
+                            MARGINRIGHT(DATATA,"1%");
                         });
 
                     });
@@ -57,23 +58,58 @@ export const MOVIELANDERANDROIDWEBPROFILEPAGE=()=>{
                 VIEWS(DATA,(DATATA)=>{
                     HEIGHT(DATATA,"50px");
                     INLINEFLEX(DATATA);
-                    BUTTON(DATATA,"Watched",(BTN)=>{
+                    BUTTON(DATATA,"Watched : "+"0",(BTN)=>{
                         MARGIN(BTN,"");
-                        BACKGROUND(BTN,"forestgreen");
+                        BACKGROUND(BTN,"transparent");
                         WIDTH(BTN,"100px");
                     });
-                    BUTTON(DATATA,"Hours",(BTN)=>{
+                    BUTTON(DATATA,"Hours : "+"0",(BTN)=>{
                         MARGIN(BTN,"");
-                        BACKGROUND(BTN,"forestgreen");
+                        BACKGROUND(BTN,"transparent");
                         WIDTH(BTN,"100px");
                     });
-                    BUTTON(DATATA,"Premium",(BTN)=>{
+                    BUTTON(DATATA,"Premium : "+"0",(BTN)=>{
                         MARGIN(BTN,"");
-                        BACKGROUND(BTN,"forestgreen");
+                        BACKGROUND(BTN,"transparent");
                         WIDTH(BTN,"100px");
                     });
                 });
             });
+            BREAK(HOLDER,()=>{});
+            HEADER(HOLDER,"PREFERENCES",()=>{});
+            BREAK(HOLDER,()=>{});
+            RIGHTICONTEXTVIEW(HOLDER,WHITEMOVIENIGHTICON,WHITEMOVIENIGHTICON,"Movie Night",()=>{
+
+            });
+            BREAK(HOLDER,()=>{});
+            RIGHTICONTEXTVIEW(HOLDER,WHITEGROUPICON,WHITEGROUPICON,"Community",()=>{
+
+            });
+            BREAK(HOLDER,()=>{});
+            RIGHTICONTEXTVIEW(HOLDER,WHITEFIREICON,WHITEFIREICON,"Streak",()=>{
+
+            });
+            BREAK(HOLDER,()=>{});
+            RIGHTICONTEXTVIEW(HOLDER,WHITEHEARTICON,WHITEHEARTICON,"Archievements",()=>{
+
+            });
+            BREAK(HOLDER,()=>{});
+            RIGHTICONTEXTVIEW(HOLDER,WHITESUBSCRIPTIONICON,WHITESUBSCRIPTIONICON,"Premium",()=>{
+
+            });
+            BREAK(HOLDER,()=>{});
+            RIGHTICONTEXTVIEW(HOLDER,WHITELIBRARYICON,WHITELIBRARYICON,"Library",()=>{
+
+            });
+            BREAK(HOLDER,()=>{});
+            RIGHTICONTEXTVIEW(HOLDER,WHITESETTINGSICON,WHITESETTINGSICON,"Settings",()=>{
+
+            });
+            BREAK(HOLDER,()=>{});
+            RIGHTICONTEXTVIEW(HOLDER,WHITEPHONEICON,BLACKPHONEICON,"Contact Us",()=>{
+
+            });
+            BREAK(HOLDER,()=>{});BREAK(HOLDER,()=>{});
         });
     });     
 };
