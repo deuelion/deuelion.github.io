@@ -26,21 +26,23 @@ export const MOVIELANDERANDROIDWEBPROFILEPAGE=()=>{
                         });
                         INLINEVIEW(HOLDERS,(HOLDERES)=>{
                             ABSOLUTE(HOLDERES);
-                            TOP(HOLDERES,"50px");
+                            TOP(HOLDERES,"55px");
                             LEFT(HOLDERES,"145px");
-                            WIDTH(HOLDERES,"80px");
-                            HEIGHT(HOLDERES,"50px");
+                            WIDTH(HOLDERES,"50px");
+                            HEIGHT(HOLDERES,"40px");
+                            BORDERRADIUS(HOLDERES,"10px");
                             BUTTON(HOLDERES,"Edit",(BTN)=>{
                                 BACKGROUND(BTN,"forestgreen");
-                                WIDTH(BTN,"80px");
+                                WIDTH(BTN,"50px");
+                                HEIGHT(BTN,"40px");
                             });
                         })
                         INLINEVIEW(HOLDERS,(HOLDERES)=>{
                             ABSOLUTE(HOLDERES);
                             TOP(HOLDERES,"50px");
-                            RIGHT(HOLDERES,"50px");
-                            WIDTH(HOLDERES,"80px");
-                            HEIGHT(HOLDERES,"50px");
+                            RIGHT(HOLDERES,"60px");
+                            WIDTH(HOLDERES,"100px");
+                            HEIGHT(HOLDERES,"45px");
                             BUTTON(HOLDERES,"Followers:"+"0",(BTN)=>{
                                 BACKGROUND(BTN,"transparent");
                                 WIDTH(BTN,"100px");
