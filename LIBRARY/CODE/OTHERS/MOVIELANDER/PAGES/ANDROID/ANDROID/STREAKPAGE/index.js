@@ -5,7 +5,7 @@ export const MOVIELANDERANDROIDWEBSTREAKPAGE=()=>{
                 ROUTE("",MOVIELANDERANDROIDWEBPROFILEPAGE,"MOVIELANDERANDROIDWEBPROFILEPAGE");
             });
         });
-        RIGHTTEXT(HOLDER,"Library",()=>{});
+        RIGHTTEXT(HOLDER,"Streak",()=>{});
     },(HOLDER)=>{
         
     });
