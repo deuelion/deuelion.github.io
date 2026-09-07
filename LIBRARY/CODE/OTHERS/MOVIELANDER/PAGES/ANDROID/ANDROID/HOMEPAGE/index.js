@@ -1,23 +1,5 @@
 export const MOVIELANDERANDROIDWEBPAGE=()=>{
-   /* CLOUDSERVERDOWNLOAD("MOVIES");
-    FOOTERVIEWSPAGE((HOLDER)=>{
-        GETINDEX("MOVIES","MOVIES",(Data)=>{
-            REDUX(Data,(Element)=>{
-                TABLEVIEW(HOLDER,(DATA)=>{
-                    IMAGEVIEW(DATA,Element.POSTER,(IMGS)=>{
-                        WIDTH(IMGS,"");
-                        HEIGHT(IMGS);
-                        BORDERRADIUS(IMGS,"10px");
-                    });
-                });
-            });
-        });
-    },(HOLDER)=>{
-        
-    });
-    */
-
-    FLOATFOOTERVIEWSPAGE(()=>{
+    FLOATFOOTERVIEWSPAGE((HOLDER)=>{
 
     },(HOLDER)=>{
         ICONTEXT(HOLDER,WHITEGRIDICON,BLACKGRIDICON,"Catergory",(DATA)=>{
