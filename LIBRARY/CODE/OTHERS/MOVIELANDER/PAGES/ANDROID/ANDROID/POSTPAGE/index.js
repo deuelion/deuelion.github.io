@@ -1,0 +1,12 @@
+export const MOVIELANDERANDROIDWEBPOSTPAGE=()=>{
+    HEADERVIEWSPAGE((HOLDER)=>{
+        LEFTICON(HOLDER,WHITEBACKICON,BLACKBACKICON,(DATA)=>{
+            CLICK(DATA,()=>{
+                ROUTE(" ",MOVIELANDERANDROIDWEBPROFILEPAGE,"MOVIELANDERANDROIDWEBPROFILEPAGE");
+            });
+        });
+        RIGHTTEXT(HOLDER,"Posts",()=>{});
+    },(HOLDER)=>{
+        
+    });
+};
