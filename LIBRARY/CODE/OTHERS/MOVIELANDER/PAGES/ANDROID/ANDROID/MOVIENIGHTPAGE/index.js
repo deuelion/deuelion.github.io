@@ -1,0 +1,12 @@
+export const MOVIELANDERANDROIDWEBMOVIENIGHTPAGE=()=>{
+    HEADERVIEWSPAGE((HOLDER)=>{
+        LEFTICON(HOLDER,WHITEBACKICON,BLACKBACKICON,(DATA)=>{
+            CLICK(DATA,()=>{
+                ROUTE(" ",MOVIELANDERANDROIDWEBPROFILEPAGE,"MOVIELANDERANDROIDWEBPROFILEPAGE");
+            });
+        });
+        RIGHTTEXT(HOLDER,"Movie Night",()=>{});
+    },(HOLDER)=>{
+        
+    });
+};
