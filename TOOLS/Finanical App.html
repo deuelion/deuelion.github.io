@@ -1441,12 +1441,10 @@ function deleteEarning(idValue){
     );
 }
 function openExpenseModal(existingId=null){
-
     const existing =
         database.expenses.find(
             item => item.id === existingId
         );
-
     const data =
         existing ||
         {
@@ -1456,7 +1454,6 @@ function openExpenseModal(existingId=null){
             category:"General",
             notes:""
         };
-
     openModal(
         existingId
             ? "Edit expense"
@@ -1465,7 +1462,6 @@ function openExpenseModal(existingId=null){
         `
         <form id="expenseForm"
               class="form-grid">
-
             <div class="field">
                 <label>Date</label>
                 <input
@@ -1474,7 +1470,6 @@ function openExpenseModal(existingId=null){
                     value="${data.date}"
                     required>
             </div>
-
             <div class="field">
                 <label>Amount</label>
                 <input
@@ -1485,7 +1480,6 @@ function openExpenseModal(existingId=null){
                     value="${data.amount}"
                     required>
             </div>
-
             <div class="field">
                 <label>Description</label>
                 <input
@@ -1493,12 +1487,9 @@ function openExpenseModal(existingId=null){
                     value="${escapeHTML(data.description)}"
                     required>
             </div>
-
             <div class="field">
                 <label>Category</label>
-
                 <select name="category">
-
                     ${[
                         "General",
                         "Food",
