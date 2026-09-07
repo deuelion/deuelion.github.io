@@ -5,8 +5,12 @@ export const MOVIELANDERANDROIDWEBPROFILEPAGE=()=>{
                 ROUTE("",MOVIELANDERANDROIDWEBPAGE,"MOVIELANDERANDROIDWEBPAGE");
             });
         });
-        RIGHTTEXT(HOLDER,"Profile",()=>{
+        RIGHTTEXT(HOLDER,"Profile",(DATA)=>{
+            CLICK(DATA,()=>{
+                BOTTOMVIEW("Full Profile",(DATATA)=>{
 
+                });
+            });
         });
     },(HOLDER)=>{
         GETUSERDATAAPP((Data)=>{
