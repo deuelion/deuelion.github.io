@@ -10,6 +10,7 @@ export const MOVIELANDERANDROIDWEBPROFILEPAGE=()=>{
         });
     },(HOLDER)=>{
         GETUSERDATAAPP((Data)=>{
+            console.log(Data)
             VIEWS(HOLDER,(DATA)=>{
                 WIDTH(DATA,"95%");
                 HEIGHT(DATA,"200px");
@@ -23,6 +24,14 @@ export const MOVIELANDERANDROIDWEBPROFILEPAGE=()=>{
                             MARGIN(IMG,"");
                             MARGINTOP(IMG,"2%");
                             MARGINLEFT(IMG,"2%");
+                            CLICK(IMG,()=>{
+                                BOTTOMVIEW("Avatar",(DATATA)=>{
+                                    IMAGEVIEW(DATATA,Data.IMAGE||MOVIELANDERLOGO,(IMGS)=>{
+                                        WIDTH(IMGS,"90%");
+                                        HEIGHT(IMGS,"8%");
+                                    });
+                                });
+                            })
                         });
                         INLINEVIEW(HOLDERS,(HOLDERES)=>{
                             ABSOLUTE(HOLDERES);
@@ -49,6 +58,9 @@ export const MOVIELANDERANDROIDWEBPROFILEPAGE=()=>{
                             BUTTON(HOLDERES,"Followers:"+"0",(BTN)=>{
                                 BACKGROUND(BTN,"transparent");
                                 WIDTH(BTN,"100px");
+                                CLICK(BTN,()=>{
+                                    ROUTE(" ",MOVIELANDERANDROIDWEBFOLLOWERSPAGE,"MOVIELANDERANDROIDWEBPROFILEPAGE");
+                                })
                             });
                         })
                         HEADER(HOLDERS,Data.FIRSTNAME,(DATATE)=>{
