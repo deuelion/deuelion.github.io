@@ -35,6 +35,9 @@ export const MOVIELANDERANDROIDWEBPROFILEPAGE=()=>{
                                 BACKGROUND(BTN,"forestgreen");
                                 WIDTH(BTN,"50px");
                                 HEIGHT(BTN,"40px");
+                                CLICK(BTN,()=>{
+                                    ROUTE(" ",MOVIELANDERANDROIDWEBEDITPAGE,"MOVIELANDERANDROIDWEBPROFILEPAGE");
+                                });
                             });
                         })
                         INLINEVIEW(HOLDERS,(HOLDERES)=>{
