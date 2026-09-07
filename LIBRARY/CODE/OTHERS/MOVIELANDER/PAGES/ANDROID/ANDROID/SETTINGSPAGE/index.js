@@ -7,6 +7,20 @@ export const MOVIELANDERANDROIDWEBSETTINGSPAGE=()=>{
         });
         RIGHTTEXT(HOLDER,"Settings",()=>{});
     },(HOLDER)=>{
-        
+        RIGHTICONTEXTVIEW(HOLDER,WHITESECRETCODEICON,WHITESECRETCODEICON,"App Lock",(DATA)=>{
+
+        });
+        RIGHTICONTEXTVIEW(HOLDER,WHITEPRIVACYPOLICYICON,WHITEPRIVACYPOLICYICON,"App Policies",(DATA)=>{
+
+        });
+        RIGHTICONTEXTVIEW(HOLDER,WHITELOGOUTICON,WHITELOGOUTICON,"Account Log Out ",(DATA)=>{
+            CLICK(DATA,()=>{
+                LOCALDELETE("User");
+                RELOAD();
+            });
+        });
+        RIGHTICONTEXTVIEW(HOLDER,WHITEDELETEICON,WHITEDELETEICON,"Account Delete ",(DATA)=>{
+            
+        });
     });
 };
