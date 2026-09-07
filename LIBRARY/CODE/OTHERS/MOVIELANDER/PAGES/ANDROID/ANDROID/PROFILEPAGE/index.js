@@ -89,8 +89,10 @@ export const MOVIELANDERANDROIDWEBPROFILEPAGE=()=>{
                 });
             });
             BREAK(HOLDER,()=>{});
-            RIGHTICONTEXTVIEW(HOLDER,WHITEGROUPICON,WHITEGROUPICON,"Community",()=>{
-
+            RIGHTICONTEXTVIEW(HOLDER,WHITEGROUPICON,WHITEGROUPICON,"Community",(DATA)=>{
+                CLICK(DATA,()=>{
+                    ROUTE(" ",MOVIELANDERANDROIDWEBCOMMUNITYPAGE,"MOVIELANDERANDROIDWEBPROFILEPAGE");
+                });
             });
             BREAK(HOLDER,()=>{});
             RIGHTICONTEXTVIEW(HOLDER,WHITEFIREICON,WHITEFIREICON,"Streak",()=>{
