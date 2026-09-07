@@ -3,9 +3,9 @@ export const ICONTEXT=(HOLDER,LIGHTICON,DARKICON,WORD,CALLBACK)=>{
         OVERFLOWY(DATA,"hidden");
         WIDTH(DATA,"auto");
         HEIGHT(DATA,"90%");
-        MARGIN(DATA,"");
+        MARGIN(DATA,"auto");
         ICONS(DATA,LIGHTICON,DARKICON,(DATAICON)=>{
-            MARGINTOP(DATAICON,"1%");
+            MARGINTOP(DATAICON,"2.5%");
         });
         VIEWS(DATA,(DATATA)=>{
             OVERFLOWY(DATATA,"hidden");
@@ -15,8 +15,8 @@ export const ICONTEXT=(HOLDER,LIGHTICON,DARKICON,WORD,CALLBACK)=>{
             HEADER(DATATA,WORD||"Text",(DATATEXT)=>{
                 LEFT(DATATA,"0");
                 WIDTH(DATATEXT,"90%");
-                MARGIN(DATATEXT,"2%");
-                PADDING(DATATEXT,"2%");
+                MARGIN(DATATEXT,"3%");
+                PADDING(DATATEXT,"1%");
             });
         });
         CALLBACK(DATA);

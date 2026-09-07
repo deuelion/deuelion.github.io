@@ -5,6 +5,7 @@ export const FOOTER=(HOLDER,CALLBACk)=>{
         BOTTOM(DATA,"0");
         LEFT(DATA,"");
         WIDTH(DATA,"100%");
+        MARGIN(DATA,"auto");
         HEIGHT(DATA,"60px");
         OVERFLOWY(DATA,"hidden");
         DISPLAYED(DATA,"inline-flex");

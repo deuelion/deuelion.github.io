@@ -1,5 +1,5 @@
 export const MOVIELANDERANDROIDWEBPAGE=()=>{
-    CLOUDSERVERDOWNLOAD("MOVIES");
+   /* CLOUDSERVERDOWNLOAD("MOVIES");
     FOOTERVIEWSPAGE((HOLDER)=>{
         GETINDEX("MOVIES","MOVIES",(Data)=>{
             REDUX(Data,(Element)=>{
@@ -12,6 +12,13 @@ export const MOVIELANDERANDROIDWEBPAGE=()=>{
                 });
             });
         });
+    },(HOLDER)=>{
+        
+    });
+    */
+
+    FLOATFOOTERVIEWSPAGE(()=>{
+
     },(HOLDER)=>{
         ICONTEXT(HOLDER,WHITEGRIDICON,BLACKGRIDICON,"Catergory",(DATA)=>{
             CLICK(DATA,()=>{
