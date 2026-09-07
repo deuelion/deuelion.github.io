@@ -135,7 +135,6 @@
     </div>
 <script>
     const MAX_CHARS = 50000;
-
     const fileInput=document.getElementById("fileInput");
     const preview=document.getElementById("preview");
     const previewImg=document.getElementById("previewImg");
@@ -146,67 +145,49 @@
     const copyBtn=document.getElementById("copyBtn");
     const downloadBtn=document.getElementById("downloadBtn");
     const clearBtn=document.getElementById("clearBtn");
-
     async function imageToDataURL(file, maxWidth, maxHeight, quality, mimeType) {
         const bitmap = await createImageBitmap(file);
-
         const scale = Math.min(
             1,
             maxWidth / bitmap.width,
             maxHeight / bitmap.height
         );
-
         const width = Math.max(1, Math.round(bitmap.width * scale));
         const height = Math.max(1, Math.round(bitmap.height * scale));
-
         const canvas = document.createElement("canvas");
         canvas.width = width;
         canvas.height = height;
-
         const ctx = canvas.getContext("2d", { alpha: true });
         ctx.drawImage(bitmap, 0, 0, width, height);
-
         bitmap.close();
-
         return {
             dataURL: canvas.toDataURL(mimeType, quality),
             width,
             height
         };
     }
-
     async function compressToLimit(file) {
-        // JPEG is much smaller for photographs. PNG is kept for images
-        // where transparency is important, but WebP is preferred when supported.
         const originalType = file.type.toLowerCase();
         const supportsWebP = document.createElement("canvas")
             .toDataURL("image/webp")
             .startsWith("data:image/webp");
-
         let mimeType = originalType === "image/png" && !supportsWebP
             ? "image/png"
             : (supportsWebP ? "image/webp" : "image/jpeg");
-
-        // Start with sensible dimensions and quality.
         let maxWidth = 1600;
         let maxHeight = 1600;
         let quality = 0.90;
-
         let result = await imageToDataURL(
             file, maxWidth, maxHeight, quality, mimeType
         );
-
-        // Binary-search quality first.
         let best = null;
         let low = 0.10;
         let high = 0.95;
-
         for (let i = 0; i < 9; i++) {
             const q = (low + high) / 2;
             const candidate = await imageToDataURL(
                 file, maxWidth, maxHeight, q, mimeType
             );
-
             if (candidate.dataURL.length <= MAX_CHARS) {
                 best = candidate;
                 low = q;
@@ -214,72 +195,53 @@
                 high = q;
             }
         }
-
-        // If quality alone cannot reach 50,000, progressively reduce dimensions.
         if (!best) {
             let width = 1400;
-
             for (let i = 0; i < 8; i++) {
                 const candidate = await imageToDataURL(
                     file, width, width, 0.82, mimeType
                 );
-
                 if (candidate.dataURL.length <= MAX_CHARS) {
                     best = candidate;
                     break;
                 }
-
                 width = Math.round(width * 0.80);
             }
         }
-
-        // Final fallback: keep reducing dimensions until it fits.
         if (!best) {
             let width = 900;
-
             for (let i = 0; i < 10; i++) {
                 const candidate = await imageToDataURL(
                     file, width, width, 0.70, mimeType
                 );
-
                 if (candidate.dataURL.length <= MAX_CHARS) {
                     best = candidate;
                     break;
                 }
-
                 width = Math.max(100, Math.round(width * 0.75));
             }
         }
-
-        // If a browser cannot produce an image under the requested limit,
-        // return the smallest generated result rather than producing invalid data.
         if (!best) {
             best = await imageToDataURL(
                 file, 100, 100, 0.50, mimeType
             );
         }
-
         return best;
     }
-
     fileInput.addEventListener("change", async ()=>{
         const file=fileInput.files[0];
         if(!file) return;
-
         fileType.textContent=file.type || "Unknown";
         fileSize.textContent=(file.size/1024).toFixed(2)+" KB";
         output.value="Compressing...";
         charCount.textContent="...";
-
         try {
             const result = await compressToLimit(file);
             const base64 = result.dataURL;
-
             preview.style.display="flex";
             previewImg.src=base64;
             output.value=base64;
             charCount.textContent=base64.length.toLocaleString();
-
             if (base64.length <= MAX_CHARS) {
                 charCount.textContent += " / 50,000 ✓";
             } else {
@@ -296,13 +258,11 @@
             alert("Unable to compress the image.");
         }
     });
-
     copyBtn.addEventListener("click",async()=>{
         if(output.value==="" || output.value==="Compressing..."){
             alert("No Base64 available.");
             return;
         }
-
         try{
             await navigator.clipboard.writeText(output.value);
             copyBtn.textContent="Copied!";
@@ -313,17 +273,14 @@
             alert("Copy failed.");
         }
     });
-
     downloadBtn.addEventListener("click",()=>{
         if(output.value==="" || output.value==="Compressing..."){
             alert("Nothing to download.");
             return;
         }
-
         const blob=new Blob([output.value],{
             type:"text/plain"
         });
-
         const a=document.createElement("a");
         a.href=URL.createObjectURL(blob);
         a.download="image-base64.txt";
@@ -332,7 +289,6 @@
         document.body.removeChild(a);
         URL.revokeObjectURL(a.href);
     });
-
     clearBtn.addEventListener("click",()=>{
         fileInput.value="";
         output.value="";
