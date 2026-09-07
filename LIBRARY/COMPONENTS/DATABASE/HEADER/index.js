@@ -8,6 +8,7 @@ export const HEAD=(HOLDER,CALLBACk)=>{
         HEIGHT(DATA,"60px");
         OVERFLOWY(DATA,"hidden");
         DISPLAYED(DATA,"inline-flex");
+        MARGIN(DATA,"auto");
         CALLBACk(DATA);
     });
 };

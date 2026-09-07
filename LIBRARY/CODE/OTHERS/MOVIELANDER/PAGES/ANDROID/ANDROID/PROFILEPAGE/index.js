@@ -6,6 +6,9 @@ export const MOVIELANDERANDROIDWEBPROFILEPAGE=()=>{
                 ROUTE("",MOVIELANDERANDROIDWEBPAGE,"MOVIELANDERANDROIDWEBPAGE");
             });
         });
+        ICONS(HOLDER,WHITENOTIFICATIONICON,WHITENOTIFICATIONICON,(DATA)=>{
+            MARGINLEFT(DATA,"45%");
+        });
         RIGHTTEXT(HOLDER,"Profile",(DATA)=>{
             CLICK(DATA,()=>{
                 BOTTOMVIEW("Full Profile",(DATATA)=>{
