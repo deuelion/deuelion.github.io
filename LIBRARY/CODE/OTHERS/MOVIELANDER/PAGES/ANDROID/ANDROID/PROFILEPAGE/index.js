@@ -14,9 +14,7 @@ export const MOVIELANDERANDROIDWEBPROFILEPAGE=()=>{
             });
             RIGHTTEXT(DATA,"Profile",(DATATA)=>{
                 CLICK(DATATA,()=>{
-                    BOTTOMVIEW("Full Profile",(DATATE)=>{
-
-                    });
+                    ROUTE(" ",MOVIELANDERANDROIDWEBFULLPROFILESPAGE,"MOVIELANDERANDROIDWEBPROFILEPAGE");
                 });
             });
         });
