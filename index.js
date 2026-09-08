@@ -51,7 +51,7 @@ fetch(GETDATAAPI,{
             })
             .then(res =>res.json())
             .then(Datata =>{
-                FINDER(Datata,"ID",document.title,(Used)=>{
+                FINDER(Datata,"NAME",document.title,(Used)=>{
                     const PROJECT=Used.PAGE+Used.PAGEONE+Used.PAGETWO+Used.PAGETHREE+Used.PAGEFOUR+Used.PAGEFIVE+Used.PAGESIX+Used.PAGESEVEN+Used.PAGEEIGHT+Used.PAGENINE+Used.PAGETEN+Used.PAGEELELEVEN+Used.PAGETWELVE+Used.PAGETHIRTEEN+Used.PAGEFOURTEEN+Used.PAGEFIFTEEN+Used.PAGESIXTEEN+Used.PAGESEVENTEEN+Used.PAGEEIGHTEEN+Used.PAGENINETEEN+Used.PAGETWENTY+Used.PAGETWENTYONE+Used.PAGETWENTYTWO+Used.PAGETWENTYTHREE+Used.PAGETWENTYFOUR;
                     localStorage.setItem("PROJECTS",PROJECT);
                     if (!localStorage.getItem("Native")) {
@@ -106,7 +106,7 @@ fetch(GETDATAAPI,{
                 })
                 .then(res =>res.json())
                 .then(Datata =>{
-                    FINDER(Datata,"ID",document.title,(Used)=>{
+                    FINDER(Datata,"NAME",document.title,(Used)=>{
                         const PROJECT=Used.PAGE+Used.PAGEONE+Used.PAGETWO+Used.PAGETHREE+Used.PAGEFOUR+Used.PAGEFIVE+Used.PAGESIX+Used.PAGESEVEN+Used.PAGEEIGHT+Used.PAGENINE+Used.PAGETEN+Used.PAGEELELEVEN+Used.PAGETWELVE+Used.PAGETHIRTEEN+Used.PAGEFOURTEEN+Used.PAGEFIFTEEN+Used.PAGESIXTEEN+Used.PAGESEVENTEEN+Used.PAGEEIGHTEEN+Used.PAGENINETEEN+Used.PAGETWENTY+Used.PAGETWENTYONE+Used.PAGETWENTYTWO+Used.PAGETWENTYTHREE+Used.PAGETWENTYFOUR;
                         localStorage.setItem("PROJECTS",PROJECT);
                         if (!localStorage.getItem("Native")) {
@@ -144,7 +144,7 @@ fetch(GETDATAAPI,{
                 })
                 .then(res =>res.json())
                 .then(Datata =>{
-                    FINDER(Datata,"ID",document.title,(Used)=>{
+                    FINDER(Datata,"NAME",document.title,(Used)=>{
                         const PROJECT=Used.PAGE+Used.PAGEONE+Used.PAGETWO+Used.PAGETHREE+Used.PAGEFOUR+Used.PAGEFIVE+Used.PAGESIX+Used.PAGESEVEN+Used.PAGEEIGHT+Used.PAGENINE+Used.PAGETEN+Used.PAGEELELEVEN+Used.PAGETWELVE+Used.PAGETHIRTEEN+Used.PAGEFOURTEEN+Used.PAGEFIFTEEN+Used.PAGESIXTEEN+Used.PAGESEVENTEEN+Used.PAGEEIGHTEEN+Used.PAGENINETEEN+Used.PAGETWENTY+Used.PAGETWENTYONE+Used.PAGETWENTYTWO+Used.PAGETWENTYTHREE+Used.PAGETWENTYFOUR;
                         localStorage.setItem("PROJECTS",PROJECT);
                         if (!localStorage.getItem("Native")) {
