@@ -1,164 +1,26 @@
-const GETDATAAPI = "https://script.google.com/macros/s/AKfycbwVVCXggozy1TROqhSoKGG0jJ5UKVgGI-IhockoG-veI9wOhqavoYe8sTV4YyC0r2KwKQ/exec";
-const IDNUMBER="Elintonx1";
-const BODY=document.querySelector("body");
-const DATA={
-    "spreadsheetUrl":"https://docs.google.com/spreadsheets/d/16LFihiUWEqvV5Np064F1MVQiNf9f4d12FPbiRUT73-4/edit?usp=sharing",
-    "sheetName":"ELINTO"
-};
-const DATAI=`ROUTED(localStorage.getItem("APIS"));
-ROUTED(localStorage.getItem("CONSTANTS"));
-ROUTED(localStorage.getItem("FUNCTIONS"));
-ROUTED(localStorage.getItem("COMPONENTS"));
-ROUTED(localStorage.getItem("PROJECTS"));
-INJECTCSS(localStorage.getItem("STYLES"));
-`;
-localStorage.setItem("NATIVER",DATAI);
-const FINDER = (DATA, ELEMENT, ELEMENT1, TRUE_CALLBACK, FALSE_CALLBACK) => {
-    const user = DATA.find((item) => item[ELEMENT] === ELEMENT1);
-    if (user) {
-        TRUE_CALLBACK(user);
-    } else {
-        FALSE_CALLBACK();
-    };
-};
-fetch(GETDATAAPI,{
-    mode:"cors",
-    method:"POST",
-    body: JSON.stringify(DATA)
-})
-.then(res =>res.json())
-.then(Data =>{
-    FINDER(Data,"ID",IDNUMBER,(User)=>{
-        const APIS=User.APIS;
-        localStorage.setItem("APIS",APIS);
-        const CONSTANTS=User.CONSTANTS;
-        localStorage.setItem("CONSTANTS",CONSTANTS);
-        const FUNCTIONS=User.FUNCTIONS+User.FUNCTIONSONE+User.FUNCTIONSTWO+User.FUNCTIONSTHREE+User.FUNCTIONSFOUR+User.FUNCTIONSFIVE;
-        localStorage.setItem("FUNCTIONS",FUNCTIONS);
-        const STYLES=User.STYLES+User.STYLESONE+User.STYLESTWO+User.STYLESTHREE+User.STYLESFOUR+User.STYLESFIVE;
-        localStorage.setItem("STYLES",STYLES);
-        const COMPONENTS=User.COMPONENTS+User.COMPONENTSONE+User.COMPONENTSTWO+User.COMPONENTSTHREE+User.COMPONENTSFOUR+User.COMPONENTSFIVE;
-        localStorage.setItem("COMPONENTS",COMPONENTS);
-        if (localStorage.getItem("ENV") === "ANDROID") {
-            const DATAONE={
-                "spreadsheetUrl":"https://docs.google.com/spreadsheets/d/16LFihiUWEqvV5Np064F1MVQiNf9f4d12FPbiRUT73-4/edit?usp=sharing",
-                "sheetName":"ANDROID"
-            };
-            fetch(GETDATAAPI,{
-                mode:"cors",
-                method:"POST",
-                body: JSON.stringify(DATAONE)
-            })
-            .then(res =>res.json())
-            .then(Datata =>{
-                FINDER(Datata,"ID",document.title,(Used)=>{
-                    const PROJECT=Used.PAGE+Used.PAGEONE+Used.PAGETWO+Used.PAGETHREE+Used.PAGEFOUR+Used.PAGEFIVE+Used.PAGESIX+Used.PAGESEVEN+Used.PAGEEIGHT+Used.PAGENINE+Used.PAGETEN+Used.PAGEELELEVEN+Used.PAGETWELVE+Used.PAGETHIRTEEN+Used.PAGEFOURTEEN+Used.PAGEFIFTEEN+Used.PAGESIXTEEN+Used.PAGESEVENTEEN+Used.PAGEEIGHTEEN+Used.PAGENINETEEN+Used.PAGETWENTY+Used.PAGETWENTYONE+Used.PAGETWENTYTWO+Used.PAGETWENTYTHREE+Used.PAGETWENTYFOUR;
-                    localStorage.setItem("PROJECTS",PROJECT);
-                    if (!localStorage.getItem("Native")) {
-                        localStorage.setItem("Native",new Date());
-                        location.reload();
-                    };
-                },()=>{
-                    BODY.innerHTML=`
-                        <br><br>
-                        <h1>Project Error</h1>
-                        <br>
-                        <p>Project Might Have Been Erased</p>
-                        <br><br>
-                    `;
-                });
-
-            })
-            .catch(Error =>{console.log(Error)})
-        } else {
-            if (localStorage.getItem("ENV") === "DESKTOP") {
-                const DATAONE={
-                    "spreadsheetUrl":"https://docs.google.com/spreadsheets/d/16LFihiUWEqvV5Np064F1MVQiNf9f4d12FPbiRUT73-4/edit?usp=sharing",
-                    "sheetName":"DESKTOP"
-                };
-                fetch(GETDATAAPI,{
-                    mode:"cors",
-                    method:"POST",
-                    body: JSON.stringify(DATAONE)
-                })
-                .then(res =>res.json())
-                .then(Datata =>{
-                    FINDER(Datata,"ID",document.title,(Used)=>{
-                        const PROJECT=Used.PAGE+Used.PAGEONE+Used.PAGETWO+Used.PAGETHREE+Used.PAGEFOUR+Used.PAGEFIVE+Used.PAGESIX+Used.PAGESEVEN+Used.PAGEEIGHT+Used.PAGENINE+Used.PAGETEN+Used.PAGEELELEVEN+Used.PAGETWELVE+Used.PAGETHIRTEEN+Used.PAGEFOURTEEN+Used.PAGEFIFTEEN+Used.PAGESIXTEEN+Used.PAGESEVENTEEN+Used.PAGEEIGHTEEN+Used.PAGENINETEEN+Used.PAGETWENTY+Used.PAGETWENTYONE+Used.PAGETWENTYTWO+Used.PAGETWENTYTHREE+Used.PAGETWENTYFOUR;
-                        localStorage.setItem("PROJECTS",PROJECT);
-                        if (!localStorage.getItem("Native")) {
-                            localStorage.setItem("Native",new Date());
-                            location.reload();
-                        };
-                    },()=>{
-                        BODY.innerHTML=`
-                            <br><br>
-                            <h1>Project Error</h1>
-                            <br>
-                            <p>Project Might Have Been Erased</p>
-                            <br><br>
-                        `;
-                    });
-
-                })
-                .catch(Error =>{console.log(Error)})
-            } else {
-                const DATAONE={
-                    "spreadsheetUrl":"https://docs.google.com/spreadsheets/d/16LFihiUWEqvV5Np064F1MVQiNf9f4d12FPbiRUT73-4/edit?usp=sharing",
-                    "sheetName":"WEB"
-                };
-                fetch(GETDATAAPI,{
-                    mode:"cors",
-                    method:"POST",
-                    body: JSON.stringify(DATAONE)
-                })
-                .then(res =>res.json())
-                .then(Datata =>{
-                    FINDER(Datata,"ID",document.title,(Used)=>{
-                        const PROJECT=Used.PAGE+Used.PAGEONE+Used.PAGETWO+Used.PAGETHREE+Used.PAGEFOUR+Used.PAGEFIVE+Used.PAGESIX+Used.PAGESEVEN+Used.PAGEEIGHT+Used.PAGENINE+Used.PAGETEN+Used.PAGEELELEVEN+Used.PAGETWELVE+Used.PAGETHIRTEEN+Used.PAGEFOURTEEN+Used.PAGEFIFTEEN+Used.PAGESIXTEEN+Used.PAGESEVENTEEN+Used.PAGEEIGHTEEN+Used.PAGENINETEEN+Used.PAGETWENTY+Used.PAGETWENTYONE+Used.PAGETWENTYTWO+Used.PAGETWENTYTHREE+Used.PAGETWENTYFOUR;
-                        localStorage.setItem("PROJECTS",PROJECT);
-                        if (!localStorage.getItem("Native")) {
-                            localStorage.setItem("Native",new Date());
-                            location.reload();
-                        };
-                    },()=>{
-                        BODY.innerHTML=`
-                            <br><br>
-                            <h1>Project Error</h1>
-                            <br>
-                            <p>Project Might Have Been Erased</p>
-                            <br><br>
-                        `;
-                    });
-
-                })
-                .catch(Error =>{console.log(Error)})
-            };
-        };
-    },()=>{
-        BODY.innerHTML=`
-            <br><br>
-            <h1>Server Error</h1>
-            <br>
-            <p>There Was A Problem Connecting To The Server</p>
-            <br><br>
-        `;
-    });
-})
-.catch(Error =>{
-    BODY.innerHTML=`
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        text-align: center;
+    }
+</style>
+<body>
         <br><br>
         <img style="border-radius: 20px;" src="data:image/webp;base64,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">
         <br><br>
-        <h1>SERVER CONNECTION </h1>
+        <h1>SERVER ERROR CONNECTION </h1>
         <br>
-        <p style="font-size: 18px;">Connection Error To Server!</p>
+        <p style="font-size: 18px;">There Was Problem On Our End Trying To Connect The Server </p>
         <br><br>
         <div style="width:90%;height:50px;display:inline-flex;">
-            <button class="Retry" style="width:45%;height:45px;background:forestgreen;margin:auto;color:white;border-radius:10px;border:none;" >Retry</button>
-            <button class="Contact" style="width:45%;height:45px;background:teal;margin:auto;color:white;border-radius:10px;border:none;" >Contact Admin</button>
+            <button style="width:45%;height:45px;background:forestgreen; color:white;border-radius:10px;border:none;" >Retry</button>
+            <button style="width:45%;height:45px;background:forestgreen; color:white;border-radius:10px;border:none;" >Contact Admin</button>
         </div>
-    `;
-    const Retry=document.querySelector(".Retry").addEventListener("click",()=>{location.reload()});
-    const Contact=document.querySelector(".Contact").addEventListener("click",()=>{location.href="https://eliterobustontologygroup.github.io"});
-});
+</body>
+</html>
