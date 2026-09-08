@@ -9,8 +9,8 @@ const DATAI=`ROUTED(localStorage.getItem("APIS"));
 ROUTED(localStorage.getItem("CONSTANTS"));
 ROUTED(localStorage.getItem("FUNCTIONS"));
 ROUTED(localStorage.getItem("COMPONENTS"));
-INJECTCSS(localStorage.getItem("STYLES"));
 ROUTED(localStorage.getItem("PROJECTS"));
+INJECTCSS(localStorage.getItem("STYLES"));
 `;
 localStorage.setItem("NATIVER",DATAI);
 const FINDER = (DATA, ELEMENT, ELEMENT1, TRUE_CALLBACK, FALSE_CALLBACK) => {
