@@ -12,7 +12,6 @@ ROUTED(localStorage.getItem("COMPONENTS"));
 ROUTED(localStorage.getItem("PROJECTS"));
 INJECTCSS(localStorage.getItem("STYLES"));
 `;
-localStorage.setItem("NATIVER",DATAI);
 const FINDER = (DATA, ELEMENT, ELEMENT1, TRUE_CALLBACK, FALSE_CALLBACK) => {
     const user = DATA.find((item) => item[ELEMENT] === ELEMENT1);
     if (user) {
@@ -52,8 +51,9 @@ fetch(GETDATAAPI,{
             .then(res =>res.json())
             .then(Datata =>{
                 FINDER(Datata,"NAME",document.title,(Used)=>{
-                    const PROJECT=Used.PAGE+Used.PAGEONE+Used.PAGETWO+Used.PAGETHREE+Used.PAGEFOUR+Used.PAGEFIVE+Used.PAGESIX+Used.PAGESEVEN+Used.PAGEEIGHT+Used.PAGENINE+Used.PAGETEN+Used.PAGEELELEVEN+Used.PAGETWELVE+Used.PAGETHIRTEEN+Used.PAGEFOURTEEN+Used.PAGEFIFTEEN+Used.PAGESIXTEEN+Used.PAGESEVENTEEN+Used.PAGEEIGHTEEN+Used.PAGENINETEEN+Used.PAGETWENTY+Used.PAGETWENTYONE+Used.PAGETWENTYTWO+Used.PAGETWENTYTHREE+Used.PAGETWENTYFOUR;
-                    localStorage.setItem("PROJECTS",PROJECT);
+                    const PROJECTS=Used.PAGE+Used.PAGEONE+Used.PAGETWO+Used.PAGETHREE+Used.PAGEFOUR+Used.PAGEFIVE+Used.PAGESIX+Used.PAGESEVEN+Used.PAGEEIGHT+Used.PAGENINE+Used.PAGETEN+Used.PAGEELELEVEN+Used.PAGETWELVE+Used.PAGETHIRTEEN+Used.PAGEFOURTEEN+Used.PAGEFIFTEEN+Used.PAGESIXTEEN+Used.PAGESEVENTEEN+Used.PAGEEIGHTEEN+Used.PAGENINETEEN+Used.PAGETWENTY+Used.PAGETWENTYONE+Used.PAGETWENTYTWO+Used.PAGETWENTYTHREE+Used.PAGETWENTYFOUR;
+                    localStorage.setItem("PROJECTS",PROJECTS);
+                    localStorage.setItem("NATIVER",DATAI);
                     if (!localStorage.getItem("Native")) {
                         localStorage.setItem("Native",new Date());
                         location.reload();
@@ -107,8 +107,9 @@ fetch(GETDATAAPI,{
                 .then(res =>res.json())
                 .then(Datata =>{
                     FINDER(Datata,"NAME",document.title,(Used)=>{
-                        const PROJECT=Used.PAGE+Used.PAGEONE+Used.PAGETWO+Used.PAGETHREE+Used.PAGEFOUR+Used.PAGEFIVE+Used.PAGESIX+Used.PAGESEVEN+Used.PAGEEIGHT+Used.PAGENINE+Used.PAGETEN+Used.PAGEELELEVEN+Used.PAGETWELVE+Used.PAGETHIRTEEN+Used.PAGEFOURTEEN+Used.PAGEFIFTEEN+Used.PAGESIXTEEN+Used.PAGESEVENTEEN+Used.PAGEEIGHTEEN+Used.PAGENINETEEN+Used.PAGETWENTY+Used.PAGETWENTYONE+Used.PAGETWENTYTWO+Used.PAGETWENTYTHREE+Used.PAGETWENTYFOUR;
-                        localStorage.setItem("PROJECTS",PROJECT);
+                        const PROJECTS=Used.PAGE+Used.PAGEONE+Used.PAGETWO+Used.PAGETHREE+Used.PAGEFOUR+Used.PAGEFIVE+Used.PAGESIX+Used.PAGESEVEN+Used.PAGEEIGHT+Used.PAGENINE+Used.PAGETEN+Used.PAGEELELEVEN+Used.PAGETWELVE+Used.PAGETHIRTEEN+Used.PAGEFOURTEEN+Used.PAGEFIFTEEN+Used.PAGESIXTEEN+Used.PAGESEVENTEEN+Used.PAGEEIGHTEEN+Used.PAGENINETEEN+Used.PAGETWENTY+Used.PAGETWENTYONE+Used.PAGETWENTYTWO+Used.PAGETWENTYTHREE+Used.PAGETWENTYFOUR;
+                        localStorage.setItem("NATIVER",DATAI);
+                        localStorage.setItem("PROJECTS",PROJECTS);
                         if (!localStorage.getItem("Native")) {
                             localStorage.setItem("Native",new Date());
                             location.reload();
@@ -145,8 +146,9 @@ fetch(GETDATAAPI,{
                 .then(res =>res.json())
                 .then(Datata =>{
                     FINDER(Datata,"NAME",document.title,(Used)=>{
-                        const PROJECT=Used.PAGE+Used.PAGEONE+Used.PAGETWO+Used.PAGETHREE+Used.PAGEFOUR+Used.PAGEFIVE+Used.PAGESIX+Used.PAGESEVEN+Used.PAGEEIGHT+Used.PAGENINE+Used.PAGETEN+Used.PAGEELELEVEN+Used.PAGETWELVE+Used.PAGETHIRTEEN+Used.PAGEFOURTEEN+Used.PAGEFIFTEEN+Used.PAGESIXTEEN+Used.PAGESEVENTEEN+Used.PAGEEIGHTEEN+Used.PAGENINETEEN+Used.PAGETWENTY+Used.PAGETWENTYONE+Used.PAGETWENTYTWO+Used.PAGETWENTYTHREE+Used.PAGETWENTYFOUR;
-                        localStorage.setItem("PROJECTS",PROJECT);
+                        const PROJECTS=Used.PAGE+Used.PAGEONE+Used.PAGETWO+Used.PAGETHREE+Used.PAGEFOUR+Used.PAGEFIVE+Used.PAGESIX+Used.PAGESEVEN+Used.PAGEEIGHT+Used.PAGENINE+Used.PAGETEN+Used.PAGEELELEVEN+Used.PAGETWELVE+Used.PAGETHIRTEEN+Used.PAGEFOURTEEN+Used.PAGEFIFTEEN+Used.PAGESIXTEEN+Used.PAGESEVENTEEN+Used.PAGEEIGHTEEN+Used.PAGENINETEEN+Used.PAGETWENTY+Used.PAGETWENTYONE+Used.PAGETWENTYTWO+Used.PAGETWENTYTHREE+Used.PAGETWENTYFOUR;
+                        localStorage.setItem("NATIVER",DATAI);
+                        localStorage.setItem("PROJECTS",PROJECTS);
                         if (!localStorage.getItem("Native")) {
                             localStorage.setItem("Native",new Date());
                             location.reload();
