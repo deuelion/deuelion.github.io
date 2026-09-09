@@ -3,30 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>NovaWorks — Digital Solutions</title>
-
     <style>
-
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
         html {
             scroll-behavior: smooth;
         }
-
         body {
             font-family: Arial, Helvetica, sans-serif;
             background: #f5f7fb;
             color: #172033;
             line-height: 1.6;
         }
-
-        /* NAVIGATION */
-
         header {
             background: white;
             border-bottom: 1px solid #e7eaf0;
@@ -34,7 +26,6 @@
             top: 0;
             z-index: 1000;
         }
-
         nav {
             max-width: 1150px;
             margin: auto;
@@ -43,35 +34,27 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .logo {
             font-size: 24px;
             font-weight: bold;
             color: #111827;
         }
-
         .logo span {
             color: #4f46e5;
         }
-
         nav ul {
             display: flex;
             list-style: none;
             gap: 30px;
         }
-
         nav a {
             text-decoration: none;
             color: #4b5563;
             font-size: 15px;
         }
-
         nav a:hover {
             color: #4f46e5;
         }
-
-        /* HERO */
-
         .hero {
             min-height: 650px;
             display: flex;
@@ -83,18 +66,15 @@
                     #ffffff
                 );
         }
-
         .hero-content {
             width: 1150px;
             max-width: 100%;
             margin: auto;
             padding: 80px 20px;
         }
-
         .hero-text {
             max-width: 700px;
         }
-
         .badge {
             display: inline-block;
             background: #e0e7ff;
@@ -105,31 +85,26 @@
             margin-bottom: 20px;
             font-weight: bold;
         }
-
         .hero h1 {
             font-size: clamp(45px, 7vw, 78px);
             line-height: 1.05;
             margin-bottom: 25px;
             color: #111827;
         }
-
         .hero h1 span {
             color: #4f46e5;
         }
-
         .hero p {
             font-size: 19px;
             color: #667085;
             max-width: 620px;
             margin-bottom: 35px;
         }
-
         .buttons {
             display: flex;
             gap: 15px;
             flex-wrap: wrap;
         }
-
         .btn {
             display: inline-block;
             padding: 14px 24px;
@@ -137,60 +112,45 @@
             text-decoration: none;
             font-weight: bold;
         }
-
         .primary {
             background: #4f46e5;
             color: white;
         }
-
         .primary:hover {
             background: #4338ca;
         }
-
         .secondary {
             border: 1px solid #d1d5db;
             color: #374151;
             background: white;
         }
-
-        /* GENERAL */
-
         section {
             padding: 90px 20px;
         }
-
         .container {
             max-width: 1150px;
             margin: auto;
         }
-
         .section-heading {
             max-width: 650px;
             margin-bottom: 45px;
         }
-
         .section-heading h2 {
             font-size: 40px;
             margin-bottom: 12px;
             color: #111827;
         }
-
         .section-heading p {
             color: #667085;
         }
-
-        /* SERVICES */
-
         .services {
             background: white;
         }
-
         .service-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 22px;
         }
-
         .card {
             background: #f8fafc;
             border: 1px solid #e5e7eb;
@@ -198,12 +158,10 @@
             padding: 30px;
             transition: 0.25s;
         }
-
         .card:hover {
             transform: translateY(-6px);
             box-shadow: 0 15px 40px rgba(0,0,0,0.08);
         }
-
         .icon {
             width: 50px;
             height: 50px;
@@ -216,61 +174,47 @@
             font-size: 22px;
             margin-bottom: 20px;
         }
-
         .card h3 {
             margin-bottom: 10px;
             font-size: 21px;
         }
-
         .card p {
             color: #667085;
             font-size: 15px;
         }
-
-        /* ABOUT */
-
         .about {
             background: #111827;
             color: white;
         }
-
         .about-grid {
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: 70px;
             align-items: center;
         }
-
         .about h2 {
             font-size: 45px;
             line-height: 1.1;
             margin-bottom: 20px;
         }
-
         .about p {
             color: #cbd5e1;
             margin-bottom: 20px;
         }
-
         .about-box {
             border: 1px solid #374151;
             border-radius: 18px;
             padding: 35px;
             background: #1f2937;
         }
-
         .about-box h3 {
             margin-bottom: 15px;
         }
-
-        /* PROJECTS */
-
         .project-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 22px;
         }
-
         .project {
             min-height: 250px;
             border-radius: 16px;
@@ -281,49 +225,37 @@
             flex-direction: column;
             justify-content: flex-end;
         }
-
         .project small {
             color: #4f46e5;
             font-weight: bold;
             margin-bottom: 8px;
         }
-
         .project h3 {
             font-size: 23px;
         }
-
-        /* CONTACT */
-
         .contact {
             background: white;
         }
-
         .contact-box {
             background: #eef2ff;
             border-radius: 20px;
             padding: 60px;
             text-align: center;
         }
-
         .contact-box h2 {
             font-size: 42px;
             margin-bottom: 15px;
         }
-
         .contact-box p {
             max-width: 600px;
             margin: 0 auto 30px;
             color: #667085;
         }
-
-        /* FOOTER */
-
         footer {
             background: #0b1120;
             color: #94a3b8;
             padding: 35px 20px;
         }
-
         .footer-content {
             max-width: 1150px;
             margin: auto;
@@ -331,55 +263,39 @@
             justify-content: space-between;
             gap: 20px;
         }
-
         footer strong {
             color: white;
         }
-
-        /* RESPONSIVE */
-
         @media (max-width: 800px) {
-
             nav ul {
                 display: none;
             }
-
             .service-grid,
             .project-grid,
             .about-grid {
                 grid-template-columns: 1fr;
             }
-
             .hero {
                 min-height: 550px;
             }
-
             .about-grid {
                 gap: 35px;
             }
-
             .contact-box {
                 padding: 40px 20px;
             }
-
             .footer-content {
                 flex-direction: column;
             }
         }
-
     </style>
 </head>
-
 <body>
-
 <header>
-
     <nav>
-
         <div class="logo">
             Nova<span>Works</span>
         </div>
-
         <ul>
             <li><a href="#home">Home</a></li>
             <li><a href="#services">Services</a></li>
@@ -387,262 +303,162 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-
     </nav>
-
 </header>
-
-
 <main>
-
-    <!-- HERO -->
-
     <section class="hero" id="home">
-
         <div class="hero-content">
-
             <div class="hero-text">
-
                 <span class="badge">
                     DIGITAL SOLUTIONS
                 </span>
-
                 <h1>
                     We build digital
                     <span>experiences.</span>
                 </h1>
-
                 <p>
                     We help businesses turn ideas into powerful websites,
                     applications and digital products that people love to use.
                 </p>
-
                 <div class="buttons">
-
                     <a href="#contact" class="btn primary">
                         Start a Project
                     </a>
-
                     <a href="#projects" class="btn secondary">
                         View Our Work
                     </a>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
-
-
-    <!-- SERVICES -->
-
     <section class="services" id="services">
-
         <div class="container">
-
             <div class="section-heading">
-
                 <h2>
                     What we do
                 </h2>
-
                 <p>
                     Everything you need to create, launch and grow
                     a modern digital product.
                 </p>
-
             </div>
-
-
             <div class="service-grid">
-
                 <div class="card">
-
                     <div class="icon">
                         &lt;/&gt;
                     </div>
-
                     <h3>
                         Web Development
                     </h3>
-
                     <p>
                         Fast, responsive and modern websites
                         designed for businesses and organizations.
                     </p>
-
                 </div>
-
-
                 <div class="card">
-
                     <div class="icon">
                         ◈
                     </div>
-
                     <h3>
                         App Development
                     </h3>
-
                     <p>
                         Custom mobile and desktop applications
                         built around your business requirements.
                     </p>
-
                 </div>
-
-
                 <div class="card">
-
                     <div class="icon">
                         ⚙
                     </div>
-
                     <h3>
                         Business Systems
                     </h3>
-
                     <p>
                         Digital systems that automate processes
                         and make your business easier to manage.
                     </p>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
-
-
-    <!-- ABOUT -->
-
     <section class="about" id="about">
-
         <div class="container">
-
             <div class="about-grid">
-
                 <div>
-
                     <h2>
                         Technology should
                         solve problems.
                     </h2>
-
                     <p>
                         We believe good software is more than
                         beautiful interfaces. It should make work
                         simpler, faster and more productive.
                     </p>
-
                     <p>
                         From an initial idea to a finished product,
                         we focus on creating practical technology
                         that delivers real value.
                     </p>
-
                 </div>
-
-
                 <div class="about-box">
-
                     <h3>
                         Our approach
                     </h3>
-
                     <p>
                         Discover the problem.
                     </p>
-
                     <p>
                         Design the solution.
                     </p>
-
                     <p>
                         Build the product.
                     </p>
-
                     <p>
                         Improve continuously.
                     </p>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
-
-
-    <!-- PROJECTS -->
-
     <section id="projects">
-
         <div class="container">
-
             <div class="section-heading">
-
                 <h2>
                     Selected projects
                 </h2>
-
                 <p>
                     A few examples of the kinds of digital
                     products we can build.
                 </p>
-
             </div>
-
-
             <div class="project-grid">
-
                 <div class="project">
-
                     <small>
                         MOBILE APP
                     </small>
-
                     <h3>
                         Movie Platform
                     </h3>
-
                 </div>
-
-
                 <div class="project">
-
                     <small>
                         BUSINESS SYSTEM
                     </small>
-
                     <h3>
                         Enterprise Cloud
                     </h3>
-
                 </div>
-
-
                 <div class="project">
-
                     <small>
                         WEB PLATFORM
                     </small>
-
                     <h3>
                         Digital Marketplace
                     </h3>
-
                 </div>
-
             </div>
-
         </div>
-
     </section>
     <section class="contact" id="contact">
         <div class="container">
