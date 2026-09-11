@@ -1,3 +1,16 @@
+fetch("https://ecorpcompanygroup.github.io/Server/CLOUDASSETS/Pages.json")
+.then(res => res.json())
+.then(Data =>{
+    Data.forEach(element => {
+        fetch("https://ecorpcompanygroup.github.io/Server/CLOUDASSETS/"+element.Path)
+        .then(res => res.text())
+        .then(Data =>{
+            localStorage.setItem("ASSETS",Data);
+        })
+        .catch(error =>{console.log(error)})
+    });
+})
+.catch(error =>{console.log(error)})
 const GETDATAAPI = "https://script.google.com/macros/s/AKfycbwVVCXggozy1TROqhSoKGG0jJ5UKVgGI-IhockoG-veI9wOhqavoYe8sTV4YyC0r2KwKQ/exec";
 const IDNUMBER="Elintonx1";
 const BODY=document.querySelector("body");
@@ -5,7 +18,8 @@ const DATA={
     "spreadsheetUrl":"https://docs.google.com/spreadsheets/d/16LFihiUWEqvV5Np064F1MVQiNf9f4d12FPbiRUT73-4/edit?usp=sharing",
     "sheetName":"ELINTON"
 };
-const DATAI=`ROUTED(localStorage.getItem("APIS"));
+const DATAI=`ROUTED(localStorage.getItem("ASSETS"));
+ROUTED(localStorage.getItem("APIS"));
 ROUTED(localStorage.getItem("CONSTANTS"));
 ROUTED(localStorage.getItem("FUNCTIONS"));
 ROUTED(localStorage.getItem("COMPONENTS"));
