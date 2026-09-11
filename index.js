@@ -29,7 +29,7 @@ fetch(GETDATAAPI,{
 .then(res =>res.json())
 .then(Data =>{
     FINDER(Data,"ID",IDNUMBER,(User)=>{
-        const APIS=User.APIS;
+        const APIS=User.APIS+User.VERSION;
         localStorage.setItem("APIS",APIS);
         const CONSTANTS=User.CONSTANTS;
         localStorage.setItem("CONSTANTS",CONSTANTS);
