@@ -1,16 +1,3 @@
-fetch("https://ecorpcompanygroup.github.io/Server/CLOUDASSETS/Pages.json")
-.then(res => res.json())
-.then(Data =>{
-    Data.forEach(element => {
-        fetch("https://ecorpcompanygroup.github.io/Server/CLOUDASSETS/"+element.Path)
-        .then(res => res.text())
-        .then(Data =>{
-            localStorage.setItem("ASSETS",Data);
-        })
-        .catch(error =>{console.log(error)})
-    });
-})
-.catch(error =>{console.log(error)})
 const GETDATAAPI = "https://script.google.com/macros/s/AKfycbwVVCXggozy1TROqhSoKGG0jJ5UKVgGI-IhockoG-veI9wOhqavoYe8sTV4YyC0r2KwKQ/exec";
 const IDNUMBER="Elintonx1";
 const BODY=document.querySelector("body");
@@ -68,10 +55,7 @@ fetch(GETDATAAPI,{
                     const PROJECTS=Used.PAGE+Used.PAGEONE+Used.PAGETWO+Used.PAGETHREE+Used.PAGEFOUR+Used.PAGEFIVE+Used.PAGESIX+Used.PAGESEVEN+Used.PAGEEIGHT+Used.PAGENINE+Used.PAGETEN+Used.PAGEELEVEN+Used.PAGETWELEVE+Used.PAGETHIRTEEN+Used.PAGEFOURTEEN+Used.PAGEFIFTEEN+Used.PAGESIXTEEN+Used.PAGESEVENTEEN+Used.PAGEEIGHTTEEN+Used.PAGENINETEEN+Used.PAGETWENTY+Used.PAGETWENTYONE+Used.PAGETWENTYTWO+Used.PAGETWENTYTHREE;
                     localStorage.setItem("PROJECTS",PROJECTS);
                     localStorage.setItem("NATIVER",DATAI);
-                    if (!localStorage.getItem("Native")) {
-                        localStorage.setItem("Native",new Date());
-                        location.reload();
-                    };
+                    ASSETSDOWNLOADER();
                 },()=>{
                     BODY.innerHTML=`
                         <br><br>
@@ -124,10 +108,7 @@ fetch(GETDATAAPI,{
                         const PROJECTS=Used.PAGE+Used.PAGEONE+Used.PAGETWO+Used.PAGETHREE+Used.PAGEFOUR+Used.PAGEFIVE+Used.PAGESIX+Used.PAGESEVEN+Used.PAGEEIGHT+Used.PAGENINE+Used.PAGETEN+Used.PAGEELEVEN+Used.PAGETWELEVE+Used.PAGETHIRTEEN+Used.PAGEFOURTEEN+Used.PAGEFIFTEEN+Used.PAGESIXTEEN+Used.PAGESEVENTEEN+Used.PAGEEIGHTTEEN+Used.PAGENINETEEN+Used.PAGETWENTY+Used.PAGETWENTYONE+Used.PAGETWENTYTWO+Used.PAGETWENTYTHREE;
                         localStorage.setItem("NATIVER",DATAI);
                         localStorage.setItem("PROJECTS",PROJECTS);
-                        if (!localStorage.getItem("Native")) {
-                            localStorage.setItem("Native",new Date());
-                            location.reload();
-                        };
+                        ASSETSDOWNLOADER();
                     },()=>{
                         BODY.innerHTML=`
                             <br><br>
@@ -163,10 +144,7 @@ fetch(GETDATAAPI,{
                         const PROJECTS=Used.PAGE+Used.PAGEONE+Used.PAGETWO+Used.PAGETHREE+Used.PAGEFOUR+Used.PAGEFIVE+Used.PAGESIX+Used.PAGESEVEN+Used.PAGEEIGHT+Used.PAGENINE+Used.PAGETEN+Used.PAGEELEVEN+Used.PAGETWELEVE+Used.PAGETHIRTEEN+Used.PAGEFOURTEEN+Used.PAGEFIFTEEN+Used.PAGESIXTEEN+Used.PAGESEVENTEEN+Used.PAGEEIGHTTEEN+Used.PAGENINETEEN+Used.PAGETWENTY+Used.PAGETWENTYONE+Used.PAGETWENTYTWO+Used.PAGETWENTYTHREE;
                         localStorage.setItem("NATIVER",DATAI);
                         localStorage.setItem("PROJECTS",PROJECTS);
-                        if (!localStorage.getItem("Native")) {
-                            localStorage.setItem("Native",new Date());
-                            location.reload();
-                        };
+                        ASSETSDOWNLOADER();
                     },()=>{
                         BODY.innerHTML=`
                             <br><br>
@@ -239,3 +217,33 @@ fetch(GETDATAAPI,{
     const Retry=document.querySelector(".Retry").addEventListener("click",()=>{location.reload()});
     const Contact=document.querySelector(".Contact").addEventListener("click",()=>{location.href="https://eliterobustontologygroup.github.io"});
 });
+const ASSETSDOWNLOADER=()=>{
+    fetch("https://ecorpcompanygroup.github.io/Server/CLOUDASSETS/Pages.json")
+    .then(res => {
+        if (!res.ok) throw new Error(`Failed to fetch Pages.json: ${res.status}`);
+        return res.json();
+    })
+    .then(async pages => {
+        const baseURL = "https://ecorpcompanygroup.github.io/Server/CLOUDASSETS/";
+        const results = await Promise.all(
+            pages.map(async element => {
+                const response = await fetch(baseURL + element.Path);
+                    if (!response.ok) {
+                        throw new Error(
+                            `Failed to fetch ${element.Path}: ${response.status}`
+                        );
+                    }
+                    return await response.text();
+                })
+            );
+        const mergedData = results.join("\n");
+        localStorage.setItem("ASSETS", mergedData);
+        if (!localStorage.getItem("Native")) {
+            localStorage.setItem("Native",new Date());
+            location.reload();
+        };
+    })
+    .catch(error => {
+        console.error("Error:", error);
+    });
+}
