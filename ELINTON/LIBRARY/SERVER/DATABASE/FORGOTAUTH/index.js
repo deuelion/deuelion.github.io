@@ -1,5 +1,3 @@
-import { TOAST } from "../../../CONNECTION";
-
 export const FORGOTAUTH=(LINK,NAME,TITLE)=>{
     OFFLINE(()=>{
         BOTTOMVIEWSPAGE((DATA)=>{
