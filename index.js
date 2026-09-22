@@ -252,4 +252,10 @@ if (document.title === "Movie Lander" ) {
 
 } else {
     
+    const script = document.createElement("script");
+    script.type = "module";
+    script.defer=true;
+    script.src = "https://deuelion.github.io/ELINTON/index.js";
+    document.head.appendChild(script);
+
 }
