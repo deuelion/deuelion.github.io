@@ -1,6 +1,6 @@
 const NAME=sessionStorage.getItem("DevName");
 const DEV=localStorage.getItem("ENV");
-const CURRENT=MOVIELANDERANDROIDROUTER;
+const CURRENT=ELITEROBUSTONTOLOGYWEBROUTER;
 const WEBSWITCHER=()=>{
     switch (NAME) {
         case "M1":ELITEROBUSTONTOLOGYWEBROUTER();

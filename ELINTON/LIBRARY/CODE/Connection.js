@@ -3,7 +3,7 @@ import { EROXIANPROJECT } from "./OTHERS/EROXIAN/Connection.js";
 import { MOVIELANDERPROJECT } from "./OTHERS/MOVIELANDER/Connection.js";
 import { NOORPROJECT } from "./OTHERS/NOOR/Connection.js";
 import { SHYLANSIRAJPROJECT } from "./OTHERS/SHYLANSIRAJ/Connection.js";
-let DEFAULTS=MOVIELANDERPROJECT;
+let DEFAULTS=ELITEROBUSTONTOLOGYPROJECT;
 export const FEATURES=()=>{
     const TITLE = document.title;
     switch (TITLE) {
