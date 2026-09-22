@@ -1,0 +1,22 @@
+export const VIEWBOTTOMHOLDER=(HOLDER,SOURCE,WORD,CALLBACK)=>{
+    VIEWS(HOLDER,(DATA)=>{
+        COMPOMODE(DATA);
+        OVERFLOW(DATA,"hidden");
+        MARGIN(DATA,"2%");
+        IMAGE(DATA,SOURCE,(DATATA)=>{
+            HEIGHT(DATATA,"70%");
+        });
+        VIEWS(DATA,(DATATA)=>{
+            BACKGROUND(DATATA,"transparent");
+            OVERFLOWY(DATATA,"hidden");
+            DISPLAYED(DATATA,"inline-flex");
+            WIDTH(DATATA,"");
+            HEIGHT(DATATA,"20%");
+            HEADER(DATATA,WORD||"Text",(DATATEXT)=>{
+                FONTSIZE(DATATEXT,"100%");
+                MARGIN(DATATEXT,"auto");
+            });
+        });
+        CALLBACK(DATA);
+    });
+};

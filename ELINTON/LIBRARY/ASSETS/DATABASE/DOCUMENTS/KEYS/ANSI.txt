@@ -1,0 +1,174 @@
+SEQUENCE
+{
+    SEQUENCE
+    {
+        INTEGER = 
+            40 08 4A 52 B3 13 E1 37  07 62 EF 9A 38 8C 01 A0   @.JR³.á7.bï.8.. 
+            1E A6 3B 43                                        .¦;C
+        SEQUENCE
+        {
+            OBJECT IDENTIFIER = Sha256WithRSAEncryption (1.2.840.113549.1.1.11)
+            NULL
+        }
+        SEQUENCE
+        {
+            SET
+            {
+                SEQUENCE
+                {
+                    OBJECT IDENTIFIER = CountryName (2.5.4.6)
+                    PRINTABLE STRING = 'UG'
+                }
+            }
+            SET
+            {
+                SEQUENCE
+                {
+                    OBJECT IDENTIFIER = StateOrProvinceName (2.5.4.8)
+                    UTF8 STRING = 'Eastern'
+                }
+            }
+            SET
+            {
+                SEQUENCE
+                {
+                    OBJECT IDENTIFIER = LocalityName (2.5.4.7)
+                    UTF8 STRING = 'Elite Robust Ontology'
+                }
+            }
+            SET
+            {
+                SEQUENCE
+                {
+                    OBJECT IDENTIFIER = OrganizationName (2.5.4.10)
+                    UTF8 STRING = 'Elite Robust Ontology'
+                }
+            }
+            SET
+            {
+                SEQUENCE
+                {
+                    OBJECT IDENTIFIER = OrganizationalUnitName (2.5.4.11)
+                    UTF8 STRING = 'Software Development'
+                }
+            }
+            SET
+            {
+                SEQUENCE
+                {
+                    OBJECT IDENTIFIER = CommonName (2.5.4.3)
+                    UTF8 STRING = 'Elite Robust Ontology'
+                }
+            }
+        }
+        SEQUENCE
+        {
+            UTC TIME = 20/Aug/2026 13:10:05 EAT (260820101005GMT+00:00)
+            UTC TIME = 20/Aug/2027 13:10:05 EAT (270820101005GMT+00:00)
+        }
+        SEQUENCE
+        {
+            SET
+            {
+                SEQUENCE
+                {
+                    OBJECT IDENTIFIER = CountryName (2.5.4.6)
+                    PRINTABLE STRING = 'UG'
+                }
+            }
+            SET
+            {
+                SEQUENCE
+                {
+                    OBJECT IDENTIFIER = StateOrProvinceName (2.5.4.8)
+                    UTF8 STRING = 'Eastern'
+                }
+            }
+            SET
+            {
+                SEQUENCE
+                {
+                    OBJECT IDENTIFIER = LocalityName (2.5.4.7)
+                    UTF8 STRING = 'Elite Robust Ontology'
+                }
+            }
+            SET
+            {
+                SEQUENCE
+                {
+                    OBJECT IDENTIFIER = OrganizationName (2.5.4.10)
+                    UTF8 STRING = 'Elite Robust Ontology'
+                }
+            }
+            SET
+            {
+                SEQUENCE
+                {
+                    OBJECT IDENTIFIER = OrganizationalUnitName (2.5.4.11)
+                    UTF8 STRING = 'Software Development'
+                }
+            }
+            SET
+            {
+                SEQUENCE
+                {
+                    OBJECT IDENTIFIER = CommonName (2.5.4.3)
+                    UTF8 STRING = 'Elite Robust Ontology'
+                }
+            }
+        }
+        SEQUENCE
+        {
+            SEQUENCE
+            {
+                OBJECT IDENTIFIER = RsaEncryption (1.2.840.113549.1.1.1)
+                NULL
+            }
+            BIT STRING (L:269), encapsulates:
+                SEQUENCE
+                {
+                    INTEGER = 
+                        00 97 02 EF 1E A1 57 84  EF E7 40 A9 F8 2E 25 8E   ...ï.¡W.ïç@©ø.%.
+                        B8 D4 60 E5 93 46 99 F0  70 7E BD 92 78 01 3A 49   ¸Ô`å.F.ðp~½.x.:I
+                        95 FC 1C DB FE 4F 3A F9  07 45 61 63 12 B8 08 7E   .ü.ÛþO:ù.Eac.¸.~
+                        F3 78 FF 0F 7C 64 4D 0D  6D 21 55 D5 4C 82 18 F7   óxÿ.|dM.m!UÕL..÷
+                        1A 44 45 A1 FF 6E F4 C4  1F 66 01 25 69 D4 A3 07   .DE¡ÿnôÄ.f.%iÔ£.
+                        67 C5 50 CD 5C 04 B8 F7  CF A3 F9 A5 AF 7C 31 5E   gÅPÍ\.¸÷Ï£ù¥¯|1^
+                        E1 03 89 65 C6 83 1A 33  FC AA F9 C0 1F 35 05 71   á..eÆ..3üªùÀ.5.q
+                        C2 D9 67 EA 17 7C 75 E3  1B CA 0C 1A 86 E0 38 FC   ÂÙgê.|uã.Ê...à8ü
+                        31 59 F0 E7 80 12 B9 63  85 0C B6 14 0B DD D8 C8   1Yðç..¹c..¶..ÝØÈ
+                        C0 EB 08 D1 68 1C D8 23  C7 67 C6 53 5C 80 5F 20   Àë.Ñh.Ø#ÇgÆS\._ 
+                        B6 67 37 9F CA 8B 13 71  C3 68 4B 75 73 FA EB 77   ¶g7.Ê..qÃhKusúëw
+                        0F 9C 62 DA 46 93 62 87  1E 58 2D 8C E9 9A 05 21   ..bÚF.b..X-.é..!
+                        82 D5 3E 49 E5 07 B6 B8  6C 12 6F 8A 9F B9 92 A4   .Õ>Iå.¶¸l.o..¹.¤
+                        72 9B 92 5D E7 2E CE 95  EE 98 33 60 98 DC 31 04   r..]ç.Î.î.3`.Ü1.
+                        D8 B1 EC 23 D7 C2 F2 62  4A 83 D1 1B 01 3C BF E7   Ø±ì#×ÂòbJ.Ñ..<¿ç
+                        A1 34 D8 A2 39 DA F4 1E  C5 D8 25 33 ED 63 F1 41   ¡4Ø¢9Úô.ÅØ%3ícñA
+                    INTEGER = 65537 (0x10001)
+                }
+
+        }
+    }
+    SEQUENCE
+    {
+        OBJECT IDENTIFIER = Sha256WithRSAEncryption (1.2.840.113549.1.1.11)
+        NULL
+    }
+    BIT STRING (L:255) = 
+        0B FB C7 4E FB 79 DE 8C  30 20 A2 7E 50 23 DF AC   .ûÇNûyÞ.0 ¢~P#ß¬
+        08 69 B5 B8 10 90 56 3E  45 AB 8C 81 C0 74 83 BF   .iµ¸..V>E«..Àt.¿
+        11 00 B1 47 7E 12 F9 D6  B3 3B E4 3C 84 9E E8 B0   ..±G~.ùÖ³;ä<..è°
+        BF 05 67 DB B2 23 47 1F  A6 C7 BA 14 CB 48 9A 11   ¿.gÛ²#G.¦Çº.ËH..
+        24 A0 33 0F 92 1D EC F7  BA E3 EB 2F D2 43 DE 5B   $ 3...ì÷ºãë/ÒCÞ[
+        B2 44 80 74 D3 57 0D 2E  05 FC 1B F8 FC 91 51 5B   ²D.tÓW...ü.øü.Q[
+        89 D9 D9 90 B0 53 C3 F0  9C 8A 02 82 B9 CB 85 97   .ÙÙ.°SÃð....¹Ë..
+        3E 1D 52 DD 20 62 0A EB  D7 D5 27 57 C6 56 C7 85   >.RÝ b.ë×Õ'WÆVÇ.
+        92 3E 2F 3B A0 F7 3A 3C  F3 47 81 C0 2B D5 23 37   .>/; ÷:<óG.À+Õ#7
+        B8 BA 3D 5C B5 BC EF 4E  5D BF 11 9A 7E 95 E1 09   ¸º=\µ¼ïN]¿..~.á.
+        B9 8D 90 81 AE 43 1F 9F  9F 20 50 3C 93 DE B3 DD   ¹...®C... P<.Þ³Ý
+        22 5C 29 63 0F D1 8C ED  2C 33 F8 6C E0 8C 06 44   "\)c.Ñ.í,3ølà..D
+        A1 C6 8B BB 79 76 71 E0  1A 47 C4 4E 7D E4 4A DC   ¡Æ.»yvqà.GÄN}äJÜ
+        07 F0 EE F3 57 CF C6 A9  96 E2 11 6F 66 B3 EC 61   .ðîóWÏÆ©.â.of³ìa
+        59 CC 12 25 49 2C C3 78  DF B9 3C 2E A2 C6 17 49   YÌ.%I,Ãxß¹<.¢Æ.I
+        F1 3E D5 84 59 38 29 05  89 BA 95 31 C6 5D CC      ñ>Õ.Y8)..º.1Æ]Ì
+}
