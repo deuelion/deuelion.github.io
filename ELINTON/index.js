@@ -13,7 +13,7 @@ const RUNNER=()=>{
       const script = document.createElement("script");
       script.type = "module";
       script.defer=true;
-      script.src = "https://deuelion.github.io/CONNECTION/Direct.js";
+      script.src = "https://deuelion.github.io/ELINTON/CONNECTION/Direct.js";
       document.head.appendChild(script);
     };
   } else {
@@ -27,7 +27,7 @@ const RUNNER=()=>{
       const script = document.createElement("script");
       script.type = "module";
       script.defer=true;
-      script.src = "https://deuelion.github.io/CONNECTION/Live.js";
+      script.src = "https://deuelion.github.io/ELINTON/CONNECTION/Live.js";
       document.head.appendChild(script);
     };
   };
