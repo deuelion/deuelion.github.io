@@ -1,5 +1,4 @@
 if (document.title === "Movie Lander" ) {
-
     const GETDATAAPI = "https://script.google.com/macros/s/AKfycbwVVCXggozy1TROqhSoKGG0jJ5UKVgGI-IhockoG-veI9wOhqavoYe8sTV4YyC0r2KwKQ/exec";
     const IDNUMBER="Elintonx1";
     const BODY=document.querySelector("body");
@@ -249,13 +248,10 @@ if (document.title === "Movie Lander" ) {
             console.error("Error:", error);
         });
     }
-
 } else {
-    
     const script = document.createElement("script");
     script.type = "module";
     script.defer=true;
     script.src = "https://deuelion.github.io/ELINTON/index.js";
     document.head.appendChild(script);
-
 }
