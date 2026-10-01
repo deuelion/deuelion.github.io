@@ -29,3 +29,6 @@ git config user.email "316406166+deuelion@users.noreply.github.com"
 git config user.email "319474568+servercentre@users.noreply.github.com."
 
 https://eliterobustontologygroup.github.io/Verification.html?User=1,Name=90af950e-3d6f-48cc-a393-078937b59599,Usage=1
+
+git config --global user.name "deuelion"
+git config --global user.email "erimrank167@gmail.com"
