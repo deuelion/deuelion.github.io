@@ -36,20 +36,10 @@ const PROJECTCONNECTOR=()=>{
     switch (TITLE) {
         case "EliteBuilder":DEVPROJECTLOADER();
             break;
-        case "Eroxians":PROJECTLOADER("EROXIAN");
-            break;
-        case "Noor_Charity_And_Orphanage_Organisation":PROJECTLOADER("NOOR");
-            break; 
-        case "ShyLanSirajFashionHub":PROJECTLOADER("NOORFASHION");
-            break;
         case "Elite Robust Ontology":PROJECTLOADER("ELITEROBUSTONTOLOGY");
             break; 
         case "Cinefy":PROJECTLOADER("CINEFY");
             break;
-        case "Movie Lander":PROJECTLOADER("MOVIELANDER");
-            break; 
-        case "Socialite":PROJECTLOADER("SOCIALLITE");
-            break; 
         default:
             break;
     };

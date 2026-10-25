@@ -5,12 +5,6 @@ const WEBSWITCHER=()=>{
     switch (NAME) {
         case "M1":ELITEROBUSTONTOLOGYWEBROUTER();
             break;
-        case "M2":EROXIANWEBROUTES();
-            break;
-        case "M3":SHYRAJANDROIDROUTER();
-            break;
-        case "M4":MOVIELANDERANDROIDROUTER();
-            break;
         default:DEVMODE();
             break;
     };
@@ -19,12 +13,6 @@ const ANDROIDSWITCHER=()=>{
     switch (NAME) {
         case "M1":ELITEROBUSTONTOLOGYWEBROUTER();
             break;
-        case "M2":EROXIANWEBROUTES();
-            break;
-        case "M3":SHYRAJANDROIDROUTER();
-            break;
-        case "M4":MOVIELANDERANDROIDROUTER();
-            break;
         default:DEVMODE();
             break;
     };
@@ -32,12 +20,6 @@ const ANDROIDSWITCHER=()=>{
 const DESKTOPSWITCHER=()=>{
     switch (NAME) {
         case "M1":ELITEROBUSTONTOLOGYWEBROUTER();
-            break;
-        case "M2":EROXIANWEBROUTES();
-            break;
-        case "M3":SHYRAJANDROIDROUTER();
-            break;
-        case "M4":MOVIELANDERANDROIDROUTER();
             break;
         default:DEVMODE();
             break;
@@ -113,7 +95,7 @@ const DEVPROTECTION=()=>{
 };
 if (!sessionStorage.getItem("DevName")) {
     const LOADDATA={
-        natasha:() => {CURRENT();},
+        harmony:() => {CURRENT();},
     };
     LINKTRACKER(LOADDATA,()=>{
         DEVMODE();
