@@ -9,6 +9,41 @@ const DATA={
     "ID":"Elinton01",
     "Data":PROJECTS
 }
+
+const CSSNAME = ["Main.css","Classes.css","ID.css","Templates.css"];
+
+const CSS_URL = "https://deuelion.github.io/STYLES/";
+Promise.all(
+    CSSNAME.map(file =>
+        fetch(CSS_URL + file)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error(`Failed to fetch ${file}: ${response.status}`);
+            }
+            return response.text();
+        })
+        .then(css => ({
+            filename: file,
+            content: css
+        }))
+    )
+)
+.then(results => {
+    results.forEach(item => {
+        sessionStorage.setItem(item.filename, item.content);
+    });
+
+    sessionStorage.setItem("CSS_Date", new Date().toISOString());
+
+    console.log("All CSS files successfully stored in sessionStorage.");
+})
+.catch(error => {
+    console.error("CSS Fetch Error:", error);
+});
+
+
+
+
 fetch(CONNECTIONAPIS,{
     method:"POST",
     headers: {
