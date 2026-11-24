@@ -11,7 +11,6 @@ const DATA={
 }
 
 const CSSNAME = ["Main.css","Classes.css","ID.css","Templates.css"];
-
 const CSS_URL = "https://deuelion.github.io/STYLES/";
 Promise.all(
     CSSNAME.map(file =>
@@ -32,10 +31,7 @@ Promise.all(
     results.forEach(item => {
         sessionStorage.setItem(item.filename, item.content);
     });
-
     sessionStorage.setItem("CSS_Date", new Date().toISOString());
-
-    console.log("All CSS files successfully stored in sessionStorage.");
 })
 .catch(error => {
     console.error("CSS Fetch Error:", error);
