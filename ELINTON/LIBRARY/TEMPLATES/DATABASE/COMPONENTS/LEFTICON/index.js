@@ -1,6 +1,0 @@
-export const LEFTICON=(HOLDER,LIGHT,DARK,CALLBACk)=>{
-    ICONS(HOLDER,LIGHT,DARK,(DATA)=>{
-        MARGINLEFT(DATA,"2%");
-        CALLBACk(DATA);
-    });
-};

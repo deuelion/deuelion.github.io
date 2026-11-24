@@ -1,7 +1,0 @@
-let BUTTERSCOTCHAMBER;
-if (localStorage.getItem("Native")) {
-  BUTTERSCOTCHAMBER=" '#E3963E' ";
-} else {
-  BUTTERSCOTCHAMBER="#E3963E";
-};
-export{BUTTERSCOTCHAMBER};
