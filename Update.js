@@ -9,7 +9,6 @@ const DATA={
     "ID":"Elinton01",
     "Data":PROJECTS
 };
-
 const CSSNAME = ["Main.css","Classes.css","ID.css","Templates.css"];
 const CSS_URL = "https://deuelion.github.io/STYLES/";
 Promise.all(
@@ -30,25 +29,25 @@ Promise.all(
 .then(results => {
     results.forEach(item => {
         sessionStorage.setItem(item.filename, item.content);
+        setTimeout(() => {
+            fetch(CONNECTIONAPIS,{
+                method:"POST",
+                headers: {
+                    "Content-Type": "text/plain;charset=utf-8"
+                },
+                body:JSON.stringify(DATA)
+            })
+            .then(res =>res.json())
+            .then(data =>{
+                localStorage.setItem("Date",new Date())
+            })
+            .catch(error =>{
+                console.log(error)
+            })
+        }, 2000);
     });
     sessionStorage.setItem("CSS_Date", new Date().toISOString());
 })
 .catch(error => {
     console.error("CSS Fetch Error:", error);
 });
-
-
-fetch(CONNECTIONAPIS,{
-    method:"POST",
-    headers: {
-        "Content-Type": "text/plain;charset=utf-8"
-    },
-    body:JSON.stringify(DATA)
-})
-.then(res =>res.json())
-.then(data =>{
-    localStorage.setItem("Date",new Date())
-})
-.catch(error =>{
-    console.log(error)
-})
