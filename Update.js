@@ -2,7 +2,7 @@ export const UPDATER=()=>{
     const CONNECTIONAPIS="https://script.google.com/macros/s/AKfycbyY9vJAPO1fkxtxWXkVIqdb7qbwDKjMeit8JgE0Dj54KAg6coSCNVVGn9GbyqOLMBv6MA/exec";
     const BASEAPIS="https://docs.google.com/spreadsheets/d/16xyQdW2hKnXD6Vlggfsuclt4ZVgfZ3xYPnUSI76r4VE/edit?usp=sharing";
     const BASENAMES="VERSIONS";
-    const PROJECTS=["Elinton",sessionStorage.getItem("Main.css"),sessionStorage.getItem("Classes.css"),sessionStorage.getItem("ID.css"),sessionStorage.getItem("Templates.css")];
+    const PROJECTS=["Elinton",sessionStorage.getItem("STYLES/Main.css"),sessionStorage.getItem("STYLES/Classes.css"),sessionStorage.getItem("STYLES/ID.css"),sessionStorage.getItem("STYLES/Templates.css")];
     const DATA={
         "Action":"Update",
         "spreadsheetUrl":BASEAPIS,
@@ -10,8 +10,8 @@ export const UPDATER=()=>{
         "ID":"Elinton01",
         "Data":PROJECTS
     };
-    const CSSNAME = ["Main.css","Classes.css","ID.css","Templates.css"];
-    const CSS_URL = "https://deuelion.github.io/STYLES/";
+    const CSSNAME = ["STYLES/Main.css","STYLES/Classes.css","STYLES/ID.css","STYLES/Templates.css"];
+    const CSS_URL = "https://deuelion.github.io/";
     Promise.all(
         CSSNAME.map(file =>
             fetch(CSS_URL + file)
