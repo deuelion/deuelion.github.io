@@ -86,7 +86,7 @@ export const UPDATER = async () => {
         const RESULT = await RESPONSE.json();
         const NOW = new Date().toISOString();
         localStorage.setItem("UPDATED", NOW);
-        sessionStorage.setItem("CSS_Date", NOW);
+        sessionStorage.clear();
         return RESULT;
     } catch (error) {
         console.error("Updater Error:", error);
