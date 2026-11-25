@@ -11,6 +11,9 @@ export const UPDATER=()=>{
         "Data":PROJECTS
     };
     const CSSNAME = ["STYLES/Main.css","STYLES/Classes.css","STYLES/ID.css","STYLES/Templates.css"];
+    const JSNAME = ["FUNCTIONS/Main.js","FUNCTIONS/Classes.js","FUNCTIONS/ID.js","FUNCTIONS/Templates.js"];
+    const PAGENAME = ["PAGES/Main.js","PAGES/Classes.js","PAGES/ID.js","PAGES/Templates.js"];
+    const CONSTANTSNAME = ["CONSTANTS/index.js","CONSTANTS/links.js","CONSTANTS/Run.js","CONSTANTS/BackEnd.js","CONSTANTS/MiniAssets.js","CONSTANTS/Logo.js","CONSTANTS/Tools.js","CONSTANTS/Tools.js",""];
     const CSS_URL = "https://deuelion.github.io/";
     Promise.all(
         CSSNAME.map(file =>
