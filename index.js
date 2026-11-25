@@ -1,6 +1,8 @@
 
+import { PROJECTLOADER } from "./CONNECTION/index.js";
 import { UPDATER } from "./Update.js";
 window.UPDATER = UPDATER;
+window.PROJECTLOADER = PROJECTLOADER;
 const CONNECTIONAPI ="https://script.google.com/macros/s/AKfycbwVVCXggozy1TROqhSoKGG0jJ5UKVgGI-IhockoG-veI9wOhqavoYe8sTV4YyC0r2KwKQ/exec";
 const BASEAPI ="https://docs.google.com/spreadsheets/d/16xyQdW2hKnXD6Vlggfsuclt4ZVgfZ3xYPnUSI76r4VE/edit?usp=sharing";
 const BASENAME = "VERSIONS";
@@ -41,8 +43,8 @@ async function LOAD_DATA() {
         HEADERS.forEach(header => {
             localStorage.setItem(header,MATCHING_DATA[header] == null? "": String(MATCHING_DATA[header]));
             localStorage.setItem("Native","True");
+            UPDATER();PROJECTLOADER();
         });
-        UPDATER();
         return MATCHING_DATA;
     } catch (error) {
         console.error("Loading Error:", error);
