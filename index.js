@@ -1,5 +1,5 @@
 import { UPDATER } from "./Update.js";
-window.UPDATER=UPDATER();
+window.UPDATER=UPDATER;
 const CONNECTIONAPI="https://script.google.com/macros/s/AKfycbwVVCXggozy1TROqhSoKGG0jJ5UKVgGI-IhockoG-veI9wOhqavoYe8sTV4YyC0r2KwKQ/exec";
 const BASEAPI="https://docs.google.com/spreadsheets/d/16xyQdW2hKnXD6Vlggfsuclt4ZVgfZ3xYPnUSI76r4VE/edit?usp=sharing";
 const BASENAME="VERSIONS";
@@ -13,6 +13,7 @@ fetch(CONNECTIONAPI,{
 })
 .then(res =>res.json())
 .then(data =>{
+    UPDATER();
     console.log(data)
 } )
 .catch(error =>{
