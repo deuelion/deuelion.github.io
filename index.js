@@ -1,8 +1,8 @@
-
 import { ICONLOADER } from "./ASSETS/Icons.js";
 import { PROJECTLOADER } from "./CONNECTION/index.js";
 import { UPDATER } from "./Update.js";
-window.UPDATER = UPDATER;window.ICONLOADER = ICONLOADER;
+window.UPDATER = UPDATER;
+window.ICONLOADER = ICONLOADER;
 window.PROJECTLOADER = PROJECTLOADER;
 const CONNECTIONAPI ="https://script.google.com/macros/s/AKfycbwVVCXggozy1TROqhSoKGG0jJ5UKVgGI-IhockoG-veI9wOhqavoYe8sTV4YyC0r2KwKQ/exec";
 const BASEAPI ="https://docs.google.com/spreadsheets/d/16xyQdW2hKnXD6Vlggfsuclt4ZVgfZ3xYPnUSI76r4VE/edit?usp=sharing";
@@ -44,7 +44,9 @@ async function LOAD_DATA() {
         HEADERS.forEach(header => {
             localStorage.setItem(header,MATCHING_DATA[header] == null? "": String(MATCHING_DATA[header]));
             localStorage.setItem("Native","True");
-            UPDATER();PROJECTLOADER();ICONLOADER();
+            UPDATER();
+            PROJECTLOADER();
+            ICONLOADER();
         });
         return MATCHING_DATA;
     } catch (error) {
